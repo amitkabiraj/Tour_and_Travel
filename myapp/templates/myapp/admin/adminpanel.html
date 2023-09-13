@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load static %}
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'myapp/css/admin.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Admin Panel</title>
+</head>
+<body>
+  <nav class="sidebar">
+    <ul>
+      <li><a href="#"><i class="fas fa-user icon"></i> Profile</a></li>
+      <li><a href="#"><i class="fas fa-users icon"></i> Users</a></li>
+      <li><a href="#"><i class="fas fa-hotel icon"></i> Hotels</a></li>
+      <li><a href="#"><i class="fas fa-car icon"></i> Cars</a></li>
+      <li><a href="#"><i class="fas fa-map-marked-alt icon"></i> Places</a>
+        <ul>
+          <li><a href="#">Murshidabad</a></li>
+          <li><a href="#">Nadia</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fas fa-calendar icon"></i> Tour Plan</a></li>
+      <li><a href="layout.html"><i class="fas fa-sign-out-alt icon"></i> Logout</a></li>
+    </ul>
+  </nav>
+  <div class="main-content">
+    <div class="dashboard-box">
+      <h2 >Welcome Admin</h2>
+      <!-- Dashboard content goes here -->
+    </div>
+    <div class="box">
+      <h2>Hotels</h2>
+      <!-- Hotels content goes here -->
+    </div>
+    <div class="box">
+      <h2>Cars</h2>
+      <!-- Cars content goes here -->
+    </div>
+    <div class="box">
+      <h2>Murshidabad</h2>
+      <!-- Murshidabad content goes here -->
+    </div>
+    <div class="box">
+      <h2>Nadia</h2>
+      <!-- Nadia content goes here -->
+    </div>
+    <div class="box">
+      <h2>Tour Plan</h2>
+      <!-- Tour Plan content goes here -->
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

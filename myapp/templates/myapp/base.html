@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/styles.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'myapp/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'myapp/css/body-content.css' %}">
+  <link rel="stylesheet" href="{% static 'myapp/css/login.css' %}">
+  <link rel="stylesheet" href="{% static 'myapp/css/user.css' %}">
+  <link rel="stylesheet" href="{% static 'myapp/css/modal.css' %}">
+  <link rel="stylesheet" href="{% static 'myapp/css/admin.css' %}">
+  {% comment %} <link rel="stylesheet" href="{% static 'myapp/css/body-content.css' %}"> {% endcomment %}
+  <title>{%block title%}Tour and Travel {% endblock %}</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="{% url 'index' %}">Tour<span>Travel</span></a>
+    </div>
+    <ul class="nav-links">
+      <li class="dropdown">
+        <a href="#">Services</a>
+        <div class="dropdown-content">
+          <a href="{% url 'hotel' %}">Hotels</a>
+          <a href="{% url 'car' %}">Cars</a>
+          <div class="dropdown">
+            <a href="{% url 'places' %}">Places</a>
+            <div class="dropdown-content">
+              <a href="{% url 'murshidabad' %}">Murshidbad</a>
+              <a href="{% url 'nadia' %}">Nadia</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="{% url 'admin_login' %}">Admin Login</a></li>
+      <li><a href="{% url 'user_login' %}">User Login</a></li>
+      <li><a href="{% url 'contact' %}">Contact</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
+    </ul>
+    <div class="menu-icon">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+
+  <!-- Content -->
+<main>
+    {% block content %}
+    <!-- This is where the content of child templates will go -->
+    {% endblock %}
+</main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <a href="#">Tour<span>Travel</span></a>
+      </div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <div class="social-icons">
+        <a href="#" class="icon"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{% static 'myapp/js/script.js' %}"></script>
+  <script src="{% static 'myapp/js/modal.js' %}"></script>
+</body>
+</html>

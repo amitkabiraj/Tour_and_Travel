@@ -1,0 +1,19 @@
+{% extends 'myapp/base.html' %}
+{% block title%}
+user login
+{% endblock title%}
+{% block content %}
+<div class="login-container">
+    
+    <form class="login-form" action="adminpanel.html">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+{% load static %}
+{% endblock content %}
