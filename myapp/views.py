@@ -8,6 +8,10 @@ def car(request):
     return render(request, 'myapp/car/car.html') 
 def hotel(request):
     return render(request, 'myapp/hotel/hotel.html') 
+def restrurent(request):
+    return render(request, 'myapp/restrurent/restrurent.html') 
+def hospital(request):    
+    return render(request, 'myapp/hospital/hospital.html') 
 def places(request):
     return render(request, 'myapp/place/places.html') 
 def murshidabad(request):
