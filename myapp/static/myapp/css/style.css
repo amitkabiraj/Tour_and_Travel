@@ -158,12 +158,14 @@ body, ul {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    padding: 5px;
   }
   
   .footer-logo a {
     color: #fff;
     font-size: 24px;
     text-decoration: none;
+    padding-left: 8px;
   }
   
   .footer-logo span {

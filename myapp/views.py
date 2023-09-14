@@ -5,15 +5,15 @@ def index(request):
     return render(request, 'myapp/index.html')
     # return HttpResponse("this is homepage")
 def car(request):
-    return render(request, 'myapp/car.html') 
+    return render(request, 'myapp/car/car.html') 
 def hotel(request):
-    return render(request, 'myapp/hotel.html') 
+    return render(request, 'myapp/hotel/hotel.html') 
 def places(request):
-    return render(request, 'myapp/places.html') 
+    return render(request, 'myapp/place/places.html') 
 def murshidabad(request):
-    return render(request, 'myapp/murshidabad.html') 
+    return render(request, 'myapp/place/murshidabad.html') 
 def nadia(request):
-    return render(request, 'myapp/nadia.html') 
+    return render(request, 'myapp/place/nadia.html') 
 def contact(request):
     return render(request, 'myapp/contact.html') 
 def about(request):
