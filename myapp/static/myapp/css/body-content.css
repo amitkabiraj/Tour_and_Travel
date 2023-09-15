@@ -5,7 +5,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 20px 0;
+    /* margin: 20px 0px; */
+    margin-top: 10px;
   }
   
   .container {
