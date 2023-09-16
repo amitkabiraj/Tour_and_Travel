@@ -4,10 +4,7 @@ body, ul {
     padding: 0;
     list-style: none;
   }
-  .nav-links a
-  {
-    font-size: 50px;
-  }
+
   
   /* Navbar styles */
   .navbar {
@@ -19,7 +16,6 @@ body, ul {
     align-items: center;
     background-color: #333;
     padding: 10px;
-    font-size: 75.5%;
     z-index: 1000; /* Ensure it appears above other elements */
   }
   body
