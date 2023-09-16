@@ -4,60 +4,309 @@ index
 {% endblock title%}
 {% block content %}
 {% load static %}
-<div class="body-content">
-    <div class="container">
-      <img src="{% static 'myapp/image/bg.jpg' %}" alt="Tourist Place">
-      <div class="description">
-        <h2>Murshidabad123</h2>
+  <!-- Page content goes here -->
+  <!-- home section start -->
+  <section id="home" class="home">
+    <div class="video">
+      <video src="{% static 'myapp/image/home-video.mp4' %}" autoplay></video>
+    </div>
+    <div class="content">
+      <h1>explore new place, <br> adventure awaits. </h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro quod totam temporibus vel illum nemo
+        deleniti consequatur assumenda velit rem! Laboriosam suscipit iusto iure temporibus provident saepe
+        veniam dicta iste?</p>
+    </div>
+    <!-- <div class="form-container">
+      <form action="">
+          <h3>search for your destination</h3>
+
+          <span>location</span>
+          <input type="text" name="place" id="place" placeholder="place you want to visit">
+
+          <span>guest members</span>
+          <input type="number" name="guest" id="guest" placeholder="number of peoples">
+
+          <span>arrivals</span>
+          <input type="date" name="arrivals" id="arrivals">
+
+          <span>leaving</span>
+          <input type="date" name="leaving" id="leaving">
+
+          <input type="submit" value="search">
+      </form>
+  </div> -->
+  </section>
+  <!-- home section end -->
+
+  <!-- feature section start -->
+  <div class="feature" id="feature">
+    <h1 class="heading"><span>f</span>eature <span>l</span>ocation</h1>
+    <div class="card-container">
+      <div class="card">
+        <span class="discount">-35%</span>
+        <img src="{% static 'myapp/image/featued-img-1.jpg' %}" alt="">
+        <div class="content">
+          <h3 class="title">hawaii</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas aliquam architecto magnam vero
+            a. Id odio quidem eaque mollitia nam obcaecati dolor fuga totam aut dolore, perspiciatis enim
+            quis saepe.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <a href="#"><button class="btn">check out!</button></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="{% static 'myapp/image/featued-img-2.jpg' %}" alt="">
+        <div class="content">
+          <h3 class="title">egypt</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas aliquam architecto magnam vero
+            a. Id odio quidem eaque mollitia nam obcaecati dolor fuga totam aut dolore, perspiciatis enim
+            quis saepe.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <a href="#"><button class="btn">check out!</button></a>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="discount">-45%</span>
+        <img src="{% static 'myapp/image/featued-img-3.jpg' %}" alt="">
+        <div class="content">
+          <h3 class="title">india</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas aliquam architecto magnam vero
+            a. Id odio quidem eaque mollitia nam obcaecati dolor fuga totam aut dolore, perspiciatis enim
+            quis saepe.</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <a href="#"><button class="btn">check out!</button></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- feature section end -->
+
+  <!-- about section start -->
+  <section id="about" class="about">
+    <h1 class="heading"><span>a</span>bout <span>U</span>s</h1>
+    <div class="row">
+      <div class="image">
+        <img src="{% static 'myapp/image/about-img.png' %}" alt="">
+      </div>
+
+      <div class="content">
+        <h3>why choose us ?</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula est quis urna scelerisque, eu faucibus nisi eleifend. Sed tincidunt eget nulla ac fermentum. Nulla facilisi.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut accusantium molestias
+          voluptates nostrum maxime obcaecati excepturi corporis cumque eaque nihil dolor dicta doloribus
+          dignissimos, natus, quod cum quasi nemo!
         </p>
+        <br>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut adipisci, esse molestiae nemo fugit quae
+          tempora earum sit. Cupiditate minima perferendis rerum nobis porro est voluptatem id aperiam qui
+          itaque.
+        </p>
+        <a href="#"><button class="btn btn1">read more</button></a>
+        <a href="#"><button class="btn">get started</button></a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- about section end -->
+
+  <!-- gallery section start -->
+  <section class="gallery" id="gallery">
+    <h1 class="heading"><span>O</span>ur <span>p</span>laces</h1>
+    <div class="box-container">
+      <div class="box">
+        <img src="{% static 'myapp/image/gallery-img-1.jpg' %}" alt="">
+        <div class="icons">
+          <a href="" class="fas fa-heart"></a>
+          <a href="" class="fas fa-share"></a>
+          <a href="" class="fas fa-search"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="{% static 'myapp/image/gallery-img-2.jpg' %}" alt="">
+        <div class="icons">
+          <a href="" class="fas fa-heart"></a>
+          <a href="" class="fas fa-share"></a>
+          <a href="" class="fas fa-search"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="{% static 'myapp/image/gallery-img-3.jpg' %}" alt="">
+        <div class="icons">
+          <a href="" class="fas fa-heart"></a>
+          <a href="" class="fas fa-share"></a>
+          <a href="" class="fas fa-search"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="{% static 'myapp/image/gallery-img-4.jpg' %}" alt="">
+        <div class="icons">
+          <a href="" class="fas fa-heart"></a>
+          <a href="" class="fas fa-share"></a>
+          <a href="" class="fas fa-search"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="{% static 'myapp/image/gallery-img-5.jpg' %}" alt="">
+        <div class="icons">
+          <a href="" class="fas fa-heart"></a>
+          <a href="" class="fas fa-share"></a>
+          <a href="" class="fas fa-search"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="{% static 'myapp/image/gallery-img-6.jpg' %}" alt="">
+        <div class="icons">
+          <a href="" class="fas fa-heart"></a>
+          <a href="" class="fas fa-share"></a>
+          <a href="" class="fas fa-search"></a>
+        </div>
       </div>
     </div>
-    <div class="container">
-      <img src="{% static 'myapp/image/bg.jpg' %}" alt="Tourist Place">
-      <div class="description">
-        <h2>Nadia</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula est quis urna scelerisque, eu faucibus nisi eleifend. Sed tincidunt eget nulla ac fermentum. Nulla facilisi.
-        </p>
+  </section>
+  <!-- gallery section end -->
+  <!-- review section start -->
+  <section class="review" id="review">
+    <h1 class="heading"><span>r</span>eview</h1>
+    <div class="box-container">
+      <div class="box">
+        <div class="image">
+          <img src="{% static 'myapp/image/pic-2.png' %}" alt="">
+        </div>
+        <div class="content">
+          <h3>someone's name</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic dicta illum rerum voluptas natus
+            facilis possimus nam neque. Aut, omnis?</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
       </div>
-    </div> 
-    <div class="container">
-      <img src="{% static 'myapp/image/bg.jpg' %}" alt="Tourist Place">
-      <div class="description">
-        <h2>Murshidabad</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula est quis urna scelerisque, eu faucibus nisi eleifend. Sed tincidunt eget nulla ac fermentum. Nulla facilisi.
-        </p>
+
+      <div class="box">
+        <div class="image">
+          <img src="{% static 'myapp/image/pic-3.png' %}" alt="">
+        </div>
+        <div class="content">
+          <h3>someone's name</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic dicta illum rerum voluptas natus
+            facilis possimus nam neque. Aut, omnis?</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="{% static 'myapp/image/pic-4.png' %}" alt="">
+        </div>
+        <div class="content">
+          <h3>someone's name</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic dicta illum rerum voluptas natus
+            facilis possimus nam neque. Aut, omnis?</p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="container">
-      <img src="{% static 'myapp/image/bg.jpg' %}" alt="Tourist Place">
-      <div class="description">
-        <h2>Murshidabad</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula est quis urna scelerisque, eu faucibus nisi eleifend. Sed tincidunt eget nulla ac fermentum. Nulla facilisi.
-        </p>
+  </section>
+  <!-- review section end -->
+
+  <!-- contact section start -->
+  <section class="contact" id="contact">
+    <h1 class="heading"><span>C</span>ontact <span>U</span>s</h1>
+    <!-- <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.1121277615803!2d107.12375331476996!3d-6.379524995383789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xabe58dfbaf3d5eb3!2zNsKwMjInNDYuMyJTIDEwN8KwMDcnMzMuNCJF!5e0!3m2!1sid!2sid!4v1647899670837!5m2!1sid!2sid"
+      width="100%" height="300" style="border:0; outline:none;" allowfullscreen="" loading="lazy"></iframe> -->
+    <div class="row">
+      <div class="contact-info">
+        <div class="box">
+          <h3><i class="fas fa-home"></i> address</h3>
+          <p>Amaipara, Jiaganj, Murshidabad <br>
+            Kolkata, West Bengal <br>
+            Jiaganj- 742123 <br>
+            WB- INDIA
+          </p>
+        </div>
+
+        <div class="box">
+          <h3><i class="fas fa-envelope"></i> e-mail</h3>
+          <p>amitkabiraj555@gmail.com</p>
+        </div>
+
+        <div class="box">
+          <h3><i class="fas fa-phone"></i> phone</h3>
+          <p>+91 9547759837</p>
+        </div>
+      </div>
+
+      <div class="contact-form-container">
+        <form action="">
+          <h3>get in touch</h3>
+          <div class="inputBox">
+            <input type="text" name="name" id="name" placeholder="your full name">
+            <input type="email" name="email" id="email" placeholder="your email">
+          </div>
+
+          <textarea name="message" id="message" cols="30" rows="10" placeholder="your message"></textarea>
+          <input type="submit" value="message">
+        </form>
       </div>
     </div>
-    <div class="container">
-      <img src="{% static 'myapp/image/bg.jpg' %}" alt="Tourist Place">
-      <div class="description">
-        <h2>Murshidabad</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula est quis urna scelerisque, eu faucibus nisi eleifend. Sed tincidunt eget nulla ac fermentum. Nulla facilisi.
-        </p>
-      </div>
-    </div>
-    <div class="container">
-      <img src="{% static 'myapp/image/bg.jpg' %}" alt="Tourist Place">
-      <div class="description">
-        <h2>Murshidabad</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula est quis urna scelerisque, eu faucibus nisi eleifend. Sed tincidunt eget nulla ac fermentum. Nulla facilisi.
-        </p>
-      </div>
-    </div>
-</div>
+  </section>
+  <!-- contact section end -->
+  <!-- newsletter section start -->
+  <section class="newsletter" id="newsletter">
+    <h1>sign up 25% discount</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim illo iusto suscipit molestias cumque,
+      explicabo hic temporibus eligendi libero fuga distinctio cupiditate aliquid soluta! Doloremque architecto
+      magnam cumque laudantium totam?</p>
+    <form action="#">
+      <input type="email" name="email" id="email" placeholder="enter your email">
+      <input type="submit" value="sign up">
+    </form>
+  </section>
+  <!-- newsletter section end -->
+  <!-- Add more container elements as needed -->
 {% endblock content %}

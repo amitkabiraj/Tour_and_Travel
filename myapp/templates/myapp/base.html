@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/styles.css' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="{% static 'myapp/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'myapp/css/index_body.css' %}">
   <link rel="stylesheet" href="{% static 'myapp/css/body-content.css' %}">
   <link rel="stylesheet" href="{% static 'myapp/css/login.css' %}">
   <link rel="stylesheet" href="{% static 'myapp/css/user.css' %}">
@@ -22,27 +23,27 @@
     </div>
     <ul class="nav-links">
       <li class="dropdown">
-        <a href="#">Services</a>
+        <a href="#" style="font-size: 15px;">Services</a>
         <div class="dropdown-content">
-          <a href="{% url 'hotel' %}">Hotels</a>
-          <a href="{% url 'car' %}">Cars</a>
-          <a href="{% url 'restrurent' %}">Restrurents</a>
-          <a href="{% url 'hospital' %}">Hospital</a>
+          <a href="{% url 'hotel' %}style="font-size: 15px;"">Hotels</a>
+          <a href="{% url 'car' %}style="font-size: 15px;"">Cars</a>
+          <a href="{% url 'restrurent' %}style="font-size: 15px;"">Restrurents</a>
+          <a href="{% url 'hospital' %}style="font-size: 15px;"">Hospital</a>
         </div>
       </li>
       <li>
         <div class="dropdown">
-          <a href="{% url 'places' %}">Places</a>
+          <a href="{% url 'places' %}"style="font-size: 15px;">Places</a>
           <div class="dropdown-content">
-            <a href="{% url 'murshidabad' %}">Murshidbad</a>
-            <a href="{% url 'nadia' %}">Nadia</a>
+            <a href="{% url 'murshidabad' %}style="font-size: 15px;"">Murshidbad</a>
+            <a href="{% url 'nadia' %}style="font-size: 15px;"">Nadia</a>
           </div>
         </div>
       </li>
-      <li><a href="{% url 'admin_login' %}">Admin Login</a></li>
-      <li><a href="{% url 'user_login' %}">User Login</a></li>
-      <li><a href="{% url 'contact' %}">Contact</a></li>
-      <li><a href="{% url 'about' %}">About</a></li>
+      <li style="font-size: 15px;"><a href="{% url 'admin_login' %}style="font-size: 15px;"">Admin Login</a></li>
+      <li style="font-size: 15px;"><a href="{% url 'user_login' %}style="font-size: 15px;"">User Login</a></li>
+      <li style="font-size: 15px;"><a href="{% url 'contact' %}style="font-size: 15px;"">Contact</a></li>
+      <li style="font-size: 15px;"><a href="{% url 'about' %}style="font-size: 15px;"">About</a></li>
     </ul>
     <div class="menu-icon">
       <span class="bar"></span>
@@ -64,8 +65,8 @@
         <a href="#">Tour<span>Travel</span></a>
       </div>
       <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
+        <a href="#"style="font-size: 20px;">Privacy Policy</a>
+        <a href="#"style="font-size: 20px;">Terms of Service</a>
       </div>
       <div class="social-icons">
         <a href="#" class="icon"><i class="fab fa-facebook"></i></a>

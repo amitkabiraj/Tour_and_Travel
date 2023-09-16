@@ -4,6 +4,10 @@ body, ul {
     padding: 0;
     list-style: none;
   }
+  .nav-links a
+  {
+    font-size: 50px;
+  }
   
   /* Navbar styles */
   .navbar {
@@ -15,6 +19,7 @@ body, ul {
     align-items: center;
     background-color: #333;
     padding: 10px;
+    font-size: 75.5%;
     z-index: 1000; /* Ensure it appears above other elements */
   }
   body
@@ -52,6 +57,7 @@ body, ul {
   /* Dropdown menu styles */
   .dropdown {
     position: relative;
+    font-size: 20px;
   }
   
   .dropdown-content {
@@ -59,6 +65,8 @@ body, ul {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 200px;
+    font-size: 20px;
+    border-radius: 10px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   }
   
@@ -71,14 +79,14 @@ body, ul {
     display: block;
     padding: 10px;
     text-decoration: none;
-    color: #333;
+    color: #a87272;
   }
   .dropdown .dropdown-content {
     top: 100%;
     left: 0;
   }
   .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #c2a7a7;
   }
   
   /* Responsive menu icon */
