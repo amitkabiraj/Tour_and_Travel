@@ -7,6 +7,7 @@ urlpatterns = [
     path('hotel',views.hotel, name='hotel'),
     path('hospital',views.hospital, name='hospital'),
     path('restrurent',views.restrurent, name='restrurent'),
+    path('tickets',views.tickets, name='tickets'),
     path('places',views.places, name='places'),
     path('murshidabad',views.murshidabad, name='murshidabad'),
     path('nadia',views.nadia, name='nadia'),

@@ -13,7 +13,9 @@ def restrurent(request):
 def hospital(request):    
     return render(request, 'myapp/hospital/hospital.html') 
 def places(request):
-    return render(request, 'myapp/place/places.html') 
+    return render(request, 'myapp/place/places.html')
+def tickets(request):
+    return render(request, 'myapp/others/tickets.html') 
 def murshidabad(request):
     return render(request, 'myapp/place/murshidabad.html') 
 def nadia(request):
