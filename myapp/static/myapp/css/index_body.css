@@ -96,7 +96,7 @@ header .fa-bars {
     cursor: pointer;
     display: none;
 } */
-
+/* HOME SECTION */
 .home {
     min-height: 100vh;
     display: flex;
@@ -188,7 +188,7 @@ header .fa-bars {
     color: var(--blue-ocean);
     background: none;
 }
-
+/* FEATURE EECTION */
 .feature {
     min-height: 100vh;
     background: #f9f9f9;
@@ -273,7 +273,7 @@ header .fa-bars {
     text-align: center;
     font-size: 2rem;
 }
-
+/* ABOUT SECTION */
 .about {
     min-height: 100vh;
 }
@@ -299,6 +299,8 @@ header .fa-bars {
 .about .row .content p {
     font-size: 1.9rem;
     color: #333;
+    margin-left: 15px;
+    text-align: justify;
 }
 
 .about .row .content .btn {
@@ -314,7 +316,10 @@ header .fa-bars {
     font-size: 2rem;
     border-radius: .5rem;
 }
-
+.about .row .content .btn1
+{
+    margin-left: 25px;
+}
 .about .row .content .btn1,
 .about .row .content .btn:hover {
     background: none;
@@ -322,6 +327,37 @@ header .fa-bars {
     border: .2rem solid var(--blue-ocean);
     margin-right: 1rem;
 }
+.about_in p {
+    margin-top: 10px;
+    padding: 20px;
+    text-align: justify;
+    font-size: 1.9rem;
+    color: #333;
+}
+
+.about_in .button-container {
+    text-align: center;
+}
+.about_in .btn {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: .2s linear;
+    height: 4rem;
+    width: 10rem;
+    margin-top: 1rem;
+    color: #fff;
+    background: var(--blue-ocean);
+    font-size: 2rem;
+    border-radius: .5rem;
+    display: block;
+    margin: 0 auto 15px;
+}
+.about_in .button-container a
+{
+    text-decoration: none;
+}
+
 /* GALLARY SECTION */
 .gallery {
     min-height: 100vh;
@@ -332,14 +368,14 @@ header .fa-bars {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
 }
 
 .gallery .box-container .box {
     height: 20rem;
     width: 30rem;
-    margin: 2rem;
+    margin: 2.5rem;
     cursor: pointer;
     overflow: hidden;
     position: relative;
@@ -355,6 +391,7 @@ header .fa-bars {
     font-size: 1rem;
     height: 1.5rem;
     width: 7rem;
+    border-width:10px;
     border-radius: .5rem;
     outline: none;
     border: none;
@@ -493,7 +530,25 @@ header .fa-bars {
     color: #fff;
     background: var(--blue-ocean);
 }
-
+.contact_button-container ,a {
+    text-align: center;
+    text-decoration: none;
+}
+.contact_button-container .btn {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: .2s linear;
+    height: 4rem;
+    width: 10rem;
+    margin-top: 1rem;
+    color: #fff;
+    background: var(--blue-ocean);
+    font-size: 2rem;
+    border-radius: .5rem;
+    display: block;
+    margin: 10px auto 15px;
+}
 /* NEWS LETTER SECTION */
 .newsletter {
     padding: 2rem;
