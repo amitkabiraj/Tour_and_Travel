@@ -31,4 +31,6 @@ def admin_panel(request):
 def user_login(request):
     return render(request, 'myapp/user/user_login.html')
 def user_panel(request):
-    return render(request, 'myapp/user/userpanel.html') 
+    return render(request, 'myapp/user/userpanel.html')
+def register(request):
+    return render(request, 'myapp/user/register.html')

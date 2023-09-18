@@ -188,6 +188,26 @@ header .fa-bars {
     color: var(--blue-ocean);
     background: none;
 }
+/* Add these styles to your CSS file */
+.register {
+    text-align: center; /* Center the text */
+    margin-top: 20px; /* Add some top margin for spacing */
+}
+
+.register a {
+    display: inline-block; /* Make the link a block element */
+    padding: 10px 20px; /* Add padding to make it more visually appealing */
+    background-color: #007bff; /* Add a background color */
+    color: #fff; /* Set text color to white */
+    text-decoration: none; /* Remove default underline */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 18px; /* Adjust font size */
+}
+
+.register a:hover {
+    background-color: #06e1de; /* Change background color on hover */
+}
+
 /* FEATURE EECTION */
 .feature {
     min-height: 100vh;
