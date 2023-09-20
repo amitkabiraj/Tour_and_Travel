@@ -15,6 +15,7 @@ index
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro quod totam temporibus vel illum nemo
         deleniti consequatur assumenda velit rem! Laboriosam suscipit iusto iure temporibus provident saepe
         veniam dicta iste?</p>
+      <h2 class="register"><a href="{% url 'register' %}">Sign Up</a></h2>
     </div>
     <!-- <div class="form-container">
       <form action="">
@@ -43,10 +44,9 @@ index
     <h1 class="heading"><span>f</span>eature <span>l</span>ocation</h1>
     <div class="card-container">
       <div class="card">
-        <span class="discount">-35%</span>
-        <img src="{% static 'myapp/image/featued-img-1.jpg' %}" alt="">
+        <img src="{% static 'myapp/image/nadia/n2.jpg' %}" alt="">
         <div class="content">
-          <h3 class="title">hawaii</h3>
+          <h3 class="title">Mayapur</h3>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas aliquam architecto magnam vero
             a. Id odio quidem eaque mollitia nam obcaecati dolor fuga totam aut dolore, perspiciatis enim
             quis saepe.</p>
@@ -62,9 +62,9 @@ index
       </div>
 
       <div class="card">
-        <img src="{% static 'myapp/image/featued-img-2.jpg' %}" alt="">
+        <img src="{% static 'myapp/image/mur/hhh.jpg' %}" alt="">
         <div class="content">
-          <h3 class="title">egypt</h3>
+          <h3 class="title">Hajarduyari</h3>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas aliquam architecto magnam vero
             a. Id odio quidem eaque mollitia nam obcaecati dolor fuga totam aut dolore, perspiciatis enim
             quis saepe.</p>
@@ -80,10 +80,9 @@ index
       </div>
 
       <div class="card">
-        <span class="discount">-45%</span>
-        <img src="{% static 'myapp/image/featued-img-3.jpg' %}" alt="">
+        <img src="{% static 'myapp/image/mur/ppp.jpg' %}" alt="">
         <div class="content">
-          <h3 class="title">india</h3>
+          <h3 class="title">Jiaganj</h3>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas aliquam architecto magnam vero
             a. Id odio quidem eaque mollitia nam obcaecati dolor fuga totam aut dolore, perspiciatis enim
             quis saepe.</p>
@@ -123,8 +122,7 @@ index
           tempora earum sit. Cupiditate minima perferendis rerum nobis porro est voluptatem id aperiam qui
           itaque.
         </p>
-        <a href="#"><button class="btn btn1">read more</button></a>
-        <a href="#"><button class="btn">get started</button></a>
+        <a href="{% url 'about' %}"><button class="btn btn1">read more</button></a>
       </div>
 
     </div>
@@ -137,57 +135,39 @@ index
     <h1 class="heading"><span>O</span>ur <span>p</span>laces</h1>
     <div class="box-container">
       <div class="box">
-        <img src="{% static 'myapp/image/gallery-img-1.jpg' %}" alt="">
-        <div class="icons">
-          <a href="" class="fas fa-heart"></a>
-          <a href="" class="fas fa-share"></a>
-          <a href="" class="fas fa-search"></a>
-        </div>
+        <img src="{% static 'myapp/image/mur/barikothi.jpeg' %}" alt="">
+        <a href="#"><button class="btn">check out!</button></a>
       </div>
 
       <div class="box">
-        <img src="{% static 'myapp/image/gallery-img-2.jpg' %}" alt="">
-        <div class="icons">
-          <a href="" class="fas fa-heart"></a>
-          <a href="" class="fas fa-share"></a>
-          <a href="" class="fas fa-search"></a>
-        </div>
+        <img src="{% static 'myapp/image/mur/aaa.jpg' %}" alt="">
+        
+        <a href="#"><button class="btn">check out!</button></a>
       </div>
 
       <div class="box">
-        <img src="{% static 'myapp/image/gallery-img-3.jpg' %}" alt="">
-        <div class="icons">
-          <a href="" class="fas fa-heart"></a>
-          <a href="" class="fas fa-share"></a>
-          <a href="" class="fas fa-search"></a>
-        </div>
+        <img src="{% static 'myapp/image/mur/barikothi1.jpeg' %}" alt="">
+        
+        <a href="#"><button class="btn">check out!</button></a>
       </div>
 
       <div class="box">
-        <img src="{% static 'myapp/image/gallery-img-4.jpg' %}" alt="">
-        <div class="icons">
-          <a href="" class="fas fa-heart"></a>
-          <a href="" class="fas fa-share"></a>
-          <a href="" class="fas fa-search"></a>
-        </div>
+      <img src="{% static 'myapp/image/mur/barikothi4.jpeg' %}" alt="">
+        
+        <a href="#"><button class="btn">check out!</button></a>
       </div>
 
       <div class="box">
-        <img src="{% static 'myapp/image/gallery-img-5.jpg' %}" alt="">
-        <div class="icons">
-          <a href="" class="fas fa-heart"></a>
-          <a href="" class="fas fa-share"></a>
-          <a href="" class="fas fa-search"></a>
-        </div>
+      <img src="{% static 'myapp/image/mur/char.jpg' %}" alt="">
+       
+        <a href="#"><button class="btn">check out!</button></a>
+
       </div>
 
       <div class="box">
-        <img src="{% static 'myapp/image/gallery-img-6.jpg' %}" alt="">
-        <div class="icons">
-          <a href="" class="fas fa-heart"></a>
-          <a href="" class="fas fa-share"></a>
-          <a href="" class="fas fa-search"></a>
-        </div>
+      <img src="{% static 'myapp/image/mur/church1.jpg' %}" alt="">
+       
+        <a href="#"><button class="btn">check out!</button></a>
       </div>
     </div>
   </section>
@@ -198,10 +178,10 @@ index
     <div class="box-container">
       <div class="box">
         <div class="image">
-          <img src="{% static 'myapp/image/pic-2.png' %}" alt="">
+          <img src="{% static 'myapp/image/pic-1.jpeg' %}" alt="">
         </div>
         <div class="content">
-          <h3>someone's name</h3>
+          <h3>Amit Kabiraj</h3>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic dicta illum rerum voluptas natus
             facilis possimus nam neque. Aut, omnis?</p>
           <div class="stars">
@@ -216,10 +196,10 @@ index
 
       <div class="box">
         <div class="image">
-          <img src="{% static 'myapp/image/pic-3.png' %}" alt="">
+          <img src="{% static 'myapp/image/pic-1.jpeg' %}" alt="">
         </div>
         <div class="content">
-          <h3>someone's name</h3>
+          <h3>Amit KAbiraj</h3>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic dicta illum rerum voluptas natus
             facilis possimus nam neque. Aut, omnis?</p>
           <div class="stars">
@@ -234,10 +214,10 @@ index
 
       <div class="box">
         <div class="image">
-          <img src="{% static 'myapp/image/pic-4.png' %}" alt="">
+          <img src="{% static 'myapp/image/pic-1.jpeg' %}" alt="">
         </div>
         <div class="content">
-          <h3>someone's name</h3>
+          <h3>Amit Kabiraj</h3>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic dicta illum rerum voluptas natus
             facilis possimus nam neque. Aut, omnis?</p>
           <div class="stars">

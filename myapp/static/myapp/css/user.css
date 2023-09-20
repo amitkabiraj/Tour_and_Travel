@@ -44,4 +44,74 @@ body, ul {
   }
   
   /* ... (other styles) ... */
-  
+/* User register css   */
+.form_css {
+  font-family: Arial, sans-serif;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  border: #007bff;
+}
+.heading {
+  font-family: "Arial", sans-serif;
+  font-size: 30px;
+  color: rgb(86, 52, 235); /* Adjust RGB values as desired */
+   text-align: center;
+  text-transform: uppercase; /* Optional: Convert text to uppercase */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add a text shadow  */
+
+} 
+.registration-container {
+  background-color: #fff;
+  margin-top: 30px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  border: #007bff;
+
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, select {
+  width: calc(100% - 12px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

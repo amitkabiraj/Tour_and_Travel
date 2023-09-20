@@ -34,7 +34,7 @@ html {
     overflow-x: hidden;
 } */
 
-header {
+/* header {
     width: 96%;
     background: #fff;
     display: flex;
@@ -49,7 +49,7 @@ header {
     padding: .3rem .2rem;
     transition: .2s linear;
     z-index: 1000;
-}
+} */
 
 /* .header-active {
     top: 0;
@@ -96,7 +96,7 @@ header .fa-bars {
     cursor: pointer;
     display: none;
 } */
-
+/* HOME SECTION */
 .home {
     min-height: 100vh;
     display: flex;
@@ -188,7 +188,27 @@ header .fa-bars {
     color: var(--blue-ocean);
     background: none;
 }
+/* Add these styles to your CSS file */
+.register {
+    text-align: center; /* Center the text */
+    margin-top: 20px; /* Add some top margin for spacing */
+}
 
+.register a {
+    display: inline-block; /* Make the link a block element */
+    padding: 10px 20px; /* Add padding to make it more visually appealing */
+    background-color: #007bff; /* Add a background color */
+    color: #fff; /* Set text color to white */
+    text-decoration: none; /* Remove default underline */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 18px; /* Adjust font size */
+}
+
+.register a:hover {
+    background-color: #06e1de; /* Change background color on hover */
+}
+
+/* FEATURE EECTION */
 .feature {
     min-height: 100vh;
     background: #f9f9f9;
@@ -214,7 +234,8 @@ header .fa-bars {
 
 .feature .card-container .card img {
     height: 25rem;
-    widows: 100%;
+    /* widows: 100%; */
+    width: 100%;
     object-fit: cover;
 }
 
@@ -273,7 +294,7 @@ header .fa-bars {
     text-align: center;
     font-size: 2rem;
 }
-
+/* ABOUT SECTION */
 .about {
     min-height: 100vh;
 }
@@ -299,6 +320,8 @@ header .fa-bars {
 .about .row .content p {
     font-size: 1.9rem;
     color: #333;
+    margin-left: 15px;
+    text-align: justify;
 }
 
 .about .row .content .btn {
@@ -314,7 +337,10 @@ header .fa-bars {
     font-size: 2rem;
     border-radius: .5rem;
 }
-
+.about .row .content .btn1
+{
+    margin-left: 25px;
+}
 .about .row .content .btn1,
 .about .row .content .btn:hover {
     background: none;
@@ -322,7 +348,38 @@ header .fa-bars {
     border: .2rem solid var(--blue-ocean);
     margin-right: 1rem;
 }
+.about_in p {
+    margin-top: 10px;
+    padding: 20px;
+    text-align: justify;
+    font-size: 1.9rem;
+    color: #333;
+}
 
+.about_in .button-container {
+    text-align: center;
+}
+.about_in .btn {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: .2s linear;
+    height: 4rem;
+    width: 10rem;
+    margin-top: 1rem;
+    color: #fff;
+    background: var(--blue-ocean);
+    font-size: 2rem;
+    border-radius: .5rem;
+    display: block;
+    margin: 0 auto 15px;
+}
+.about_in .button-container a
+{
+    text-decoration: none;
+}
+
+/* GALLARY SECTION */
 .gallery {
     min-height: 100vh;
 }
@@ -332,57 +389,43 @@ header .fa-bars {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
 }
 
 .gallery .box-container .box {
-    height: 20rem;
+    height: 22rem;
     width: 30rem;
-    margin: 2rem;
+    margin: 2.5rem;
     cursor: pointer;
     overflow: hidden;
     position: relative;
 }
 
 .gallery .box-container .box img {
-    height: 100%;
+    height: 98%;
     width: 100%;
     object-fit: cover;
 }
-
-.gallery .box-container .box .icons {
-    position: absolute;
-    top: 120%;
-    left: 0;
-    background: linear-gradient(transparent, #333);
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .2s linear;
-}
-
-.gallery .box-container .box:hover .icons {
-    opacity: 1;
-    top: 0;
-}
-
-.gallery .box-container .box .icons a {
+.gallery .box-container .box .btn
+{
+    font-size: 1.2rem;
+    height: 1rem;
+    width: 10rem;
+    border-radius: .5rem;
+    outline: none;
+    border: none;
+    background: var(--blue-ocean);
     color: #fff;
-    box-shadow: 0 .1rem .3rem #000;
-    font-size: 3rem;
-    padding-bottom: 2rem;
+    cursor: pointer;
+    transition: .2s linear;
+    display: flex;
+    align-items: center; /* Align vertically */
+    justify-content: center; /* Align horizontally */
+    text-align: center; /* Center text within button */
+    margin: auto;
 }
-
-.gallery .box-container .box .icons a:hover {
-    color: red;
-    /* font-size: 4rem; */
-}
-
-
+/* REVIEW SECTION */
 .review {
     background: url(../images/review.jpg), linear-gradient(var(--blue-ocean), var(--blue-ocean)) no-repeat;
     background-size: cover;
@@ -442,7 +485,7 @@ header .fa-bars {
     font-size: 1.7rem;
     padding: 1rem .1rem;
 }
-
+/* CONTACT SECTION */
 .contact .row {
     display: flex;
     align-items: center;
@@ -512,8 +555,26 @@ header .fa-bars {
     color: #fff;
     background: var(--blue-ocean);
 }
-
-
+.contact_button-container ,a {
+    text-align: center;
+    text-decoration: none;
+}
+.contact_button-container .btn {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: .2s linear;
+    height: 4rem;
+    width: 10rem;
+    margin-top: 1rem;
+    color: #fff;
+    background: var(--blue-ocean);
+    font-size: 2rem;
+    border-radius: .5rem;
+    display: block;
+    margin: 10px auto 15px;
+}
+/* NEWS LETTER SECTION */
 .newsletter {
     padding: 2rem;
     background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../images/newsletter.jpg) no-repeat;
@@ -576,47 +637,7 @@ header .fa-bars {
     background: none;
 }
 
-/* .footer {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem;
-    background: #222;
-}
-
-.footer .credit {
-    font-size: 2rem;
-    color: #eee;
-}
-
-.footer .credit span {
-    color: var(--blue-ocean);
-}
-
-.footer .icons a {
-    font-size: 2rem;
-    margin: 0 .5rem;
-    height: 4rem;
-    width: 4rem;
-    line-height: 3.5rem;
-    text-align: center;
-    border-radius: 50%;
-    color: #fff;
-    border: .2rem solid #fff;
-    transition: .2s linear;
-}
-
-.footer .icons a:hover {
-    background: var(--blue-ocean);
-} */
-
-
-
-
-
-
-
+/* RESPONSIVE PART */
 /* media query */
 
 @media (max-width: 991px) {

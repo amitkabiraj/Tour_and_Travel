@@ -10,12 +10,12 @@ body, ul {
   .navbar {
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position it at the top of the page */
-    width: 99%; /* Make it take up the full width */
+    width: 98%; /* Make it take up the full width */
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #333;
-    padding: 10px;
+    padding: 15px;
     z-index: 1000; /* Ensure it appears above other elements */
   }
   body
@@ -38,7 +38,7 @@ body, ul {
   }
   
   .nav-links li {
-    margin-right: 15px;
+    margin-right: 18px;
   }
   
   .nav-links li:last-child {
@@ -75,14 +75,14 @@ body, ul {
     display: block;
     padding: 10px;
     text-decoration: none;
-    color: #a87272;
+    color: #93b946ec;
   }
   .dropdown .dropdown-content {
     top: 100%;
-    left: 0;
+    left: -110%;
   }
   .dropdown-content a:hover {
-    background-color: #c2a7a7;
+    background-color: #d8ea74;
   }
   
   /* Responsive menu icon */

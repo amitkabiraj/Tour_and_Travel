@@ -13,7 +13,13 @@ def restrurent(request):
 def hospital(request):    
     return render(request, 'myapp/hospital/hospital.html') 
 def places(request):
-    return render(request, 'myapp/place/places.html') 
+    return render(request, 'myapp/place/places.html')
+def tickets(request):
+    return render(request, 'myapp/others/tickets.html')
+def terms(request):
+    return render(request, 'myapp/others/terms.html') 
+def privasy(request):
+    return render(request, 'myapp/others/privasy.html') 
 def murshidabad(request):
     return render(request, 'myapp/place/murshidabad.html') 
 def nadia(request):
@@ -29,4 +35,6 @@ def admin_panel(request):
 def user_login(request):
     return render(request, 'myapp/user/user_login.html')
 def user_panel(request):
-    return render(request, 'myapp/user/userpanel.html') 
+    return render(request, 'myapp/user/userpanel.html')
+def register(request):
+    return render(request, 'myapp/user/register.html')
