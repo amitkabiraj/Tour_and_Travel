@@ -15,7 +15,11 @@ def hospital(request):
 def places(request):
     return render(request, 'myapp/place/places.html')
 def tickets(request):
-    return render(request, 'myapp/others/tickets.html') 
+    return render(request, 'myapp/others/tickets.html')
+def terms(request):
+    return render(request, 'myapp/others/terms.html') 
+def privasy(request):
+    return render(request, 'myapp/others/privasy.html') 
 def murshidabad(request):
     return render(request, 'myapp/place/murshidabad.html') 
 def nadia(request):
