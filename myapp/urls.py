@@ -11,6 +11,7 @@ urlpatterns = [
     path('terms',views.terms, name='terms'),
     path('privasy',views.privasy, name='privasy'),
     path('places',views.places, name='places'),
+    path('review',views.review, name='review'),
     path('murshidabad',views.murshidabad, name='murshidabad'),
     path('nadia',views.nadia, name='nadia'),
     path('contact',views.contact, name='contact'),

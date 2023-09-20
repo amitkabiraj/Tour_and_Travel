@@ -19,7 +19,9 @@ def tickets(request):
 def terms(request):
     return render(request, 'myapp/others/terms.html') 
 def privasy(request):
-    return render(request, 'myapp/others/privasy.html') 
+    return render(request, 'myapp/others/privasy.html')
+def review(request):
+    return render(request, 'myapp/others/review.html') 
 def murshidabad(request):
     return render(request, 'myapp/place/murshidabad.html') 
 def nadia(request):
