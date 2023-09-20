@@ -1,12 +1,24 @@
 /* body-content.css */
 /* Add your custom styles for the body content here */
-
+/* .heading
+{
+  text-align: center;
+  font-family:sans-serif
+} */
+.heading {
+  font-family: "Arial", sans-serif;
+  font-size: 36px;
+  color: rgb(41, 128, 185); /* Adjust RGB values as desired */
+  text-align: center;
+  text-transform: uppercase; /* Optional: Convert text to uppercase */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add a text shadow */
+}
 .body-content {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    /* margin: 20px 0px; */
-    margin-top: 10px;
+    margin: 20px 0px;
+    /* margin-top: 10px; */
   }
   
   .container {
@@ -33,11 +45,20 @@
     font-size: 15px;
     line-height: 1.5;
   }
-.heading
-{
-  text-align: center;
-  font-family:sans-serif
-}
+  .btn 
+  {
+    font-size: 2rem;
+    height: 3.5rem;
+    width: 11rem;
+    border-radius: .5rem;
+    outline: none;
+    border: none;
+    background: var(--blue-ocean);
+    color: #fff;
+    cursor: pointer;
+    transition: .2s linear;
+  }
+
 
 /* Modal styles */
 .modal {
