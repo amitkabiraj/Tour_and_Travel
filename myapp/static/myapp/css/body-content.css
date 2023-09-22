@@ -59,7 +59,37 @@
     transition: .2s linear;
   }
 
+/* ATM CSS */
+.atm-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
+.atm-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.atm-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.map-container {
+  margin-top: 20px;
+}
+
+.atm-details {
+  margin-top: 20px;
+  text-align: left;
+}
 /* Modal styles */
 .modal {
   display: none;
