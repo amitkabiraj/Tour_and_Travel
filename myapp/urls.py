@@ -5,9 +5,12 @@ urlpatterns = [
     path('',views.index, name='index'),
     path('car',views.car, name='car'),
     path('hotel',views.hotel, name='hotel'),
+    path('tourplan',views.tourplan, name='tour_plan'),
+    path('tickets',views.tickets, name='tickets'),
     path('hospital',views.hospital, name='hospital'),
     path('restrurent',views.restrurent, name='restrurent'),
-    path('tickets',views.tickets, name='tickets'),
+    path('atm',views.hospital, name='atm'),
+    path('pump',views.hospital, name='pump'),
     path('terms',views.terms, name='terms'),
     path('privasy',views.privasy, name='privasy'),
     path('places',views.places, name='places'),
@@ -23,7 +26,4 @@ urlpatterns = [
     path('register',views.register, name='register'),
 
    
-
-
-
 ]

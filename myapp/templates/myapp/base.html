@@ -27,7 +27,9 @@
         <div class="dropdown-content">
           <a href="{% url 'hotel' %}"style="font-size: 15px;">Hotels</a>
           <a href="{% url 'car' %}" style="font-size: 15px;">Cars</a>
+          <a href="{% url 'tour_plan' %}" style="font-size: 15px;">Tour Plan</a>
           <a href="{% url 'tickets' %}"style="font-size: 15px;">Tickets</a>
+          
         </div>
       </li>
       <li>
@@ -50,8 +52,17 @@
           </div>
         </div>
       </li>
-      <li style="font-size: 15px;"><a href="{% url 'admin_login' %}">Admin Login</a></li>
-      <li style="font-size: 15px;"><a href="{% url 'user_login' %}">User Login</a></li>
+      <li>
+      <div class="dropdown">
+        <a href="{% url 'places' %}"style="font-size: 15px;">Login</a>
+        <div class="dropdown-content">
+          <a href="{% url 'admin_login' %}"style="font-size: 15px;">Admin Login</a>
+          <a href="{% url 'user_login' %}"style="font-size: 15px;">User Login</a>
+        </div>
+      </div>
+    </li>
+      {% comment %} <li style="font-size: 15px;"><a href="{% url 'admin_login' %}">Admin Login</a></li>
+      <li style="font-size: 15px;"><a href="{% url 'user_login' %}">User Login</a></li> {% endcomment %}
       <li style="font-size: 15px;"><a href="{% url 'contact' %}">Contact</a></li>
       <li style="font-size: 15px;"><a href="{% url 'about' %}">About</a></li>
     </ul>
