@@ -5,7 +5,7 @@ body {
     background-color: #f4f4f4;
 }
 
-.hotel__header {
+.hotel-header {
     background-color: #eb1717;
     color: #fff;
     padding: 10px 0;
@@ -13,32 +13,32 @@ body {
     margin-top: 58px;
 }
 
-.hotel__container {
+.hotel-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     
 }
 
-.hotel__header h1 {
+.hotel-header h1 {
     font-size: 36px;
     margin: 100;
 }
 
-.hotel__header p {
+.hotel-header p {
     font-size: 16px;
 }
 
-.hotel__ul {
+.hotel-ul {
     font-size: 18px;
 }
 
-.hotel__hotel-image {
+.hotel-hotel-image {
     max-width: 100%;
     height: auto;
 }
 
-.hotel__room {
+.hotel-room {
     display: flex; /* Use Flexbox for layout */
     border: 1px solid #ccc;
     padding: 20px;
@@ -47,32 +47,32 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.hotel__image {
+.hotel-image {
     flex: 1; /* Allow image to grow and shrink */
     margin-right: 20px; /* Add some spacing between image and details */
 }
 
-.hotel__image img {
+.hotel-image img {
     max-width: 100%; /* Ensure the image doesn't overflow its container */
     height: auto;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
-.hotel__room-details {
+.hotel-room-details {
     flex: 2; /* Allow details to grow and shrink */
     padding: 0px 10px;
 }
 
-.hotel__room h2 {
+.hotel-room h2 {
     font-size: 24px;
 }
 
-.hotel__room p {
+.hotel-room p {
     font-size: 16px;
 }
 
-.hotel__button {
+.hotel-button {
     display: inline-block;
     padding: 13px 24px;
     background-color: #1fe0b0;
