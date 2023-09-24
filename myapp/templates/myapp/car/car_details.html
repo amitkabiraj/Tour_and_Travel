@@ -1,0 +1,70 @@
+{% extends 'myapp/base.html' %}
+{% block title%}
+Car Details  page
+{% endblock title%}
+{% block content %}
+
+
+
+
+{% load static %}
+<div class="from-box">
+    <form id="placeForm">
+        <h2>Booking Details </h2>
+        <label for="placeSelector">Select Place :</label>
+        <select id="placeSelector">
+          <option value="nadia">Nadia</option>
+          <option value="murshidabad">Murshidabad</option>
+        </select>
+        
+        <label for="numMembers">Number of Members:</label>
+        <input type="number" id="numMembers" min="1" value="">
+        
+        <label for="numCars">Number of Cars:</label>
+        <input type="number" id="numCars" min="1" value="">
+        
+        <label for="numSeats">Number of Seats in Car:</label>
+        <input type="number" id="numSeats" min="1" value="">
+        
+        <button type="submit">Submit</button>
+      </form>
+      <script>
+        // Get the form and its elements
+        const placeForm = document.getElementById('placeForm');
+        const placeSelector = document.getElementById('placeSelector');
+        const numMembers = document.getElementById('numMembers');
+        const numCars = document.getElementById('numCars');
+        const numSeats = document.getElementById('numSeats');
+        
+        // Add an event listener to the form submission
+        placeForm.addEventListener('submit', function (event) {
+          event.preventDefault(); // Prevent the form from actually submitting
+          
+          // Get the selected option's value and other input values
+          const selectedPage = placeSelector.value;
+          const selectedMembers = numMembers.value;
+          const selectedCars = numCars.value;
+          const selectedSeats = numSeats.value;
+          
+          // Construct the URL based on the selectedPage
+          let redirectURL = '';
+          switch (selectedPage) {
+            case 'nadia':
+            redirectURL = 'Nadia_car_places.html';
+            break;
+            case 'murshidabad':
+            redirectURL = 'Murshidabad_car_places.html';
+            break;
+            default:
+            // Handle any other cases or provide a default action
+            break;
+          }
+          
+          // Append query parameters to the URL
+          redirectURL += `?members=${selectedMembers}&cars=${selectedCars}&seats=${selectedSeats}`;
+          
+          // Redirect to the constructed URL
+          window.location.href = redirectURL;
+        });
+      </script>
+{% endblock content %}
