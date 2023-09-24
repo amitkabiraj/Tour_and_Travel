@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: auto;
+            {% comment %} text-align: center; {% endcomment %}
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        ol {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+        .home
+        {
+           text-align:center;
+        }
+        a.home-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        a.home-link:hover {
+            background-color: #0056b3;
+        }
+            
+    </style>
+</head>
+<body>
+    <h1>Terms and Conditions</h1>
+
+    <div class="content">
+        <p>Welcome to our Tour and Travel Service. Please read these terms carefully before using our service.</p>
+
+        <h2>1. Introduction</h2>
+        <p>These terms and conditions govern your use of our service. By accessing or using our service, you agree to be bound by these terms.</p>
+
+        <h2>2. Service Availability</h2>
+        <p>We strive to ensure the availability of our services, but we cannot guarantee uninterrupted access.</p>
+
+        <h2>3. User Accounts</h2>
+        <p>To access certain features, you may be required to create an account. You are responsible for maintaining the confidentiality of your account information.</p>
+
+        <h2>4. Booking and Payments</h2>
+        <p>All bookings are subject to availability. Payment must be made in full at the time of booking.</p>
+
+        <h2>5. Cancellation Policy</h2>
+        <p>For details on our cancellation policy, please refer to our <a href="#">Cancellation Policy</a> page.</p>
+
+        <h2>6. Privacy</h2>
+        <p>Your privacy is important to us. Please review our <a href="#">Privacy Policy</a> for details on how we handle your information.</p>
+
+        <h2>7. Changes to Terms</h2>
+        <p>We may update these terms from time to time. Any changes will be posted on this page.</p>
+
+        <div class="highlight">
+            <p class="bold">Disclaimer:</p>
+            <p>The information provided on this website is for general informational purposes only. We do not guarantee the accuracy or completeness of any information presented.</p>
+        </div>
+        <div class="home">
+        <!-- Add class="home-link" to the "Home" link -->
+         <a href="{% url 'index' %}" class="home-link">Home</a>
+        </div>
+    </div>
+</body>
+</html>

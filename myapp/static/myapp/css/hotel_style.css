@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.hotel-header {
+    background-color: #eb1717;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 58px;
+}
+
+.hotel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+.hotel-header h1 {
+    font-size: 36px;
+    margin: 100;
+}
+
+.hotel-header p {
+    font-size: 16px;
+}
+
+.hotel-ul {
+    font-size: 18px;
+}
+
+.hotel-hotel-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.hotel-room {
+    display: flex; /* Use Flexbox for layout */
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-image {
+    flex: 1; /* Allow image to grow and shrink */
+    margin-right: 20px; /* Add some spacing between image and details */
+}
+
+.hotel-image img {
+    max-width: 100%; /* Ensure the image doesn't overflow its container */
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.hotel-room-details {
+    flex: 2; /* Allow details to grow and shrink */
+    padding: 0px 10px;
+}
+
+.hotel-room h2 {
+    font-size: 24px;
+}
+
+.hotel-room p {
+    font-size: 16px;
+}
+
+.hotel-button {
+    display: inline-block;
+    padding: 13px 24px;
+    background-color: #1fe0b0;
+    color: #fff;
+    text-decoration: none;
+    font-weight:bolder;
+    border-radius: 25px;
+
+}

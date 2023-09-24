@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'myapp/css/user.css' %}">
+    <title>Register for Tour</title>
+</head>
+<body>
+    <div class="form_css">
+    <div class="registration-container">
+        <h1 class="heading">Register for Tour</h1>
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone"><i class="fas fa-phone"></i> Phone</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="password"><i class="fas fa-lock"></i> Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="picture"><i class="fas fa-camera"></i> Upload Picture</label>
+                <input type="file" id="picture" name="picture" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="gender"><i class="fas fa-venus-mars"></i> Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="country"><i class="fas fa-globe"></i> Country</label>
+                <select id="country" name="country" required>
+                    <option value="USA">United States</option>
+                    <option value="Canada">Canada</option>
+                    <option value="UK">United Kingdom</option>
+                </select>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
