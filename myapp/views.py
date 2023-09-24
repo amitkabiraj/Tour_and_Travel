@@ -4,8 +4,8 @@ from django.shortcuts import render,HttpResponse
 def index(request):
     return render(request, 'myapp/index.html')
     # return HttpResponse("this is homepage")
-def car(request):
-    return render(request, 'myapp/car/car.html') 
+# def car(request):
+#     return render(request, 'myapp/car/car.html') 
 def hotel(request):
     return render(request, 'myapp/hotel/hotel.html')
 def tickets(request):
@@ -46,3 +46,5 @@ def user_panel(request):
     return render(request, 'myapp/user/userpanel.html')
 def register(request):
     return render(request, 'myapp/user/register.html')
+def car(request):
+    return render(request, 'myapp/car/car.html')
