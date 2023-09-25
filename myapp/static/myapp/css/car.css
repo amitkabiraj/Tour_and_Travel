@@ -1,45 +1,52 @@
-*{
+/* {% load static %} */
+
+
+/* *{
     margin: 0;
     padding: 0;
-    font-family: 'poppins',sans-serif;
-}
-section{
+    font-family: 'poppins',sans-serif; 
+ } */
+#about{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    background: url('/images/background.jpeg')no-repeat;
+    background: linear-gradient(135deg,rgb(52, 131, 219),#c15252);
     background-position:center;
     background-size: cover;
+    /* background-color: rgb(215, 223, 228); Another shade of blue
+    color: rgb(255, 255, 255); White */
+  
     
 }
 .from-box{
     position: relative;
     width: 600px;
-    height: 500px;
+    height: 550px;
     background: transparent;
-    border: 2px solid rgb(255,255,255,0.5);
+    border: 5px solid rgba(187, 45, 147, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(15px);
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
 }
-h2{
+#nocar{
     font-size: 50px;
     font-weight: bold;
     margin-bottom: 20px;
-    color: #fff;
+    color: #e9e3e3;
 }
 /* Style for the form container */
 #pageForm {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #962b2b;
     border-radius: 5px;
-    background-color: #f9f9f9;
+    background-color: #a14d4d;
   }
   
   /* Style for labels and input fields */
@@ -53,8 +60,8 @@ h2{
   select {
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
+    margin-bottom: 18px;
+    border: 3px solid #504b4b;
     border-radius: 5px;
     font-size: 16px;
   }
@@ -63,15 +70,20 @@ h2{
   button[type="submit"] {
     background-color: #007bff;
     color: #fff;
-    border: none;
-    border-radius: 3px;
+    border: 3px solid #3e3c3c;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
     margin-top: 15px;
+    display: block;
+    margin: 0 auto;
   }
   
   button[type="submit"]:hover {
     background-color: #0056b3;
   }
   
+  /* body {
+    background-image: url('myapp/static/image/background.jpeg');
+    /* Other CSS rules for your background here 
+   } */

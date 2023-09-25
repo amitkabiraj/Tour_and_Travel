@@ -8,9 +8,10 @@ Car Details  page
 
 
 {% load static %}
+<section id=about>
 <div class="from-box">
     <form id="placeForm">
-        <h2>Booking Details </h2>
+        <h2 id=nocar>Booking Details </h2>
         <label for="placeSelector">Select Place :</label>
         <select id="placeSelector">
           <option value="nadia">Nadia</option>
@@ -28,7 +29,8 @@ Car Details  page
         
         <button type="submit">Submit</button>
       </form>
-      <script>
+    </section>
+      {% comment %} <script>
         // Get the form and its elements
         const placeForm = document.getElementById('placeForm');
         const placeSelector = document.getElementById('placeSelector');
@@ -50,10 +52,10 @@ Car Details  page
           let redirectURL = '';
           switch (selectedPage) {
             case 'nadia':
-            redirectURL = 'Nadia_car_places.html';
+            redirectURL = 'Nadia_car.html';
             break;
             case 'murshidabad':
-            redirectURL = 'Murshidabad_car_places.html';
+            redirectURL = 'murshidabad_car.html';
             break;
             default:
             // Handle any other cases or provide a default action
@@ -66,5 +68,5 @@ Car Details  page
           // Redirect to the constructed URL
           window.location.href = redirectURL;
         });
-      </script>
+      </script> {% endcomment %}
 {% endblock content %}
