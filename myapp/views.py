@@ -48,3 +48,5 @@ def register(request):
     return render(request, 'myapp/user/register.html')
 def all_images(request):
     return render(request, 'myapp/hotel/all_images.html')
+def hotel_booking(request):
+    return render(request, 'myapp/hotel/booking page.html')
