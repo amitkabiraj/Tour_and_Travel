@@ -17,7 +17,6 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    
 }
 
 .hotel_header h1 {
@@ -30,13 +29,15 @@
 }
 
 .hotel_ul {
-    font-size: 18px;
+    font-size: 22px;
 }
 
 .hotel_hotel-image {
     max-width: 100%;
     height: auto;
     position: relative;
+    flex: 0 0 0%;
+    transition: transform 0.5s ease;
 }
 
 .hotel_room {
@@ -46,8 +47,14 @@
     margin: 20px 0;
     background-color: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
 }
-
+.image{
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 26%;
+}
 .hotel_image {
     flex: 1; /* Allow image to grow and shrink */
     margin-right: 20px; /* Add some spacing between image and details */
@@ -70,7 +77,7 @@
 }
 
 .hotel_room p {
-    font-size: 16px;
+    font-size: 26px;
 }
 
 .hotel_button {
@@ -83,19 +90,73 @@
     border-radius: 25px;
 
 }
+.all_images{
+    display: inline-block;
+    padding: 13px 24px;
+    background-color: #333333;
+    color: #fff;
+    text-decoration: none;
+    font-weight:bolder;
+    border-radius: 25px;
+}
 .hotel_room-details .next-btn{
     margin-left: -61px;
-    margin-top: 13px;
+    margin-top: -8px;
     position: absolute;
     border: none;
     background: none;
     cursor: pointer;
+    color: #fff;
+    font-size: 27px;
 }
 .hotel_room-details .prev-btn{
     margin-left: -97px;
-    margin-top: 13px;
+    margin-top: -8px;
     position: absolute;
     border: none;
-    background-color: none;
+    background: none;
     cursor: pointer;
+    color: #fff;
+    font-size: 27px;
+}
+.hotel_hotel-image.active{
+    transform: translateX(0);
+}
+
+/* Hotel images style */
+
+.image_body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.hotel_image_card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    max-width: 700px;
+    margin: 10px;
+}
+
+.hotel_image_card img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+
+.hotel_card h2 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.hotel_card p {
+    margin-top: 10px;
 }

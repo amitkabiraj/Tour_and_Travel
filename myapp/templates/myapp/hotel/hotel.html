@@ -12,7 +12,11 @@ hotel page
     
     <div class="hotel_container">
         <div class="hotel_room">
-            <img src="{% static 'myapp/image/pexels-pixabay-164595.jpg' %}" alt="Hotel Room" class="hotel_hotel-image">
+            <div class="image">
+                <img src="{% static 'myapp/image/hotel/hotel1.jpg' %}" alt="Hotel Room" class="hotel_hotel-image">
+                <img src="{% static 'myapp/image/hotel/hotel2.jpg' %}" alt="Hotel Room" class="hotel_hotel-image">
+            </div>
+            
             <div class="hotel_room-details">
                 
                 <h2>Deluxe Room</h2>
@@ -27,10 +31,15 @@ hotel page
                 <button class="prev-btn"><b><</b></button>
                 <button class="next-btn"><b>></b></button>
                 <a href="#" class="hotel_button">Book Now</a>
+                <a href="{% url "all_images" %}" class="all_images">Show all images</a>
             </div>
         </div>
         <div class="hotel_room">
-            <img src="{% static 'myapp/image/pexels-thorsten-technoman-338504.jpg'%}" alt="Suite Room" class="hotel_hotel-image">
+            <div class="image">
+                <img src="{% static 'myapp/image/hotel/hotel3.jpg'%}" alt="Suite Room" class="hotel_hotel-image" >
+                <img src="{% static 'myapp/image/hotel/hotel4.jpg'%}" alt="Suite Room" class="hotel_hotel-image">
+            </div>
+            
             <div class="hotel_room-details">
                 <h2>Suite Room</h2>
                 <p>Indulge in the ultimate comfort with our elegantly designed suite rooms.</p>
@@ -41,6 +50,8 @@ hotel page
                     <li>City view</li>
                     <li>En-suite bathroom</li>
                 </ul>
+                <button class="prev-btn"><b><</b></button>
+                <button class="next-btn"><b>></b></button>
                 <a href="#" class="hotel_button">Book Now</a>
             </div>
                 
@@ -48,6 +59,44 @@ hotel page
     </div>
     
 </div>
+
+
+<script>
+    {% comment %} const slider = document.querySelector('.image');
+    const images = document.querySelectorAll('.hotel_hotel-image');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+
+    let currentIndex = 0;
+
+    function showImage(index) {
+        images.forEach((image, i) => {
+            if (i === index) {
+                image.style.transform = 'translateX(0)';
+            } else {
+                image.style.transform = 'translateX(100%)';
+            }
+        });
+    }
+
+    function showNextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    }
+
+    function showPrevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    }
+
+    prevBtn.addEventListener('click', showPrevImage);
+    nextBtn.addEventListener('click', showNextImage);
+
+    // Initially, show the first image
+    showImage(currentIndex); {% endcomment %}
+
+
+</script>
 
 
 

@@ -46,3 +46,5 @@ def user_panel(request):
     return render(request, 'myapp/user/userpanel.html')
 def register(request):
     return render(request, 'myapp/user/register.html')
+def all_images(request):
+    return render(request, 'myapp/hotel/all_images.html')

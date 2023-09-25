@@ -24,6 +24,7 @@ urlpatterns = [
     path('user_login',views.user_login, name='user_login'),
     path('user_pnel',views.user_panel, name='user_panel'),
     path('register',views.register, name='register'),
+    path('all_images',views.all_images,name='all_images'),
 
    
 ]

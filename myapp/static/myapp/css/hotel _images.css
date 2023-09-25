@@ -1,0 +1,32 @@
+.image_body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.hotel_card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    max-width: 300px;
+    margin: 10px;
+}
+
+.hotel_card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.hotel_card h2 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.hotel_card p {
+    margin-top: 10px;
+}
