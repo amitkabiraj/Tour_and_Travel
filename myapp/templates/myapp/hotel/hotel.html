@@ -4,47 +4,60 @@ hotel page
 {% endblock title%}
 {% block content %}
 {% load static %}
-
-<header class="hotel-header">
-    <h1>Welcome to Our Hotel</h1>
-    <p>Your Home Away From Home</p>
-</header>
-
-<div class="hotel-container">
-    <div class="hotel-room">
-        <img src="{% static 'myapp/image/pexels-pixabay-164595.jpg' %}" alt="Hotel Room" class="hotel-hotel-image">
-        <div class="hotel-room-details">
-            <h2>Deluxe Room</h2>
-            <p>Enjoy a luxurious stay in our spacious deluxe rooms with a stunning view of the city.</p>
-            <ul class="hotel-ul">
-                <li>Free Wifi</li>
-                <li>24x7 Service</li>
-                <li>King-sized bed</li>
-                <li>City view</li>
-                <li>En-suite bathroom</li>
-            </ul>
-            <a href="#" class="hotel-button">Book Now</a>
-        </div>
-    </div>
-    <div class="hote-room">
-        <img src="{% static 'myapp/image/pexels-thorsten-technoman-338504.jpg'%}" alt="Suite Room" class="hotel-hotel-image">
-        <div class="hotel-room-details">
-            <h2>Suite Room</h2>
-            <p>Indulge in the ultimate comfort with our elegantly designed suite rooms.</p>
-            <ul class="hotel-ul">
-                <li>Free Wifi</li>
-                <li>24x7 Service</li>
-                <li>King-sized bed</li>
-                <li>City view</li>
-                <li>En-suite bathroom</li>
-            </ul>
-            <a href="#" class="hotel-button">Book Now</a>
-        </div>
+<div class="hotel_body">
+    <header class="hotel_header">
+        <h1>Welcome to Our Hotel</h1>
+        <p>Your Home Away From Home</p>
+    </header>
+    
+    <div class="hotel_container">
+        <div class="hotel_room">
+            <div class="image">
+                <img src="{% static 'myapp/image/hotel/hotel1.jpg' %}" alt="Hotel Room" class="hotel_hotel-image">
+                <img src="{% static 'myapp/image/hotel/hotel2.jpg' %}" alt="Hotel Room" class="hotel_hotel-image">
+            </div>
             
+            <div class="hotel_room-details">
+                
+                <h2>Deluxe Room</h2>
+                <p>Enjoy a luxurious stay in our spacious deluxe rooms with a stunning view of the city.</p>
+                <ul class="hotel_ul">
+                    <li>Free Wifi</li>
+                    <li>24x7 Service</li>
+                    <li>King-sized bed</li>
+                    <li>City view</li>
+                    <li>En-suite bathroom</li>
+                </ul>
+                <button class="prev-btn"><b><</b></button>
+                <button class="next-btn"><b>></b></button>
+                <a href="{% url "hotel_booking" %}" class="hotel_button">Book Now</a>
+                <a href="{% url "all_images" %}" class="all_images">Show all images</a>
+            </div>
+        </div>
+        <div class="hotel_room">
+            <div class="image">
+                <img src="{% static 'myapp/image/hotel/hotel3.jpg'%}" alt="Suite Room" class="hotel_hotel-image" >
+                <img src="{% static 'myapp/image/hotel/hotel4.jpg'%}" alt="Suite Room" class="hotel_hotel-image">
+            </div>
+            
+            <div class="hotel_room-details">
+                <h2>Suite Room</h2>
+                <p>Indulge in the ultimate comfort with our elegantly designed suite rooms.</p>
+                <ul class="hotel_ul">
+                    <li>Free Wifi</li>
+                    <li>24x7 Service</li>
+                    <li>King-sized bed</li>
+                    <li>City view</li>
+                    <li>En-suite bathroom</li>
+                </ul>
+                <button class="prev-btn"><b><</b></button>
+                <button class="next-btn"><b>></b></button>
+                <a href="#" class="hotel_button">Book Now</a>
+            </div>
+                
+        </div>
     </div>
+    
 </div>
-
-
-
 
 {% endblock content %}
