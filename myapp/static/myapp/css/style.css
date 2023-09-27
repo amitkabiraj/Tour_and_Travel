@@ -4,17 +4,18 @@ body, ul {
     padding: 0;
     list-style: none;
   }
+
   
   /* Navbar styles */
   .navbar {
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position it at the top of the page */
-    width: 99%; /* Make it take up the full width */
+    width: 98%; /* Make it take up the full width */
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #333;
-    padding: 10px;
+    padding: 15px;
     z-index: 1000; /* Ensure it appears above other elements */
   }
   body
@@ -37,7 +38,7 @@ body, ul {
   }
   
   .nav-links li {
-    margin-right: 15px;
+    margin-right: 18px;
   }
   
   .nav-links li:last-child {
@@ -52,6 +53,7 @@ body, ul {
   /* Dropdown menu styles */
   .dropdown {
     position: relative;
+    font-size: 20px;
   }
   
   .dropdown-content {
@@ -59,6 +61,8 @@ body, ul {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 200px;
+    font-size: 20px;
+    border-radius: 10px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   }
   
@@ -71,14 +75,14 @@ body, ul {
     display: block;
     padding: 10px;
     text-decoration: none;
-    color: #333;
+    color: #93b946ec;
   }
   .dropdown .dropdown-content {
     top: 100%;
-    left: 0;
+    left: -110%;
   }
   .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #d8ea74;
   }
   
   /* Responsive menu icon */
@@ -111,6 +115,7 @@ body, ul {
     background-color: #fff;
     padding: 30px;
     border-radius: 5px;
+    font-size: 15px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
   }

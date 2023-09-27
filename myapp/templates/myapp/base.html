@@ -7,42 +7,66 @@
   <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/styles.css' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="{% static 'myapp/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'myapp/css/index_body.css' %}">
   <link rel="stylesheet" href="{% static 'myapp/css/body-content.css' %}">
   <link rel="stylesheet" href="{% static 'myapp/css/login.css' %}">
   <link rel="stylesheet" href="{% static 'myapp/css/user.css' %}">
   <link rel="stylesheet" href="{% static 'myapp/css/modal.css' %}">
   <link rel="stylesheet" href="{% static 'myapp/css/admin.css' %}">
+  <link rel="stylesheet" href="{% static 'myapp/css/car.css' %}">
+
   {% comment %} <link rel="stylesheet" href="{% static 'myapp/css/body-content.css' %}"> {% endcomment %}
   <title>{%block title%}Tour and Travel {% endblock %}</title>
 </head>
 <body>
   <nav class="navbar">
     <div class="logo">
-      <a href="{% url 'index' %}">Tour<span>Travel</span></a>
+      <a href="{% url 'index' %}">Easy<span>Travel</span></a>
     </div>
     <ul class="nav-links">
       <li class="dropdown">
-        <a href="#">Services</a>
+        <a href="#" style="font-size: 15px;">Services</a>
         <div class="dropdown-content">
-          <a href="{% url 'hotel' %}">Hotels</a>
-          <a href="{% url 'car' %}">Cars</a>
-          <a href="{% url 'restrurent' %}">Restrurents</a>
-          <a href="{% url 'hospital' %}">Hospital</a>
+          <a href="{% url 'hotel' %}"style="font-size: 15px;">Hotels</a>
+          <a href="{% url 'car' %}" style="font-size: 15px;">Cars</a>
+          <a href="{% url 'tour_plan' %}" style="font-size: 15px;">Tour Plan</a>
+          <a href="{% url 'tickets' %}"style="font-size: 15px;">Tickets</a>
+          
         </div>
       </li>
       <li>
         <div class="dropdown">
-          <a href="{% url 'places' %}">Places</a>
+          <a href="{% url 'places' %}"style="font-size: 15px;">Places</a>
           <div class="dropdown-content">
-            <a href="{% url 'murshidabad' %}">Murshidbad</a>
-            <a href="{% url 'nadia' %}">Nadia</a>
+            <a href="{% url 'murshidabad' %}"style="font-size: 15px;">Murshidbad</a>
+            <a href="{% url 'nadia' %}"style="font-size: 15px;">Nadia</a>
           </div>
         </div>
       </li>
-      <li><a href="{% url 'admin_login' %}">Admin Login</a></li>
-      <li><a href="{% url 'user_login' %}">User Login</a></li>
-      <li><a href="{% url 'contact' %}">Contact</a></li>
-      <li><a href="{% url 'about' %}">About</a></li>
+      <li>
+        <div class="dropdown">
+          <a href="{% url 'places' %}"style="font-size: 15px;">Info</a>
+          <div class="dropdown-content">
+            <a href="{% url 'restrurent' %}"style="font-size: 15px;">Restaurants</a>
+             <a href="{% url 'hospital' %}"style="font-size: 15px;">Hospital</a>
+            <a href="{% url 'pump' %}"style="font-size: 15px;">Oil Pump</a>
+            <a href="{% url 'atm' %}"style="font-size: 15px;">ATM</a>
+          </div>
+        </div>
+      </li>
+      <li>
+      <div class="dropdown">
+        <a href="{% url 'places' %}"style="font-size: 15px;">Login</a>
+        <div class="dropdown-content">
+          <a href="{% url 'admin_login' %}"style="font-size: 15px;">Admin Login</a>
+          <a href="{% url 'user_login' %}"style="font-size: 15px;">User Login</a>
+        </div>
+      </div>
+    </li>
+      {% comment %} <li style="font-size: 15px;"><a href="{% url 'admin_login' %}">Admin Login</a></li>
+      <li style="font-size: 15px;"><a href="{% url 'user_login' %}">User Login</a></li> {% endcomment %}
+      <li style="font-size: 15px;"><a href="{% url 'contact' %}">Contact</a></li>
+      <li style="font-size: 15px;"><a href="{% url 'about' %}">About</a></li>
     </ul>
     <div class="menu-icon">
       <span class="bar"></span>
@@ -61,15 +85,16 @@
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-logo">
-        <a href="#">Tour<span>Travel</span></a>
+        <a href="{% url 'index' %}">Easy<span>Travel</span></a>
       </div>
       <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
+        <a href="{% url 'privasy' %}"style="font-size: 20px;">Privacy Policy</a>
+        <a href="{% url 'terms' %}" style="font-size: 20px;">Terms of Service</a>
+        <a href="{% url 'review' %}"style="font-size: 20px;">Review</a>
       </div>
       <div class="social-icons">
         <a href="#" class="icon"><i class="fab fa-facebook"></i></a>
-        <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com/in/amit-kabiraj-8bb204249" class="icon"><i class="fab fa-linkedin"></i></a>
         <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
       </div>
     </div>

@@ -3,7 +3,45 @@
 about
 {% endblock title%}
 {% block content %}
-this the about page
 {% load static %}
+<section id="about" class="about">
+    <h1 class="heading"><span>a</span>bout <span>U</span>s</h1>
+    <div class="row">
+      <div class="image">
+        <img src="{% static 'myapp/image/about-img.png' %}" alt="">
+      </div>
+
+      <div class="content">
+        <h3>why choose us ?</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut accusantium molestias
+          voluptates nostrum maxime obcaecati excepturi corporis cumque eaque nihil dolor dicta doloribus
+          dignissimos, natus, quod cum quasi nemo!
+        </p>
+        <br>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut adipisci, esse molestiae nemo fugit quae
+          tempora earum sit. Cupiditate minima perferendis rerum nobis porro est voluptatem id aperiam qui
+          itaque.
+        </p>
+      </div>
+    </div>
+    <div class="about_in">
+        <p> 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut adipisci, esse molestiae nemo fugit quae
+        tempora earum sit. Cupiditate minima perferendis rerum nobis porro est voluptatem id aperiam qui
+        itaque.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut adipisci, esse molestiae nemo fugit quae
+        tempora earum sit. Cupiditate minima perferendis rerum nobis porro est voluptatem id aperiam qui
+        itaque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut adipisci, esse molestiae nemo fugit quae
+        tempora earum sit. Cupiditate minima perferendis rerum nobis porro est voluptatem id aperiam qui
+        itaque.
+        </p>
+        <div class="button-container">
+        <a href="{% url 'index' %}"><button class="btn">HOME</button></a>
+        </div>
+    </div>
+
+  </section>
 
 {% endblock content %}

@@ -1,6 +1,18 @@
 /* body-content.css */
 /* Add your custom styles for the body content here */
-
+/* .heading
+{
+  text-align: center;
+  font-family:sans-serif
+} */
+.heading {
+  font-family: "Arial", sans-serif;
+  font-size: 36px;
+  color: rgb(41, 128, 185); /* Adjust RGB values as desired */
+  text-align: center;
+  text-transform: uppercase; /* Optional: Convert text to uppercase */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add a text shadow */
+}
 .body-content {
     display: flex;
     justify-content: center;
@@ -33,12 +45,116 @@
     font-size: 15px;
     line-height: 1.5;
   }
-.heading
-{
-  text-align: center;
-  font-family:sans-serif
+  .btn 
+  {
+    font-size: 2rem;
+    height: 3.5rem;
+    width: 11rem;
+    border-radius: .5rem;
+    outline: none;
+    border: none;
+    background: var(--blue-ocean);
+    color: #fff;
+    cursor: pointer;
+    transition: .2s linear;
+  }
+
+/* ATM CSS */
+.atm-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
 }
 
+.atm-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.atm-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.map-container {
+  margin-top: 20px;
+}
+
+.atm-details {
+  margin-top: 20px;
+  text-align: left;
+}
+/* Hospital CSS */
+.hospital-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.hospital-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.hospital-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.map-container {
+  margin-top: 20px;
+}
+
+.hospital-details {
+  margin-top: 20px;
+  text-align: left;
+}
+/* Pump CSS */
+.pump-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.pump-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.pump-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.map-container {
+  margin-top: 20px;
+}
+
+.pump-details {
+  margin-top: 20px;
+  text-align: left;
+}
 /* Modal styles */
 .modal {
   display: none;
