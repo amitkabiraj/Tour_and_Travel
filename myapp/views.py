@@ -7,15 +7,27 @@ def index(request):
 def car(request):
     return render(request, 'myapp/car/car.html') 
 def hotel(request):
-    return render(request, 'myapp/hotel/hotel.html') 
+    return render(request, 'myapp/hotel/hotel.html')
+def tickets(request):
+    return render(request, 'myapp/others/tickets.html')
+def tourplan(request):
+    return render(request, 'myapp/others/tour_plan.html') 
 def restrurent(request):
-    return render(request, 'myapp/restrurent/restrurent.html') 
+    return render(request, 'myapp/info/restrurent.html') 
 def hospital(request):    
-    return render(request, 'myapp/hospital/hospital.html') 
+    return render(request, 'myapp/info/hospital.html')
+def atm(request):    
+    return render(request, 'myapp/info/atm.html')
+def pump(request):    
+    return render(request, 'myapp/info/pump.html')
 def places(request):
     return render(request, 'myapp/place/places.html')
-def tickets(request):
-    return render(request, 'myapp/others/tickets.html') 
+def terms(request):
+    return render(request, 'myapp/others/terms.html') 
+def privasy(request):
+    return render(request, 'myapp/others/privasy.html')
+def review(request):
+    return render(request, 'myapp/others/review.html') 
 def murshidabad(request):
     return render(request, 'myapp/place/murshidabad.html') 
 def nadia(request):
@@ -34,3 +46,7 @@ def user_panel(request):
     return render(request, 'myapp/user/userpanel.html')
 def register(request):
     return render(request, 'myapp/user/register.html')
+def all_images(request):
+    return render(request, 'myapp/hotel/all_images.html')
+def hotel_booking(request):
+    return render(request, 'myapp/hotel/booking page.html')

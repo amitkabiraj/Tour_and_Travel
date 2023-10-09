@@ -5,10 +5,16 @@ urlpatterns = [
     path('',views.index, name='index'),
     path('car',views.car, name='car'),
     path('hotel',views.hotel, name='hotel'),
+    path('tourplan',views.tourplan, name='tour_plan'),
+    path('tickets',views.tickets, name='tickets'),
     path('hospital',views.hospital, name='hospital'),
     path('restrurent',views.restrurent, name='restrurent'),
-    path('tickets',views.tickets, name='tickets'),
+    path('pump',views.pump, name='pump'),
+    path('atm',views.atm, name='atm'),
+    path('terms',views.terms, name='terms'),
+    path('privasy',views.privasy, name='privasy'),
     path('places',views.places, name='places'),
+    path('review',views.review, name='review'),
     path('murshidabad',views.murshidabad, name='murshidabad'),
     path('nadia',views.nadia, name='nadia'),
     path('contact',views.contact, name='contact'),
@@ -18,9 +24,8 @@ urlpatterns = [
     path('user_login',views.user_login, name='user_login'),
     path('user_pnel',views.user_panel, name='user_panel'),
     path('register',views.register, name='register'),
+    path('all_images',views.all_images,name='all_images'),
+    path('hotel_booking',views.hotel_booking,name='hotel_booking'),
 
    
-
-
-
 ]
