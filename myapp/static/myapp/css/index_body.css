@@ -344,7 +344,6 @@ header .fa-bars {
     margin-left: 15px; /* Add margin to separate image and content */
     flex: 1; /* Allow the content to grow to take up remaining space */
   }
-  
   .about .row .content h3 {
     font-size: 4rem;
     color: var(--blue-ocean);
