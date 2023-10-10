@@ -52,3 +52,10 @@ def user_panel(request):
     return render(request, 'myapp/user/userpanel.html')
 def register(request):
     return render(request, 'myapp/user/register.html')
+<<<<<<< HEAD
+=======
+def all_images(request):
+    return render(request, 'myapp/hotel/all_images.html')
+def hotel_booking(request):
+    return render(request, 'myapp/hotel/booking page.html')
+>>>>>>> 9635052f9c39ff31e964b122090e900d29290ff6

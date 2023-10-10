@@ -27,7 +27,12 @@ urlpatterns = [
     path('user_login',views.user_login, name='user_login'),
     path('user_pnel',views.user_panel, name='user_panel'),
     path('register',views.register, name='register'),
+<<<<<<< HEAD
     
+=======
+    path('all_images',views.all_images,name='all_images'),
+    path('hotel_booking',views.hotel_booking,name='hotel_booking'),
+>>>>>>> 9635052f9c39ff31e964b122090e900d29290ff6
 
    
 ]
