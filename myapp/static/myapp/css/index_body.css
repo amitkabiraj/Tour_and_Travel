@@ -650,6 +650,17 @@ header .fa-bars {
 .newsletter form input[type="email"]::placeholder {
     color: #ccc;
 }
+.newsletter form input[type="password"] {
+    width: 40rem;
+    padding: 0 1rem;
+    color: #fff;
+    background: rgba(255, 255, 255, .2);
+    font-size: 2rem;
+}
+
+.newsletter form input[type="password"]::placeholder {
+    color: #ccc;
+}
 
 .newsletter form input[type="submit"] {
     width: 20rem;
