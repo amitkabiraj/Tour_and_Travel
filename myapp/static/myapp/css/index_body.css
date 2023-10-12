@@ -645,10 +645,11 @@ header .fa-bars {
     color: #fff;
     background: rgba(255, 255, 255, .2);
     font-size: 2rem;
+    margin-right: 1rem;
 }
 
 .newsletter form input[type="email"]::placeholder {
-    color: #ccc;
+    color: #211d1d;
 }
 .newsletter form input[type="password"] {
     width: 40rem;
@@ -656,10 +657,11 @@ header .fa-bars {
     color: #fff;
     background: rgba(255, 255, 255, .2);
     font-size: 2rem;
+    margin-right: 1rem;
 }
 
 .newsletter form input[type="password"]::placeholder {
-    color: #ccc;
+    color: #211d1d;
 }
 
 .newsletter form input[type="submit"] {
