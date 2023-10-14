@@ -22,16 +22,16 @@
 }
 .from-box{
     position: relative;
-    width: 600px;
-    height: 850px;
+    width: 550px;
+    height: 650px;
     background: transparent;
-    border: 5px solid rgba(187, 45, 147, 0.5);
+    border: 5px solid rgba(240, 244, 20, 0.912);
     border-radius: 30px;
     backdrop-filter: blur(15px);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 15px;
+    font-size: 18px;
 }
 #nocar{
     font-size: 50px;
