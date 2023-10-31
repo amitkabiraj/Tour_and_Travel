@@ -16,6 +16,8 @@ def restrurent(request):
     return render(request, 'myapp/info/restrurent.html') 
 def hospital(request):    
     return render(request, 'myapp/info/hospital.html')
+def medicine(request):    
+    return render(request, 'myapp/info/medicine.html')
 def atm(request):    
     return render(request, 'myapp/info/atm.html')
 def pump(request):    
@@ -36,8 +38,8 @@ def contact(request):
     return render(request, 'myapp/contact.html') 
 def about(request):
     return render(request, 'myapp/about.html') 
-def admin_login(request):
-    return render(request, 'myapp/admin/admin_login.html')
+# def admin_login(request):
+#     return render(request, 'myapp/admin/admin_login.html')
 def admin_panel(request):
     return render(request, 'myapp/admin/adminpanel.html') 
 def user_login(request):
@@ -46,3 +48,7 @@ def user_panel(request):
     return render(request, 'myapp/user/userpanel.html')
 def register(request):
     return render(request, 'myapp/user/register.html')
+def all_images(request):
+    return render(request, 'myapp/hotel/all_images.html')
+def hotel_booking(request):
+    return render(request, 'myapp/hotel/booking page.html')
