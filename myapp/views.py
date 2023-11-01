@@ -44,8 +44,8 @@ def contact(request):
     return render(request, 'myapp/contact.html') 
 def about(request):
     return render(request, 'myapp/about.html') 
-def admin_login(request):
-    return render(request, 'myapp/admin/admin_login.html')
+# def admin_login(request):
+#     return render(request, 'myapp/admin/admin_login.html')
 def admin_panel(request):
     return render(request, 'myapp/admin/adminpanel.html') 
 def user_login(request):
