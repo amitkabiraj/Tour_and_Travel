@@ -1,13 +1,11 @@
 from django.shortcuts import render,HttpResponse
-
+from myapp.models import Hotel
 # Create your views here.
 def index(request):
     return render(request, 'myapp/index.html')
     # return HttpResponse("this is homepage")
 def car(request):
     return render(request, 'myapp/car/car.html') 
-def hotel(request):
-    return render(request, 'myapp/hotel/hotel.html')
 def tickets(request):
     return render(request, 'myapp/others/tickets.html')
 def tourplan(request):
@@ -16,6 +14,8 @@ def restrurent(request):
     return render(request, 'myapp/info/restrurent.html') 
 def hospital(request):    
     return render(request, 'myapp/info/hospital.html')
+def medicine(request):    
+    return render(request, 'myapp/info/medicine.html')
 def atm(request):    
     return render(request, 'myapp/info/atm.html')
 def pump(request):    
@@ -36,8 +36,8 @@ def contact(request):
     return render(request, 'myapp/contact.html') 
 def about(request):
     return render(request, 'myapp/about.html') 
-def admin_login(request):
-    return render(request, 'myapp/admin/admin_login.html')
+# def admin_login(request):
+#     return render(request, 'myapp/admin/admin_login.html')
 def admin_panel(request):
     return render(request, 'myapp/admin/adminpanel.html') 
 def user_login(request):
@@ -50,3 +50,9 @@ def all_images(request):
     return render(request, 'myapp/hotel/all_images.html')
 def hotel_booking(request):
     return render(request, 'myapp/hotel/booking page.html')
+def hotel(request):
+    data=Hotel.objects.all()
+    print("data comes")
+    return render(request,'myapp/hotel/hotel.html',{'hotel_data':data})
+# def hotel(request):
+#     return render(request, 'myapp/hotel/hotel.html')
