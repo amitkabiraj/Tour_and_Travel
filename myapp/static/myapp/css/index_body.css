@@ -509,6 +509,7 @@ header .fa-bars {
     font-size: 1.4rem;
     color: #333;
     padding: .5rem 1.5rem;
+    text-align: justify;
 }
 
 .review .box-container .box .content .stars i {
