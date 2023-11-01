@@ -38,6 +38,10 @@ menuIcon.addEventListener("click", () => {
         // Redirect to the constructed URL
         window.location.href = redirectURL;
     });
+// CAR select for place page  javascript
 
+function selectImage(checkboxId) {
+  document.getElementById(checkboxId).click();
+}
 
 
