@@ -1,12 +1,13 @@
 from django.contrib import admin
 from django.urls import path
 from myapp import views
-urlpatterns = [
+urlpatterns = [ 
     path('',views.index, name='index'),
     path('car',views.car, name='car'),
     path('car_details',views.car_details, name='car_details'),
     path('nadia_car',views.nadia_car, name='nadia_car'),
     path('murshidabad_car',views.murshidabad_car, name='murshidabad_car'),
+    path('car_range',views.car_range, name='car_range'),
     path('hotel',views.hotel, name='hotel'),
     path('tourplan',views.tourplan, name='tour_plan'),
     path('tickets',views.tickets, name='tickets'),
@@ -28,4 +29,4 @@ urlpatterns = [
     path('user_login',views.user_login, name='user_login'),
     path('user_pnel',views.user_panel, name='user_panel'),
     path('register',views.register, name='register'),
-]
+ ]

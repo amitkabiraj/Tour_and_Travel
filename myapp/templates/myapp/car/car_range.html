@@ -1,0 +1,40 @@
+{% comment %} {% extends 'myapp/base.html' %} {% endcomment %}
+{% comment %} {% block title%}
+Car price range
+{% endblock title%}
+{% block content %}
+{% load static %} {% endcomment %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+  <title>Price Range Selection</title>
+  <link rel="stylesheet" href="{% static 'myapp/css/car_range.css' %}"></head>
+<body>
+  <div class="container">
+    <h1>Select Price Range</h1>
+
+    <div class="price-options">
+      <form action="payment.html" method="get">
+        <div class="price-option">
+          <input type="radio" id="low" name="price" value="low">
+          <label for="low">Low<span>(Rs:1000) </span></label>
+        </div>
+
+        <div class="price-option">
+          <input type="radio" id="medium" name="price" value="medium">
+          <label for="medium">Medium<span>(Rs:1500) </span></label>
+        </div>
+
+        <div class="price-option">
+          <input type="radio" id="high" name="price" value="high">
+          <label for="high">High<span>(Rs:2000) </span></label>
+        </div>
+<br><br>
+        <input type="submit" value="Proceed to Payment">
+      </form>
+    </div>
+  </div>
+</body>
+</html>

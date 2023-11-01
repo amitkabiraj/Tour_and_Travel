@@ -95,7 +95,8 @@ Murshidabad car page
     </div>
     </div>
     
-    <form action="#" method="post">
+    <form action="{% url 'car_range' %}" method="post">
+      {% csrf_token %}
       <input type="submit" value="Save & Next">
     </form>
 

@@ -1,0 +1,90 @@
+/* price option page css */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff, #00ffff,  #ff6347, #1cb526);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  width: 400px; /* Adjusted width */
+  height: 450px; /* Adjusted height */
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 25px; /* Adjusted font size */
+  color: #151212;
+}
+
+.price-options {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 0 20px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  display:var(#007bff);
+  padding-left: 2px;
+}
+
+label {
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  font-size: 20px; /* Adjusted font size */
+}
+
+input[type="radio"]:checked + label {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+input[type="radio"]:checked + label:hover {
+  background-color: #15a5da;
+  border-color: #0056b3;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
