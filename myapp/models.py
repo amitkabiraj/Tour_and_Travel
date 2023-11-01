@@ -4,7 +4,7 @@ from django.db import models
 
 # class Review(models.Model):
 class Review(models.Model):
-    image = models.URLField()
+    image =models.FileField(upload_to="review/",max_length=250,null=True,default=None)
     name = models.CharField(max_length=100)
     review = models.TextField()
     stars = models.IntegerField(choices=[(i, f"{i} star") for i in range(1, 6)])

@@ -1,8 +1,9 @@
 from django.shortcuts import render,HttpResponse
-from myapp.models import Hotel
+from myapp.models import Hotel,Review
 # Create your views here.
 def index(request):
-    return render(request, 'myapp/index.html')
+    data=Review.objects.all()
+    return render(request, 'myapp/index.html',{'review_data':data})
     # return HttpResponse("this is homepage")
 def car(request):
     return render(request, 'myapp/car/car.html') 
@@ -53,6 +54,6 @@ def hotel_booking(request):
 def hotel(request):
     data=Hotel.objects.all()
     print("data comes")
-    return render(request,'myapp/hotel/hotel.html',{'hotel_data':data})
+    return render(request,'myapp/hotel/hotel.html',{'hotel_data':data},)
 # def hotel(request):
 #     return render(request, 'myapp/hotel/hotel.html')

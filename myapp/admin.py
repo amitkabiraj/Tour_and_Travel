@@ -4,8 +4,9 @@ from django.contrib import admin
 from .models import Review
 from myapp.models import Hotel
 
-admin.site.register(Review)
-
+@admin.register(Review)
+class Review(admin.ModelAdmin):
+    list_display=('image','name','review','stars')
 # admin.site.register(Hotel)
 @admin.register(Hotel)
 class Hotel(admin.ModelAdmin):
