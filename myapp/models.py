@@ -1,7 +1,22 @@
 from django.db import models
 
 # Create your models here.
+<<<<<<< HEAD
 # Hotel Model
+=======
+# class Review(models.Model):
+class Review(models.Model):
+    image = models.URLField()
+    name = models.CharField(max_length=100)
+    review = models.TextField()
+    stars = models.IntegerField(choices=[(i, f"{i} star") for i in range(1, 6)])
+
+    def __str__(self):
+        return f"Review by {self.name}"
+
+
+
+>>>>>>> gopal
 class Hotel(models.Model):
     hotel_id=models.CharField(max_length=10,primary_key=True)
     hotel_name=models.CharField(max_length=30)
@@ -16,6 +31,7 @@ class Hotel(models.Model):
     hotel_image3=models.FileField(upload_to="hotel/",max_length=250,null=True,default=None)
     hotel_image4=models.FileField(upload_to="hotel/",max_length=250,null=True,default=None)
     hotel_image5=models.FileField(upload_to="hotel/",max_length=250,null=True,default=None)
+<<<<<<< HEAD
 
 
 # class Review(models.Model):
@@ -37,3 +53,5 @@ class ContactMessage(models.Model):
     def __str__(self):
         return f"Message from {self.name}"
 
+=======
+>>>>>>> gopal
