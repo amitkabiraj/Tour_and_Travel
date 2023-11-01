@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+# Hotel Model
 class Hotel(models.Model):
     hotel_id=models.CharField(max_length=10,primary_key=True)
     hotel_name=models.CharField(max_length=30)
@@ -15,6 +16,8 @@ class Hotel(models.Model):
     hotel_image3=models.FileField(upload_to="hotel/",max_length=250,null=True,default=None)
     hotel_image4=models.FileField(upload_to="hotel/",max_length=250,null=True,default=None)
     hotel_image5=models.FileField(upload_to="hotel/",max_length=250,null=True,default=None)
+
+
 # class Review(models.Model):
 class Review(models.Model):
     image = models.URLField()
@@ -24,3 +27,13 @@ class Review(models.Model):
 
     def __str__(self):
         return f"Review by {self.name}"
+
+# contact table
+class ContactMessage(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    message = models.TextField()
+
+    def __str__(self):
+        return f"Message from {self.name}"
+

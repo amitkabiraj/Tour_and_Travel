@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="{% static 'myapp/css/modal.css' %}">
   <link rel="stylesheet" href="{% static 'myapp/css/admin.css' %}">
   <link rel="stylesheet" href="{% static 'myapp/css/hotel_style.css' %}">
+  <link rel="stylesheet" href="{% static 'myapp/css/restaurant.css' %}">
   
   {% comment %} <link rel="stylesheet" href="{% static 'myapp/css/body-content.css' %}"> {% endcomment %}
   <title>{%block title%}Tour and Travel {% endblock %}</title>
@@ -45,7 +46,7 @@
       </li>
       <li>
         <div class="dropdown">
-          <a href="{% url 'places' %}"style="font-size: 15px;">Info</a>
+          <a href="#"style="font-size: 15px;">Info</a>
           <div class="dropdown-content">
             <a href="{% url 'restrurent' %}"style="font-size: 15px;">Restaurants</a>
             <a href="{% url 'hospital' %}"style="font-size: 15px;">Hospital</a>
