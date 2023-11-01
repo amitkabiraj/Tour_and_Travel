@@ -253,6 +253,7 @@ header .fa-bars {
     color: #333;
     font-size: 1.3rem;
     padding: 1rem;
+    text-align: justify;
 }
 
 .feature .card-container .content .stars i {
