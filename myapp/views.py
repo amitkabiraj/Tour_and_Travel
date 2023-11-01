@@ -22,6 +22,8 @@ def restrurent(request):
     return render(request, 'myapp/info/restrurent.html') 
 def hospital(request):    
     return render(request, 'myapp/info/hospital.html')
+def medicine(request):    
+    return render(request, 'myapp/info/medicine.html')
 def atm(request):    
     return render(request, 'myapp/info/atm.html')
 def pump(request):    
