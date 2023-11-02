@@ -1,11 +1,9 @@
 from django.contrib import admin
 
 # Register your models here.
-<<<<<<< HEAD
 # from .models import Review
 
 # admin.site.register(Review)
-=======
 from .models import *
 from myapp.models import Hotel
 
@@ -60,4 +58,3 @@ class Hotel(admin.ModelAdmin):
 @admin.register(ContactMessage)
 class ContactMessageAdmin(admin.ModelAdmin):
     list_display = ("name", "email", "message")
->>>>>>> f6984537c415d25f98ba1be64cb40c8d8fb1a48f

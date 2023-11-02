@@ -4,11 +4,9 @@ from .managers import UserManager
 from uuid import uuid4
 import os
 
-<<<<<<< HEAD
 # Create your models here.
 # class Review(models.Model):
     
-=======
 
 def path_and_rename(instance, filename):
     upload_to = "user/"
@@ -101,4 +99,3 @@ class ContactMessage(models.Model):
 
     def __str__(self):
         return f"Message from {self.name}"
->>>>>>> f6984537c415d25f98ba1be64cb40c8d8fb1a48f

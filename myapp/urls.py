@@ -1,20 +1,16 @@
 from django.contrib import admin
 from django.urls import path
 from myapp import views
-<<<<<<< HEAD
-urlpatterns = [ 
-=======
 from django .conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
->>>>>>> f6984537c415d25f98ba1be64cb40c8d8fb1a48f
     path('',views.index, name='index'),
     path('car',views.car, name='car'),
-    path('car_details',views.car_details, name='car_details'),
-    path('nadia_car',views.nadia_car, name='nadia_car'),
-    path('murshidabad_car',views.murshidabad_car, name='murshidabad_car'),
-    path('car_range',views.car_range, name='car_range'),
+    # path('car_details',views.car_details, name='car_details'),
+    # path('nadia_car',views.nadia_car, name='nadia_car'),
+    # path('murshidabad_car',views.murshidabad_car, name='murshidabad_car'),
+    # path('car_range',views.car_range, name='car_range'),
     path('hotel',views.hotel, name='hotel'),
     path('tourplan',views.tourplan, name='tour_plan'),
     path('tickets',views.tickets, name='tickets'),
@@ -36,9 +32,7 @@ urlpatterns = [
     path('user_login',views.user_login, name='user_login'),
     path('user_pnel',views.user_panel, name='user_panel'),
     path('register',views.register, name='register'),
-<<<<<<< HEAD
- ]
-=======
+ 
     path('all_images',views.all_images,name='all_images'),
     path('hotel_booking',views.hotel_booking,name='hotel_booking'),
 
@@ -47,4 +41,3 @@ urlpatterns = [
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
->>>>>>> f6984537c415d25f98ba1be64cb40c8d8fb1a48f
