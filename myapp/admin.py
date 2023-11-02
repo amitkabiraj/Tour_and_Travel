@@ -51,7 +51,12 @@ class Hotel(admin.ModelAdmin):
         "hotel_image5",
     )
 
-
+# Register Contact table
 @admin.register(ContactMessage)
 class ContactMessageAdmin(admin.ModelAdmin):
     list_display = ("name", "email", "message")
+
+# Register Murshidabad_place table
+@admin.register(Murshidabad_place)
+class Murshidabad_place(admin.ModelAdmin):
+    list_display = ("title","description","image")

@@ -18,7 +18,7 @@ GENDER_CHOICES = [
     ("N", "Not Specified"),
 ]
 
-
+# User table
 class User(AbstractBaseUser, PermissionsMixin):
     name = models.CharField(max_length=255)
     email = models.EmailField(max_length=255, unique=True)
@@ -48,7 +48,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     class Meta:
         db_table = "user"
 
-
+# Review Table
 # class Review(models.Model):
 class Review(models.Model):
     image = models.FileField(
@@ -61,7 +61,7 @@ class Review(models.Model):
     def __str__(self):
         return f"Review by {self.name}"
 
-
+#  Hotel table
 class Hotel(models.Model):
     hotel_id = models.CharField(max_length=10, primary_key=True)
     hotel_name = models.CharField(max_length=30)
@@ -96,3 +96,12 @@ class ContactMessage(models.Model):
 
     def __str__(self):
         return f"Message from {self.name}"
+
+# Murshidabad place
+class Murshidabad_place(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField()
+    image = models.ImageField(upload_to='murshidabad_place/')
+
+    def __str__(self):
+        return self.title

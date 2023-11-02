@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse
-from myapp.models import Hotel, Review, ContactMessage, User
+# from myapp.models import Hotel, Review, ContactMessage, User
+from myapp.models import *
 
 
 # Create your views here.
@@ -59,6 +60,7 @@ def review(request):
 
 def murshidabad(request):
     data = Hotel.objects.all()
+    # data1=Murshidabad_place.objects.all()
     return render(request, "myapp/place/murshidabad.html",{"hotel_data": data},)
 
 
