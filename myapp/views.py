@@ -1,6 +1,10 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import redirect, render, HttpResponse
+from django.contrib.auth.decorators import login_required
+
 # from myapp.models import Hotel, Review, ContactMessage, User
 from myapp.models import *
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.hashers import make_password
 
 
 # Create your views here.
@@ -11,6 +15,8 @@ def index(request):
     # return HttpResponse("this is homepage")
 
 
+def tickets(request):
+    return render(request, "myapp/others/tickets.html")
 
 
 def tickets(request):
@@ -59,13 +65,21 @@ def review(request):
 
 def murshidabad(request):
     data = Hotel.objects.all()
-    data1=Murshidabad_place.objects.all()
-    return render(request, "myapp/place/murshidabad.html",{"hotel_data": data , "murshidabad_place": data1},)
+    data1 = Murshidabad_place.objects.all()
+    return render(
+        request,
+        "myapp/place/murshidabad.html",
+        {"hotel_data": data, "murshidabad_place": data1},
+    )
 
 
 def nadia(request):
     data = Hotel.objects.all()
-    return render(request, "myapp/place/nadia.html",{"hotel_data": data},)
+    return render(
+        request,
+        "myapp/place/nadia.html",
+        {"hotel_data": data},
+    )
 
 
 def contact(request):
@@ -73,7 +87,7 @@ def contact(request):
         name = request.POST["name"]
         email = request.POST["email"]
         message = request.POST["message"]
-        
+
         ContactMessage.objects.create(name=name, email=email, message=message)
 
     return render(request, "myapp/contact.html")
@@ -88,48 +102,75 @@ def about(request):
 def admin_panel(request):
     return render(request, "myapp/admin/adminpanel.html")
 
+
 # USER
 def user_login(request):
+    if request.user.is_authenticated:
+        return redirect("/user_profile")
+
+    if request.method == "POST":
+        email = request.POST["email"]
+        password = request.POST["password"]
+        user = authenticate(email=email, password=password)
+        print(user)
+        if user is not None:
+            login(request, user)
+            return redirect("/user_profile")
     return render(request, "myapp/user/user_login.html")
 
 
 def user_panel(request):
     return render(request, "myapp/user/userpanel.html")
 
+
+@login_required(login_url="/")
 def user_profile(request):
-    return render(request,"myapp/user/user_profile.html")
+    user = request.user
+    print(user.email)
+
+    context = {"name": user.name, "email": user.email}
+    return render(request, "myapp/user/user_profile.html", context=context)
+
 
 def order(request):
-    return render(request,"myapp/user/order.html")
+    return render(request, "myapp/user/order.html")
+
 
 def status(request):
-    return render(request,"myapp/user/status.html")
+    return render(request, "myapp/user/status.html")
+
 
 def register(request):
     if request.method == "POST":
         name = request.POST["name"]
         email = request.POST["email"]
-        phone =request.POST["phone"]
-        password= request.POST["password"]
+        phone = request.POST["phone"]
+        password = request.POST["password"]
         picture = request.FILES.get("picture")
         gender = request.POST["gender"]
         country = request.POST["country"]
 
-
-    
-        User.objects.create(name=name, email=email, phone=phone, password=password,picture=picture,gender=gender, country=country)
+        User.objects.create(
+            name=name,
+            email=email,
+            phone=phone,
+            password=make_password(password),
+            picture=picture,
+            gender=gender,
+            country=country,
+        )
         # return render(request, "myapp/success.html",{"user": User})
-    
+
     return render(request, "myapp/user/register.html")
-
-
 
 
 def hotel_booking(request):
     return render(request, "myapp/hotel/booking page.html")
 
+
 def all_images(request):
     return render(request, "myapp/hotel/all_images.html")
+
 
 def hotel(request):
     data = Hotel.objects.all()
@@ -140,7 +181,10 @@ def hotel(request):
         {"hotel_data": data},
     )
 
+
 def car(request):
     return render(request, "myapp/car/car.html")
+
+
 # def hotel(request):
 #     return render(request, 'myapp/hotel/hotel.html')

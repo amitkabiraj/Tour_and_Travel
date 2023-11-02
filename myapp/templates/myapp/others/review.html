@@ -84,6 +84,7 @@
     <section class="review-form" id="review-form">
         <h1 class="heading"><span>Write a Review</span></h1>
         <form action="/submit_review" method="post">
+            {% csrf_token %}
             <!-- Image -->
             <label for="image">Image:</label>
             <input type="file" id="image" name="image" accept="image/*" required><br><br>

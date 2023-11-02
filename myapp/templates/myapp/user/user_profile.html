@@ -17,15 +17,15 @@ contact
             <th>Gender</th>
             <th>Country</th>
         </tr>
-        {% for user in users %}
+        
             <tr>
-                <td>{{ user.name }}</td>
-                <td>{{ user.email }}</td>
+                <td>{{ name }}</td>
+                <td>{{ email }}</td>
                 <td>{{ user.phone }}</td>
                 <td>{{ user.gender }}</td>
                 <td>{{ user.country }}</td>
             </tr>
-        {% endfor %}
+        
     </table>
 </div>
 

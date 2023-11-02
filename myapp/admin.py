@@ -17,7 +17,6 @@ class UserAdmin(admin.ModelAdmin):
         "is_admin",
         "is_superuser",
         "created_at",
-
     ]
 
     def get_exclude(self, request, obj=None):
@@ -51,17 +50,20 @@ class Hotel(admin.ModelAdmin):
         "hotel_image5",
     )
 
+
 # Register Contact table
 @admin.register(ContactMessage)
 class ContactMessageAdmin(admin.ModelAdmin):
     list_display = ("name", "email", "message")
 
+
 # Register Murshidabad_place table
 @admin.register(Murshidabad_place)
 class Murshidabad_place(admin.ModelAdmin):
-    list_display = ("title","description","image")
+    list_display = ("title", "description", "image")
+
 
 # Register Murshidabad_restaurants table
 @admin.register(Murshidabad_Restaurants)
 class Murshidabad_Restaurants(admin.ModelAdmin):
-    list_display = ("name","description","restaurant","menu")
+    list_display = ("name", "description", "restaurant", "menu")

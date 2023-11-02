@@ -23,7 +23,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     name = models.CharField(max_length=255)
     email = models.EmailField(max_length=255, unique=True)
     phone = models.IntegerField(unique=True)
-    password = models.CharField(max_length=128)
     picture = models.ImageField(upload_to='user/', blank=True, null=True)    
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
     country = models.CharField(max_length=255, blank=True, null=True)
