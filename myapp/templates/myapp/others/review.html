@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review Form</title>
-    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -57,6 +56,15 @@
             height: 100px;
         }
 
+        input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
         input[type="submit"] {
             background-color: #007bff;
             color: #fff;
@@ -73,21 +81,12 @@
     </style>
 </head>
 <body>
-    <!-- Your review form HTML code here -->
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Review Form</title>
-</head>
-<body>
     <section class="review-form" id="review-form">
         <h1 class="heading"><span>Write a Review</span></h1>
         <form action="/submit_review" method="post">
             <!-- Image -->
-            <label for="image">Image URL:</label>
-            <input type="text" id="image" name="image" required><br><br>
+            <label for="image">Image:</label>
+            <input type="file" id="image" name="image" accept="image/*" required><br><br>
 
             <!-- Name -->
             <label for="name">Name:</label>
@@ -111,7 +110,5 @@
             <input type="submit" value="Submit Review">
         </form>
     </section>
-</body>
-</html>
 </body>
 </html>

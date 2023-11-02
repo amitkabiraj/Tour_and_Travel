@@ -17,6 +17,7 @@ hotel page
                 <img src="{% static 'myapp/image/hotel/hotel2.jpg' %}" alt="Hotel Room" class="hotel_hotel-image">
             </div>
             
+            
             <div class="hotel_room-details">
                 
                 <h2>Deluxe Room</h2>
@@ -28,8 +29,8 @@ hotel page
                     <li>City view</li>
                     <li>En-suite bathroom</li>
                 </ul>
-                <button class="prev-btn"><b><</b></button>
-                <button class="next-btn"><b>></b></button>
+                {% comment %} <button class="prev-btn"><b><</b></button>
+                <button class="next-btn"><b>></b></button> {% endcomment %}
                 <a href="{% url "hotel_booking" %}" class="hotel_button">Book Now</a>
                 <a href="{% url "all_images" %}" class="all_images">Show all images</a>
             </div>
@@ -50,12 +51,39 @@ hotel page
                     <li>City view</li>
                     <li>En-suite bathroom</li>
                 </ul>
-                <button class="prev-btn"><b><</b></button>
-                <button class="next-btn"><b>></b></button>
+                {% comment %} <button class="prev-btn"><b><</b></button>
+                <button class="next-btn"><b>></b></button> {% endcomment %}
                 <a href="#" class="hotel_button">Book Now</a>
             </div>
-                
+
         </div>
+
+
+        {% for i in hotel_data %}
+        <div class="hotel_room">
+            <div class="image">
+                <img src="{{i.hotel_image2.url}}" alt="Hotel Room" class="hotel_hotel-image">
+                
+            </div>
+            
+            
+            <div class="hotel_room-details">
+                
+                <h2>{{i.hotel_name}}</h2>
+                <p>{{i.hotel_about}}</p>
+                <ul class="hotel_ul">
+                    <li>{{i.hotel_feature1}}</li>
+                    <li>{{i.hotel_feature2}}</li>
+                    <li>{{i.hotel_feature3}}</li>
+                    <li>{{i.hotel_feature4}}</li>
+                    <li>{{i.hotel_feature5}}</li>
+                </ul>
+                
+                <a href="{% url "hotel_booking" %}" class="hotel_button">Book Now</a>
+                <a href="{% url "all_images" %}" class="all_images">Show all images</a>
+            </div>
+        </div>
+        {% endfor %}
     </div>
     
 </div>
