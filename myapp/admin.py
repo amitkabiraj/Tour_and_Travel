@@ -60,3 +60,8 @@ class ContactMessageAdmin(admin.ModelAdmin):
 @admin.register(Murshidabad_place)
 class Murshidabad_place(admin.ModelAdmin):
     list_display = ("title","description","image")
+
+# Register Murshidabad_restaurants table
+@admin.register(Murshidabad_Restaurants)
+class Murshidabad_Restaurants(admin.ModelAdmin):
+    list_display = ("name","description","restaurant","menu")

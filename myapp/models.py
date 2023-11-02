@@ -105,3 +105,14 @@ class Murshidabad_place(models.Model):
 
     def __str__(self):
         return self.title
+
+# murshidabad_hotel
+
+class Murshidabad_Restaurants(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    restaurant = models.ImageField(upload_to='restaurant_images/')
+    menu = models.ImageField(upload_to='restaurant_images/')
+
+    def __str__(self):
+        return self.name
