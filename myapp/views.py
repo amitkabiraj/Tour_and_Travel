@@ -58,11 +58,13 @@ def review(request):
 
 
 def murshidabad(request):
-    return render(request, "myapp/place/murshidabad.html")
+    data = Hotel.objects.all()
+    return render(request, "myapp/place/murshidabad.html",{"hotel_data": data},)
 
 
 def nadia(request):
-    return render(request, "myapp/place/nadia.html")
+    data = Hotel.objects.all()
+    return render(request, "myapp/place/nadia.html",{"hotel_data": data},)
 
 
 def contact(request):

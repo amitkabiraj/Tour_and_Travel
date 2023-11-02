@@ -77,17 +77,17 @@ murshidabad
 <h1 class="heading">Hotels Of Murshidebad</h1>
 <div class="body-content">
     <div class="container">
-      <img src="{% static 'myapp/image/bg.jpg' %}" alt="Tourist Place">
+      {% for i in hotel_data %}
+      <img src="{{i.hotel_image2.url}}" alt="Tourist Place">
       <div class="description">
-        <h2>Murshidabad</h2>
+        <h2>{{i.hotel_name}}</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula est quis urna scelerisque, 
-          eu faucibus nisi eleifend. Sed tincidunt eget nulla ac fermentum. Nulla facilisi.
+          {{i.hotel_about}}
         </p>
-        <a href="#"><button class="btn">check out!</button></a>
-
       </div>
+      <a href="{% url 'hotel' %}"><button class="btn">check out!</button></a> 
     </div>
+    {% endfor %}
     <div class="container">
       <img src="{% static 'myapp/image/bg.jpg' %}" alt="Tourist Place">
       <div class="description">
@@ -144,77 +144,6 @@ murshidabad
       </div>
     </div>
 </div>
-
-</div>
-<h1 class="heading">Restrurents Of Murshidebad</h1>
-<div class="body-content">
-    <div class="container">
-      <img src="{% static 'myapp/image/bg.jpg' %}" alt="Tourist Place">
-      <div class="description">
-        <h2>Murshidabad</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula est quis urna scelerisque, 
-          eu faucibus nisi eleifend. Sed tincidunt eget nulla ac fermentum. Nulla facilisi.
-        </p>
-        <a href="#"><button class="btn">check out!</button></a>
-
-      </div>
-    </div>
-    <div class="container">
-      <img src="{% static 'myapp/image/bg.jpg' %}" alt="Tourist Place">
-      <div class="description">
-        <h2>Murshidabad</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula est quis urna scelerisque, eu faucibus nisi eleifend. Sed tincidunt eget nulla ac fermentum. Nulla facilisi.
-        </p>
-        <a href="#"><button class="btn">check out!</button></a>
-
-      </div>
-    </div> 
-    <div class="container">
-      <img src="{% static 'myapp/image/bg.jpg' %}" alt="Tourist Place">
-      <div class="description">
-        <h2>Murshidabad</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula est quis urna scelerisque, eu faucibus nisi eleifend. Sed tincidunt eget nulla ac fermentum. Nulla facilisi.
-        </p>
-        <a href="#"><button class="btn">check out!</button></a>
-
-      </div>
-    </div>
-    <div class="container">
-      <img src="{% static 'myapp/image/bg.jpg' %}" alt="Tourist Place">
-      <div class="description">
-        <h2>Murshidabad</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula est quis urna scelerisque, eu faucibus nisi eleifend. Sed tincidunt eget nulla ac fermentum. Nulla facilisi.
-        </p>
-        <a href="#"><button class="btn">check out!</button></a>
-
-      </div>
-    </div>
-    <div class="container">
-      <img src="{% static 'myapp/image/bg.jpg' %}" alt="Tourist Place">
-      <div class="description">
-        <h2>Murshidabad</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula est quis urna scelerisque, eu faucibus nisi eleifend. Sed tincidunt eget nulla ac fermentum. Nulla facilisi.
-        </p>
-        <a href="#"><button class="btn">check out!</button></a>
-
-      </div>
-    </div>
-    <div class="container">
-      <img src="{% static 'myapp/image/bg.jpg' %}" alt="Tourist Place">
-      <div class="description">
-        <h2>Murshidabad</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vehicula est quis urna scelerisque, eu faucibus nisi eleifend. Sed tincidunt eget nulla ac fermentum. Nulla facilisi.
-        </p>
-        <a href="#"><button class="btn">check out!</button></a>
-
-      </div>
-    </div>
 </div>
 <!-- Modal -->
 <div id="myModal" class="modal">
