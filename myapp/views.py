@@ -4,14 +4,13 @@ from myapp.models import *
 
 
 # Create your views here.
+# INDEX PAGE
 def index(request):
     data = Review.objects.all()
     return render(request, "myapp/index.html", {"review_data": data})
     # return HttpResponse("this is homepage")
 
 
-def car(request):
-    return render(request, "myapp/car/car.html")
 
 
 def tickets(request):
@@ -60,8 +59,8 @@ def review(request):
 
 def murshidabad(request):
     data = Hotel.objects.all()
-    # data1=Murshidabad_place.objects.all()
-    return render(request, "myapp/place/murshidabad.html",{"hotel_data": data},)
+    data1=Murshidabad_place.objects.all()
+    return render(request, "myapp/place/murshidabad.html",{"hotel_data": data , "murshidabad_place": data1},)
 
 
 def nadia(request):
@@ -89,7 +88,7 @@ def about(request):
 def admin_panel(request):
     return render(request, "myapp/admin/adminpanel.html")
 
-
+# USER
 def user_login(request):
     return render(request, "myapp/user/user_login.html")
 
@@ -97,6 +96,14 @@ def user_login(request):
 def user_panel(request):
     return render(request, "myapp/user/userpanel.html")
 
+def user_profile(request):
+    return render(request,"myapp/user/user_profile.html")
+
+def order(request):
+    return render(request,"myapp/user/order.html")
+
+def status(request):
+    return render(request,"myapp/user/status.html")
 
 def register(request):
     if request.method == "POST":
@@ -116,13 +123,13 @@ def register(request):
     return render(request, "myapp/user/register.html")
 
 
-def all_images(request):
-    return render(request, "myapp/hotel/all_images.html")
 
 
 def hotel_booking(request):
     return render(request, "myapp/hotel/booking page.html")
 
+def all_images(request):
+    return render(request, "myapp/hotel/all_images.html")
 
 def hotel(request):
     data = Hotel.objects.all()
@@ -133,6 +140,7 @@ def hotel(request):
         {"hotel_data": data},
     )
 
-
+def car(request):
+    return render(request, "myapp/car/car.html")
 # def hotel(request):
 #     return render(request, 'myapp/hotel/hotel.html')

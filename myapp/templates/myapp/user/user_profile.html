@@ -1,0 +1,32 @@
+{% extends 'myapp/user/userpanel.html' %}
+{% block title%}
+contact
+{% endblock title%}
+{% block content %}
+{% load static %}
+<h1>
+    User profile
+</h1>
+<div class="user-details-container">
+    <h1 class="heading">User Details</h1>
+    <table class="user-details-table">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Gender</th>
+            <th>Country</th>
+        </tr>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.phone }}</td>
+                <td>{{ user.gender }}</td>
+                <td>{{ user.country }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock content %}

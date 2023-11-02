@@ -5,22 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{% static 'myapp/css/user.css' %}">
+  <link rel="stylesheet" href="{% static 'myapp/css/userprofile.css' %}">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <title>User Panel</title>
+  {% comment %} <title>User Panel</title> {% endcomment %}
+  <title>{%block title%}User Panel {% endblock %}</title>
 </head>
 <body>
   <nav class="sidebar">
     <ul>
-      <li><a href="#"><i class="fas fa-user icon"></i> Profile</a></li>
-      <li><a href="#"><i class="fas fa-shopping-bag icon"></i> My Orders</a></li>
-      <li><a href="#"><i class="fas fa-info-circle icon"></i> Order Status</a></li>
+      <li><a href="{% url 'user_profile' %}"><i class="fas fa-user icon"></i> Profile</a></li>
+      <li><a href="{% url 'order' %}"><i class="fas fa-shopping-bag icon"></i> My Orders</a></li>
+      <li><a href="{% url 'status' %}"><i class="fas fa-info-circle icon"></i> Order Status</a></li>
       <li><a href="{% url 'review' %}"><i class="fas fa-info-circle icon"></i> Review</a></li>
-      <li><a href="layout.html"><i class="fas fa-sign-out-alt icon"></i> Logout</a></li>
+      <li><a href="{% url 'index' %}"><i class="fas fa-sign-out-alt icon"></i> Logout</a></li>
     </ul>
   </nav>
   <div class="main-content">
-    <h2>My Booking Details</h2>
     <!-- User booking details content goes here -->
+    <main>
+      {% block content %}
+      <!-- This is where the content of child templates will go -->
+      {% endblock %}
+  </main>
   </div>
   <script src="script.js"></script>
 </body>

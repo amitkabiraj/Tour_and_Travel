@@ -6,7 +6,7 @@ murshidabad
 {% load static %}
 <h1 class="heading">Places Of Murshidebad</h1>
 <div class="body-content">
-  {% comment %} <div class="container">
+   <div class="container">
     {% for i in murshidabad_place %}
     <img src="{{i.image.url}}" alt="Tourist Place">
     <div class="description">
@@ -17,7 +17,7 @@ murshidabad
     </div>
     <a href="{% url 'hotel' %}"><button class="btn">check out!</button></a> 
   </div>
-  {% endfor %}  {% endcomment %}
+  {% endfor %}
     <div class="container">
       <img src="{% static 'myapp/image/bg.jpg' %}" alt="Tourist Place">
       <div class="description">

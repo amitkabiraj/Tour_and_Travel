@@ -1,0 +1,20 @@
+
+    .user-details-container {
+        margin-top: 20px; /* Add some space above the table */
+    }
+
+    .user-details-table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .user-details-table th, .user-details-table td {
+        border: 1px solid #dddddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .user-details-table th {
+        background-color: #f2f2f2; /* Light gray background for headers */
+    }
+
