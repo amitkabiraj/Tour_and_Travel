@@ -11,6 +11,14 @@ def index(request):
 
 def car(request):
     return render(request, 'myapp/car/car.html') 
+def car_details(request):
+    return render(request, 'myapp/car/car_details.html')
+def nadia_car(request):
+    return render(request, 'myapp/car/nadia_car.html') 
+def murshidabad_car(request):
+    return render(request, 'myapp/car/murshidabad_car.html') 
+def car_range(request):
+    return render(request, 'myapp/car/car_range.html')
 def hotel(request):
     return render(request, 'myapp/hotel/hotel.html')
 def tickets(request):
