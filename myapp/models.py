@@ -99,13 +99,17 @@ class ContactMessage(models.Model):
         return f"Message from {self.name}"
 
 # Murshidabad place
-class Murshidabad_place(models.Model):
+class place(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
-    image = models.ImageField(upload_to='murshidabad_place/')
+    Dist = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='place/')
 
     def __str__(self):
         return self.title
+    def save(self, *args, **kwargs):
+        self.Dist = self.Dist.capitalize()  # Capitalize the Dist field
+        super(place, self).save(*args, **kwargs)
 
 # murshidabad_restaurants
 

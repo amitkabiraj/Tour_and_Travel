@@ -70,20 +70,21 @@ def review(request):
 
 def murshidabad(request):
     data = Hotel.objects.all()
-    data1 = Murshidabad_place.objects.all()
+    murshidabad_place = place.objects.filter(Dist='Murshidabad')
     return render(
         request,
         "myapp/place/murshidabad.html",
-        {"hotel_data": data, "murshidabad_place": data1},
+        {"hotel_data": data, "murshidabad_place": murshidabad_place},
     )
 
 
 def nadia(request):
-    data = Hotel.objects.all()
+    # data = Hotel.objects.all()
+    nadia_place = place.objects.filter(Dist='Nadia')
     return render(
         request,
         "myapp/place/nadia.html",
-        {"hotel_data": data},
+        { "nadia_place": nadia_place},
     )
 
 

@@ -16,7 +16,7 @@
     <ul>
       <li><a href="{% url 'user_profile' %}"><i class="fas fa-user icon"></i> Profile</a></li>
       <li><a href="{% url 'order' %}"><i class="fas fa-shopping-bag icon"></i> My Orders</a></li>
-      <li><a href="{% url 'status' %}"><i class="fas fa-info-circle icon"></i> Order Status</a></li>
+      {% comment %} <li><a href="{% url 'status' %}"><i class="fas fa-info-circle icon"></i> Order Status</a></li> {% endcomment %}
       <li><a href="{% url 'review' %}"><i class="fas fa-info-circle icon"></i> Review</a></li>
       <li><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt icon"></i> Logout</a></li>
     </ul>

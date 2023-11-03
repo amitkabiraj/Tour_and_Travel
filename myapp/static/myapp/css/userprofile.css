@@ -1,4 +1,74 @@
 
+/* .headh1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #007BFF; */
+/* Order CSS */
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+} */
+
+.body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.order-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+.order-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.order-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-details h3 {
+    margin: 0;
+}
+
+.order-details a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.order-details a:hover {
+    text-decoration: underline;
+}
+
+.order-type {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+h1 {
+    text-align: center;
+}
+/* USER profile CSS     */
+
     .user-details-container {
         margin-top: 20px; /* Add some space above the table */
     }

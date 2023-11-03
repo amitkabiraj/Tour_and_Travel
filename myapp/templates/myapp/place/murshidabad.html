@@ -6,8 +6,8 @@ murshidabad
 {% load static %}
 <h1 class="heading">Places Of Murshidebad</h1>
 <div class="body-content">
+  {% for i in murshidabad_place %}
    <div class="container">
-    {% for i in murshidabad_place %}
     <img src="{{i.image.url}}" alt="Tourist Place">
     <div class="description">
       <h2>{{i.title}}</h2>
