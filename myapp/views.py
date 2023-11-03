@@ -10,13 +10,9 @@ from django.contrib.auth.hashers import make_password
 # Create your views here.
 # INDEX PAGE
 def index(request):
-    data = Review.objects.all()
+    data = Review.objects.order_by('-created_at')[:3]
     return render(request, "myapp/index.html", {"review_data": data})
     # return HttpResponse("this is homepage")
-
-
-def tickets(request):
-    return render(request, "myapp/others/tickets.html")
 
 
 def tickets(request):
@@ -28,8 +24,12 @@ def tourplan(request):
 
 
 def restrurent(request):
-    return render(request, "myapp/info/restrurent.html")
-
+    data = Murshidabad_Restaurants.objects.all()
+    return render(
+        request,
+        "myapp/info/restrurent.html",
+        {"mursidabad_restaurants": data},
+    )
 
 def hospital(request):
     return render(request, "myapp/info/hospital.html")
@@ -104,6 +104,7 @@ def admin_panel(request):
 
 
 # USER
+#USER LOGIN
 def user_login(request):
     if request.user.is_authenticated:
         return redirect("/user_profile")
@@ -119,10 +120,6 @@ def user_login(request):
     return render(request, "myapp/user/user_login.html")
 
 
-def user_panel(request):
-    return render(request, "myapp/user/userpanel.html")
-
-
 @login_required(login_url="/")
 def user_profile(request):
     user = request.user
@@ -131,15 +128,10 @@ def user_profile(request):
     context = {"name": user.name, "email": user.email}
     return render(request, "myapp/user/user_profile.html", context=context)
 
+def user_panel(request):
+    return render(request, "myapp/user/userpanel.html")
 
-def order(request):
-    return render(request, "myapp/user/order.html")
-
-
-def status(request):
-    return render(request, "myapp/user/status.html")
-
-
+# USER REGISTER
 def register(request):
     if request.method == "POST":
         name = request.POST["name"]
@@ -159,10 +151,20 @@ def register(request):
             gender=gender,
             country=country,
         )
-        # return render(request, "myapp/success.html",{"user": User})
+        return redirect("user_login")
 
     return render(request, "myapp/user/register.html")
 
+
+def order(request):
+    return render(request, "myapp/user/order.html")
+
+
+def status(request):
+    return render(request, "myapp/user/status.html")
+
+
+# HOTEL
 
 def hotel_booking(request):
     return render(request, "myapp/hotel/booking page.html")

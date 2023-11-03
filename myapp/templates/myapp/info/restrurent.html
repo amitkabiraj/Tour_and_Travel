@@ -7,17 +7,18 @@ Restrurents
 <div class="head">
     <h1>Restaurants in [Murshidabad]</h1>
 </div>
+{% for i in mursidabad_restaurants %}
 <section class="restaurant">
     <div class="restaurant-info">
-        <h2>Restaurant Name</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam veniam quia necessitatibus ratione? Mollitia, quos maxime perspiciatis praesentium nulla sint.</p>
+        <h2>{{ i.name }}</h2>
+        <p>{{ i.description }}</p>
     </div>
     <div class="restaurant-images">
-        <img src="{% static 'myapp/image/restaurants/res1.jpg' %}" alt="Home Image" class="home-image">
-        <img src="{% static 'myapp/image/restaurants/m1.jpg' %}" alt="Menu Image" class="menu-image">
+        <img src="{{i.restaurant.url}}" alt="Home Image" class="home-image">
+        <img src="{{i.menu.url}}" alt="Menu Image" class="menu-image">
     </div>
 </section>
-
+{% endfor %}
 <section class="restaurant">
     <div class="restaurant-info">
         <h2>Another Restaurant</h2>
@@ -28,6 +29,8 @@ Restrurents
         <img src="{% static 'myapp/image/restaurants/m2.jpg' %}" alt="Menu Image" class="menu-image">
     </div>
 </section>
+
+{% comment %} NADIA {% endcomment %}
 <div class="head">
     <h1>Restaurants in [Nadia]</h1>
 </div>

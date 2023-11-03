@@ -56,6 +56,8 @@ class Review(models.Model):
     name = models.CharField(max_length=100)
     review = models.TextField()
     stars = models.IntegerField(choices=[(i, f"{i} star") for i in range(1, 6)])
+    created_at = models.DateTimeField(auto_now_add=True)
+
 
     def __str__(self):
         return f"Review by {self.name}"
@@ -105,7 +107,7 @@ class Murshidabad_place(models.Model):
     def __str__(self):
         return self.title
 
-# murshidabad_hotel
+# murshidabad_restaurants
 
 class Murshidabad_Restaurants(models.Model):
     name = models.CharField(max_length=100)
