@@ -19,8 +19,8 @@ Nadia car page
     </div>
 
     <div class="container">
-    <input type="checkbox" id="checkbox1" class="checkbox-hidden">
-    <label class="checkbox-container" for="checkbox1">
+    <input type="checkbox" id="checkbox2" class="checkbox-hidden">
+    <label class="checkbox-container" for="checkbox2">
       <span class="custom-checkbox"></span>
       <img src="{% static 'myapp/image/bg.jpg' %}" alt="Image 1" class="border-image image-zoom">
     <div class="description">
@@ -30,8 +30,8 @@ Nadia car page
     </div>
 
     <div class="container">
-    <input type="checkbox" id="checkbox1" class="checkbox-hidden">
-    <label class="checkbox-container" for="checkbox1">
+    <input type="checkbox" id="checkbox3" class="checkbox-hidden">
+    <label class="checkbox-container" for="checkbox3">
       <span class="custom-checkbox"></span>
       <img src="{% static 'myapp/image/bg.jpg' %}" alt="Image 1" class="border-image image-zoom">
     <div class="description">
@@ -41,8 +41,8 @@ Nadia car page
     </div>
 
     <div class="container">
-    <input type="checkbox" id="checkbox1" class="checkbox-hidden">
-    <label class="checkbox-container" for="checkbox1">
+    <input type="checkbox" id="checkbox4" class="checkbox-hidden">
+    <label class="checkbox-container" for="checkbox4">
       <span class="custom-checkbox"></span>
       <img src="{% static 'myapp/image/bg.jpg' %}" alt="Image 1" class="border-image image-zoom">
     <div class="description">
@@ -52,8 +52,8 @@ Nadia car page
     </div>
 
     <div class="container">
-    <input type="checkbox" id="checkbox1" class="checkbox-hidden">
-    <label class="checkbox-container" for="checkbox1">
+    <input type="checkbox" id="checkbox5" class="checkbox-hidden">
+    <label class="checkbox-container" for="checkbox5">
       <span class="custom-checkbox"></span>
       <img src="{% static 'myapp/image/bg.jpg' %}" alt="Image 1" class="border-image image-zoom">
     <div class="description">
@@ -63,8 +63,8 @@ Nadia car page
     </div>
 
     <div class="container">
-    <input type="checkbox" id="checkbox1" class="checkbox-hidden">
-    <label class="checkbox-container" for="checkbox1">
+    <input type="checkbox" id="checkbox6" class="checkbox-hidden">
+    <label class="checkbox-container" for="checkbox6">
       <span class="custom-checkbox"></span>
       <img src="{% static 'myapp/image/bg.jpg' %}" alt="Image 1" class="border-image image-zoom">
     <div class="description">
@@ -74,8 +74,8 @@ Nadia car page
     </div>
 
     <div class="container">
-    <input type="checkbox" id="checkbox1" class="checkbox-hidden">
-    <label class="checkbox-container" for="checkbox1">
+    <input type="checkbox" id="checkbox7" class="checkbox-hidden">
+    <label class="checkbox-container" for="checkbox7">
       <span class="custom-checkbox"></span>
       <img src="{% static 'myapp/image/bg.jpg' %}" alt="Image 1" class="border-image image-zoom">
     <div class="description">
@@ -85,8 +85,8 @@ Nadia car page
     </div>
 
     <div class="container">
-    <input type="checkbox" id="checkbox1" class="checkbox-hidden">
-    <label class="checkbox-container" for="checkbox1">
+    <input type="checkbox" id="checkbox8" class="checkbox-hidden">
+    <label class="checkbox-container" for="checkbox8">
       <span class="custom-checkbox"></span>
       <img src="{% static 'myapp/image/bg.jpg' %}" alt="Image 1" class="border-image image-zoom">
     <div class="description">
@@ -94,11 +94,13 @@ Nadia car page
       </label>
     </div>
     </div>
-    
-    <form action="{% url 'car_range' %}" method="post">
-      {% csrf_token %}
-      <input type="submit" value="Save & Next">
-    </form>
+    <div class="save-next-button">
+      <form action="{% url 'car_range' %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Save & Next">
+      </form>
+    </div>
+
 
 
 
