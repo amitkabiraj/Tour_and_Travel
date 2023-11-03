@@ -22,14 +22,19 @@ def tickets(request):
 def tourplan(request):
     return render(request, "myapp/others/tour_plan.html")
 
-
 def restrurent(request):
-    data = Murshidabad_Restaurants.objects.all()
+    murshidabad_restaurants = Restaurants.objects.filter(Dist='Murshidabad')
+    nadia_restaurants = Restaurants.objects.filter(Dist='Nadia')
+
     return render(
         request,
         "myapp/info/restrurent.html",
-        {"mursidabad_restaurants": data},
+        {
+            "murshidabad_restaurants": murshidabad_restaurants,
+            "nadia_restaurants": nadia_restaurants,
+        }
     )
+
 
 def hospital(request):
     return render(request, "myapp/info/hospital.html")

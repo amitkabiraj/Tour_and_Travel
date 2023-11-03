@@ -64,6 +64,10 @@ class Murshidabad_place(admin.ModelAdmin):
 
 
 # Register Murshidabad_restaurants table
-@admin.register(Murshidabad_Restaurants)
+# @admin.register(Murshidabad_Restaurants)
+# class Murshidabad_Restaurants(admin.ModelAdmin):
+#     list_display = ("name", "description", "Dist","restaurant", "menu")
+
+@admin.register(Restaurants)
 class Murshidabad_Restaurants(admin.ModelAdmin):
-    list_display = ("name", "description", "restaurant", "menu")
+    list_display = ("name", "description", "Dist","restaurant", "menu")

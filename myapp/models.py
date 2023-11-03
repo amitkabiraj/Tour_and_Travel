@@ -109,11 +109,15 @@ class Murshidabad_place(models.Model):
 
 # murshidabad_restaurants
 
-class Murshidabad_Restaurants(models.Model):
+class Restaurants(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
+    Dist = models.CharField(max_length=100)
     restaurant = models.ImageField(upload_to='restaurant_images/')
     menu = models.ImageField(upload_to='restaurant_images/')
 
     def __str__(self):
         return self.name
+    def save(self, *args, **kwargs):
+        self.Dist = self.Dist.capitalize()  # Capitalize the Dist field
+        super(Restaurants, self).save(*args, **kwargs)
