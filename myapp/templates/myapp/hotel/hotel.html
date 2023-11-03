@@ -23,6 +23,7 @@ hotel page
                 <h2>Deluxe Room</h2>
                 <p>Enjoy a luxurious stay in our spacious deluxe rooms with a stunning view of the city.</p>
                 <ul class="hotel_ul">
+                    <li>price $500</li>
                     <li>Free Wifi</li>
                     <li>24x7 Service</li>
                     <li>King-sized bed</li>
@@ -31,33 +32,10 @@ hotel page
                 </ul>
                 {% comment %} <button class="prev-btn"><b><</b></button>
                 <button class="next-btn"><b>></b></button> {% endcomment %}
-                <a href="{% url "hotel_booking" %}" class="hotel_button">Book Now</a>
+                <a href="{% url "booking_page" %}" class="hotel_button">Book Now</a>
                 <a href="{% url "all_images" %}" class="all_images">Show all images</a>
             </div>
         </div>
-        <div class="hotel_room">
-            <div class="image">
-                <img src="{% static 'myapp/image/hotel/hotel3.jpg'%}" alt="Suite Room" class="hotel_hotel-image" >
-                <img src="{% static 'myapp/image/hotel/hotel4.jpg'%}" alt="Suite Room" class="hotel_hotel-image">
-            </div>
-            
-            <div class="hotel_room-details">
-                <h2>Suite Room</h2>
-                <p>Indulge in the ultimate comfort with our elegantly designed suite rooms.</p>
-                <ul class="hotel_ul">
-                    <li>Free Wifi</li>
-                    <li>24x7 Service</li>
-                    <li>King-sized bed</li>
-                    <li>City view</li>
-                    <li>En-suite bathroom</li>
-                </ul>
-                {% comment %} <button class="prev-btn"><b><</b></button>
-                <button class="next-btn"><b>></b></button> {% endcomment %}
-                <a href="#" class="hotel_button">Book Now</a>
-            </div>
-
-        </div>
-
 
         {% for i in hotel_data %}
         <div class="hotel_room">
@@ -72,6 +50,8 @@ hotel page
                 <h2>{{i.hotel_name}}</h2>
                 <p>{{i.hotel_about}}</p>
                 <ul class="hotel_ul">
+                    <li>price: {{i.hotel_price}}</li>
+                    <li> Dist: {{i.hotel_dist}}</li>
                     <li>{{i.hotel_feature1}}</li>
                     <li>{{i.hotel_feature2}}</li>
                     <li>{{i.hotel_feature3}}</li>
@@ -79,7 +59,7 @@ hotel page
                     <li>{{i.hotel_feature5}}</li>
                 </ul>
                 
-                <a href="{% url "hotel_booking" %}" class="hotel_button">Book Now</a>
+                <a href="{% url "booking_page" %}" class="hotel_button">Book Now</a>
                 <a href="{% url "all_images" %}" class="all_images">Show all images</a>
             </div>
         </div>

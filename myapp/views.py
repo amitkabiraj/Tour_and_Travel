@@ -1,5 +1,7 @@
 from django.shortcuts import redirect, render, HttpResponse
+from datetime import date,datetime
 from django.contrib.auth.decorators import login_required
+
 
 # from myapp.models import Hotel, Review, ContactMessage, User
 from myapp.models import *
@@ -172,9 +174,9 @@ def status(request):
 
 # HOTEL
 
-def hotel_booking(request):
-    return render(request, "myapp/hotel/booking page.html")
-
+def booking_page(request):
+    initial=date.today()
+    return render(request, "myapp/hotel/booking_page.html",{'d':initial})
 
 def all_images(request):
     return render(request, "myapp/hotel/all_images.html")
@@ -188,7 +190,20 @@ def hotel(request):
         "myapp/hotel/hotel.html",
         {"hotel_data": data},
     )
-
+#Payment page
+def payment_page(request):
+    text=''
+    initial=date.today()
+    if request.method == 'POST':
+        date_str1 = request.POST.get('startdatetime')
+        date_str2 = request.POST.get('enddatetime')
+        date1 = datetime.strptime(date_str1, "%Y-%m-%d")
+        date2 = datetime.strptime(date_str2, "%Y-%m-%d")
+        day_difference = (date2 - date1).days
+        if day_difference<0:
+            text="Please enter correct data"
+            return render(request, "myapp/hotel/booking_page.html",{'d':initial,'error':text})
+    return render(request, "myapp/hotel/hotel_payment.html",{'day_difference':day_difference,'error':text})
 
 def car(request):
     return render(request, "myapp/car/car.html")

@@ -45,8 +45,10 @@ urlpatterns = [
     # CAR END
     # HOTEL
     path("hotel", views.hotel, name="hotel"),
-    path("hotel_booking", views.hotel_booking, name="hotel_booking"),
+    path("booking_page", views.booking_page, name="booking_page"),
+    path("payment_page", views.payment_page, name="payment_page"),
     path("all_images", views.all_images, name="all_images"),
+
     # HOTEL END
     # path('admin_login',views.admin_login, name='admin_login'),
     # path("admin_panel", views.admin_panel, name="admin_panel"),

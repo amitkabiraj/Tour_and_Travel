@@ -1,0 +1,64 @@
+{% comment %} {% extends 'myapp/base.html' %}
+{% block title%}
+hotel booking
+{% endblock title%}
+{% block content %}
+{% load static %}
+<h1>Member Information</h1>
+    <form id="memberForm">
+        <label for="numberOfMembers">Number of Members:</label>
+        <input type="number" id="numberOfMembers" name="numberOfMembers" min="1" required>
+        <button type="button" onclick="generateFields()">Generate Fields</button>
+
+        <div id="memberFields">
+            <!-- Dynamic fields will be inserted here -->
+        </div>
+
+        <div class="time">
+            <input type="datetime-local" name="datetime" id="datetime">
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+
+{% endblock content %} {% endcomment %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel booking</title>
+    <link rel="stylesheet" href="{% static 'myapp/css/booking.css' %}">
+</head>
+<body>
+    <h3 class="danger">{{error}}</h3>
+    <h1>Member Information</h1>
+    <form id="memberForm" action="{% url "payment_page" %}" method="post">
+        {% csrf_token %}
+        <label for="numberOfMembers">Number of Members:</label>
+        <input type="number" id="numberOfMembers" name="numberOfMembers" min="1" required>
+        <button type="button" onclick="generateFields()">Generate Fields</button>
+
+        <div id="memberFields">
+            <!-- Dynamic fields will be inserted here -->
+        </div>
+
+        <div class="time">
+            <input type="date" name="startdatetime" id="datetime" min="{{d|date:'Y-m-d'}}">
+        </div>
+        <p><b>To</b></p>
+        <div class="time">
+            <input type="date" name="enddatetime" id="datetime" min="{{d|date:'Y-m-d'}}">
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+    <script src="{% static 'myapp/js/hotel_booking.js' %}
+    "></script>   
+    <script src="{% static 'myapp/js/date.js' %}
+    "></script>   
+</body>
+</html>

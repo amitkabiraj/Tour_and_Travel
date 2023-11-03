@@ -28,7 +28,7 @@ class UserAdmin(admin.ModelAdmin):
 
 @admin.register(Review)
 class Review(admin.ModelAdmin):
-    list_display = ("image", "name", "review", "stars")
+    list_display = ("name","image", "review", "stars")
 
 
 # admin.site.register(Hotel)
@@ -37,6 +37,8 @@ class Hotel(admin.ModelAdmin):
     list_display = (
         "hotel_id",
         "hotel_name",
+        "hotel_price",
+        "hotel_dist",
         "hotel_about",
         "hotel_feature1",
         "hotel_feature2",

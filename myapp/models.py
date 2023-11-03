@@ -66,6 +66,8 @@ class Review(models.Model):
 class Hotel(models.Model):
     hotel_id = models.CharField(max_length=10, primary_key=True)
     hotel_name = models.CharField(max_length=30)
+    hotel_price = models.DecimalField(max_digits=10, decimal_places=2)   
+    hotel_dist = models.CharField(max_length=100)
     hotel_about = models.CharField(max_length=50)
     hotel_feature1 = models.CharField(max_length=10)
     hotel_feature2 = models.CharField(max_length=10)
