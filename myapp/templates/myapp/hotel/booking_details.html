@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Invoice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .invoice-details {
+            margin-bottom: 20px;
+        }
+
+        .invoice-details div {
+            display: inline-block;
+            width: 49%;
+            vertical-align: top;
+        }
+
+        .invoice-details div:nth-child(odd) {
+            margin-right: 2%;
+        }
+
+        .invoice-details input[type="text"],
+        .invoice-details input[type="date"],
+        .invoice-details input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .invoice-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .invoice-table th,
+        .invoice-table td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .invoice-table th {
+            background-color: #f5f5f5;
+        }
+
+        .total-amount {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .payment-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .payment-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>IN Murshidabad</h1>
+        <div class="invoice-details">
+            <div>
+                <label for="checkInDate">Check-In Date:</label>
+                <input type="date" id="checkInDate" name="checkInDate" value="2023-11-03" readonly>
+            </div>
+            <div>
+                <label for="checkOutDate">Check-Out Date:</label>
+                <input type="date" id="checkOutDate" name="checkOutDate" value="2023-11-05" readonly>
+            </div>
+        </div>
+
+        <table class="invoice-table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Room Booking</td>
+                    <td>₹300.00</td>
+                </tr>
+                <tr>
+                    <td>Additional Services</td>
+                    <td>₹50.00</td>
+                </tr>
+                <!-- Add more items as needed -->
+            </tbody>
+        </table>
+
+        <div class="total-amount">Total Amount: ₹350.00</div>
+
+        <button class="payment-button">Make Payment</button>
+    </div>
+</body>
+</html>

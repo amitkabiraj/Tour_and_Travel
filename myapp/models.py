@@ -18,12 +18,13 @@ GENDER_CHOICES = [
     ("N", "Not Specified"),
 ]
 
+
 # User table
 class User(AbstractBaseUser, PermissionsMixin):
     name = models.CharField(max_length=255)
     email = models.EmailField(max_length=255, unique=True)
     phone = models.IntegerField(unique=True)
-    picture = models.ImageField(upload_to='user/', blank=True, null=True)    
+    picture = models.ImageField(upload_to="user/", blank=True, null=True)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
     country = models.CharField(max_length=255, blank=True, null=True)
     address = models.TextField(blank=True, null=True)
@@ -47,6 +48,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     class Meta:
         db_table = "user"
 
+
 # Review Table
 # class Review(models.Model):
 class Review(models.Model):
@@ -55,18 +57,19 @@ class Review(models.Model):
     )
     name = models.CharField(max_length=100)
     review = models.TextField()
-    stars = models.IntegerField(choices=[(i, f"{i} star") for i in range(1, 6)])
+    stars = models.IntegerField(default=5)
     created_at = models.DateTimeField(auto_now_add=True)
-
+    user = models.ForeignKey(User, models.DO_NOTHING, blank=True, null=True)
 
     def __str__(self):
         return f"Review by {self.name}"
 
+
 #  Hotel table
 class Hotel(models.Model):
-    hotel_id = models.CharField(max_length=10, primary_key=True)
+    hotel_id = models.CharField(max_length=20, primary_key=True)
     hotel_name = models.CharField(max_length=30)
-    hotel_price = models.DecimalField(max_digits=10, decimal_places=2)   
+    hotel_price = models.DecimalField(max_digits=10, decimal_places=2)
     hotel_dist = models.CharField(max_length=100)
     hotel_about = models.CharField(max_length=50)
     hotel_feature1 = models.CharField(max_length=10)
@@ -100,30 +103,35 @@ class ContactMessage(models.Model):
     def __str__(self):
         return f"Message from {self.name}"
 
+
 # Murshidabad place
 class place(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     Dist = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='place/')
+    image = models.ImageField(upload_to="place/")
 
     def __str__(self):
         return self.title
+
     def save(self, *args, **kwargs):
         self.Dist = self.Dist.capitalize()  # Capitalize the Dist field
         super(place, self).save(*args, **kwargs)
 
+
 # murshidabad_restaurants
+
 
 class Restaurants(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
     Dist = models.CharField(max_length=100)
-    restaurant = models.ImageField(upload_to='restaurant_images/')
-    menu = models.ImageField(upload_to='restaurant_images/')
+    restaurant = models.ImageField(upload_to="restaurant_images/")
+    menu = models.ImageField(upload_to="restaurant_images/")
 
     def __str__(self):
         return self.name
+
     def save(self, *args, **kwargs):
         self.Dist = self.Dist.capitalize()  # Capitalize the Dist field
         super(Restaurants, self).save(*args, **kwargs)

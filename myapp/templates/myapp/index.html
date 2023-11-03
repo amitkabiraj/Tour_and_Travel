@@ -174,18 +174,16 @@ index
         <img src="{{ i.image.url }}" alt="">
       </div>
       <div class="content">
-        <h3>{{ i.name }}</h3>
+        <h3>{{ i.user.name }}</h3>
         <p>{{  i.review }}</p>
         <div class="stars">
+        {% for _ in ''|center:i.stars %}
           <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
-          
-          
-          
+        {% endfor %}
         </div>
+ 
+          {% comment %} <i class="fas fa-star-half-alt"></i> {% endcomment %}
+                  
       </div>
     </div>
     {% endfor %}

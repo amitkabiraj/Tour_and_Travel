@@ -83,7 +83,7 @@
 <body>
     <section class="review-form" id="review-form">
         <h1 class="heading"><span>Write a Review</span></h1>
-        <form action="/submit_review" method="post">
+        <form method="post" enctype="multipart/form-data" >
             {% csrf_token %}
             <!-- Image -->
             <label for="image">Image:</label>

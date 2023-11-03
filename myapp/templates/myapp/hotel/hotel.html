@@ -33,7 +33,7 @@ hotel page
                 {% comment %} <button class="prev-btn"><b><</b></button>
                 <button class="next-btn"><b>></b></button> {% endcomment %}
                 <a href="{% url "booking_page" %}" class="hotel_button">Book Now</a>
-                <a href="{% url "all_images" %}" class="all_images">Show all images</a>
+                {% comment %} <a href="{% url "all_images" %}" class="all_images">Show all images</a> {% endcomment %}
             </div>
         </div>
 
@@ -50,7 +50,7 @@ hotel page
                 <h2>{{i.hotel_name}}</h2>
                 <p>{{i.hotel_about}}</p>
                 <ul class="hotel_ul">
-                    <li>price: {{i.hotel_price}}</li>
+                    <li>price: ₹{{i.hotel_price}}</li>
                     <li> Dist: {{i.hotel_dist}}</li>
                     <li>{{i.hotel_feature1}}</li>
                     <li>{{i.hotel_feature2}}</li>
@@ -60,7 +60,7 @@ hotel page
                 </ul>
                 
                 <a href="{% url "booking_page" %}" class="hotel_button">Book Now</a>
-                <a href="{% url "all_images" %}" class="all_images">Show all images</a>
+                <a href="{% url 'all_images' i.pk %}" class="all_images">Show all images</a>
             </div>
         </div>
         {% endfor %}

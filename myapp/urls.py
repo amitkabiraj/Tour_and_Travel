@@ -46,9 +46,9 @@ urlpatterns = [
     # HOTEL
     path("hotel", views.hotel, name="hotel"),
     path("booking_page", views.booking_page, name="booking_page"),
+    path("booking_details", views.booking_details, name="bookimng_details"),
     path("payment_page", views.payment_page, name="payment_page"),
-    path("all_images", views.all_images, name="all_images"),
-
+    path("all_images/<str:pk>", views.all_images, name="all_images"),
     # HOTEL END
     # path('admin_login',views.admin_login, name='admin_login'),
     # path("admin_panel", views.admin_panel, name="admin_panel"),
