@@ -32,7 +32,7 @@ hotel page
                 </ul>
                 {% comment %} <button class="prev-btn"><b><</b></button>
                 <button class="next-btn"><b>></b></button> {% endcomment %}
-                <a href="{% url "booking_page" %}" class="hotel_button">Book Now</a>
+                {% comment %} <a href="{% url "booking_page" %}" class="hotel_button">Book Now</a> {% endcomment %}
                 {% comment %} <a href="{% url "all_images" %}" class="all_images">Show all images</a> {% endcomment %}
             </div>
         </div>
@@ -60,7 +60,7 @@ hotel page
                     <li>{{i.hotel_feature5}}</li>
                 </ul>
                 
-                <a href="{% url 'booking_page'  %}" class="hotel_button">Book Now</a>
+                <a href="{% url 'booking_page' i.pk %}" class="hotel_button">Book Now</a>
                 <a href="{% url 'all_images' i.pk %}" class="all_images">Show all images</a>
             </div>
         </div>

@@ -45,8 +45,8 @@ urlpatterns = [
     # CAR END
     # HOTEL
     path("hotel", views.hotel, name="hotel"),
-    path("booking_page", views.booking_page, name="booking_page"),
-    path("booking_details", views.booking_details, name="bookimng_details"),
+    path("booking_page/<str:pk>", views.booking_page, name="booking_page"),
+    path("booking_details/<str:pk>", views.booking_details, name="bookimng_details"),
     path("payment_page", views.payment_page, name="payment_page"),
     path("all_images/<str:pk>", views.all_images, name="all_images"),
     # HOTEL END

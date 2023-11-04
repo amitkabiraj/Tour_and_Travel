@@ -24,7 +24,15 @@ function generateFields() {
         const genderOptions = ["Select", "Male", "Female", "Other"];
         for (const optionText of genderOptions) {
             const option = document.createElement("option");
-            option.value = optionText;
+            if (optionText === "Male") {
+                option.value = "M";
+            } else if (optionText === "Female") {
+                option.value = "F";
+            } else if (optionText === "Other") {
+                option.value = "N";
+            } else {
+                option.value = optionText;
+            }
             option.textContent = optionText;
             genderInput.appendChild(option);
         }

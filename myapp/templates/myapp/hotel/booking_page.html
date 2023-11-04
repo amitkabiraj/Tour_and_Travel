@@ -127,10 +127,10 @@ hotel booking
 <body>
     <h3 class="danger">{{error}}</h3>
     <h1>Member Information</h1>
-    <form id="memberForm" action="{% url "bookimng_details" %}" method="post">
+    <form id="memberForm" action="" method="post">
         {% csrf_token %}
-        <label for ="addhar">Enter your Addhar number </label>
-        <input type="number" id="" class="addhar" name="Addhar" required>
+        <label for ="adhaar">Enter your Addhar number </label>
+        <input type="number" id="" class="adhaar" name="adhaar" required>
         <label for="numberOfMembers">Number of Members:</label>
         <input type="number" id="numberOfMembers" name="numberOfMembers" min="1" required>
         <button type="button" onclick="generateFields()">Generate Fields</button>

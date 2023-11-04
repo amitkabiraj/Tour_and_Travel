@@ -192,17 +192,45 @@ def status(request):
 # HOTEL
 
 
-def booking_page(request):
+@login_required(login_url="/user_login")
+def booking_page(request, pk):
     initial = date.today()
-    # # hotel=Hotel.objects.get(pk=pk)
-    # if request.method=="POST":
-    #     print ("hello world")
+    hotel = Hotel.objects.get(pk=pk)
+    if request.method == "POST":
+        aadhaar = request.POST["adhaar"]
+        check_in = request.POST["startdatetime"]
+        check_out = request.POST["enddatetime"]
+        total_member = request.POST["numberOfMembers"]
 
+        hotel_booking = HotelBooking.objects.create(
+            hotel=hotel,
+            aadhaar_no=aadhaar,
+            check_in=check_in,
+            check_out=check_out,
+            user=request.user,
+        )
+        for i in range(1, int(total_member) + 1):
+            name = request.POST[f"memberName{str(i)}"]
+            age = request.POST[f"memberAge{str(i)}"]
+            gender = request.POST[f"memberGender{str(i)}"]
+            print(gender)
+            HotelBookingMemberDetail.objects.create(
+                hotel_booking=hotel_booking, name=name, age=age, gender=gender
+            )
+
+        return redirect(f"/booking_details/{hotel_booking.pk}")
     return render(request, "myapp/hotel/booking_page.html", {"d": initial})
 
 
-def booking_details(request):
-    return render(request, "myapp/hotel/booking_details.html")
+def booking_details(request, pk):
+    hotel_booking = HotelBooking.objects.get(pk=pk)
+    exchange_rate = 0.015  # Assuming 1 INR = 0.015 USD
+
+    rupees = float(hotel_booking.amount + 50)
+    dollars = rupees * exchange_rate
+
+    context = {"hotel_booking": hotel_booking, "rupees": rupees, "dollars": dollars}
+    return render(request, "myapp/hotel/booking_details.html", context)
 
 
 def all_images(request, pk):
