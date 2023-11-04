@@ -194,10 +194,16 @@ def status(request):
 
 def booking_page(request):
     initial = date.today()
+    # # hotel=Hotel.objects.get(pk=pk)
+    # if request.method=="POST":
+    #     print ("hello world")
+
     return render(request, "myapp/hotel/booking_page.html", {"d": initial})
+
 
 def booking_details(request):
     return render(request, "myapp/hotel/booking_details.html")
+
 
 def all_images(request, pk):
     hotel = Hotel.objects.get(pk=pk)

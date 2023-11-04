@@ -70,6 +70,7 @@ class Hotel(models.Model):
     hotel_id = models.CharField(max_length=20, primary_key=True)
     hotel_name = models.CharField(max_length=30)
     hotel_price = models.DecimalField(max_digits=10, decimal_places=2)
+    allowed_number = models.IntegerField(default=2)
     hotel_dist = models.CharField(max_length=100)
     hotel_about = models.CharField(max_length=50)
     hotel_feature1 = models.CharField(max_length=10)
@@ -92,6 +93,9 @@ class Hotel(models.Model):
     hotel_image5 = models.FileField(
         upload_to="hotel/", max_length=250, null=True, default=None
     )
+
+    def __str__(self):
+        return self.hotel_name
 
 
 # contact table
@@ -135,3 +139,48 @@ class Restaurants(models.Model):
     def save(self, *args, **kwargs):
         self.Dist = self.Dist.capitalize()  # Capitalize the Dist field
         super(Restaurants, self).save(*args, **kwargs)
+
+
+class HotelBooking(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
+    user = models.ForeignKey(User, models.DO_NOTHING, blank=True, null=True)
+    hotel = models.ForeignKey(Hotel, models.DO_NOTHING, blank=True, null=True)
+    aadhaar_no = models.IntegerField(null=True)
+    check_in = models.DateTimeField(blank=True, null=True)
+    check_out = models.DateTimeField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True, blank=True, null=True)
+    updated_at = models.DateTimeField(auto_now=True, blank=True, null=True)
+
+    @property
+    def total_member(self):
+        return self.hotel_booking_members.all().count()
+
+    @property
+    def amount(self):
+        duration = self.check_out - self.check_in
+        days = duration.days
+        total_member = self.total_member
+        hotel_price = self.hotel.hotel_price
+        allowed_number = self.hotel.allowed_number
+        total_room = -(-total_member // allowed_number)
+        price = hotel_price * total_room
+        return price * days
+
+    def __str__(self):
+        return f"Booking-id : {str(self.id)}"
+
+
+class HotelBookingMemberDetail(models.Model):
+    hotel_booking = models.ForeignKey(
+        HotelBooking,
+        models.DO_NOTHING,
+        blank=True,
+        null=True,
+        related_name="hotel_booking_members",
+    )
+    name = models.CharField(max_length=255, blank=True, null=True)
+    age = models.IntegerField(null=True)
+    gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
+
+    def __str__(self):
+        return str(self.name)

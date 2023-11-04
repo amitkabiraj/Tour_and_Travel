@@ -49,6 +49,7 @@ hotel page
                 
                 <h2>{{i.hotel_name}}</h2>
                 <p>{{i.hotel_about}}</p>
+                <p>Member allowed per room :{{i.allowed_number}}</p>
                 <ul class="hotel_ul">
                     <li>price: ₹{{i.hotel_price}}</li>
                     <li> Dist: {{i.hotel_dist}}</li>
@@ -59,7 +60,7 @@ hotel page
                     <li>{{i.hotel_feature5}}</li>
                 </ul>
                 
-                <a href="{% url "booking_page" %}" class="hotel_button">Book Now</a>
+                <a href="{% url 'booking_page'  %}" class="hotel_button">Book Now</a>
                 <a href="{% url 'all_images' i.pk %}" class="all_images">Show all images</a>
             </div>
         </div>

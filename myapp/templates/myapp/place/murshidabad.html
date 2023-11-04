@@ -77,8 +77,8 @@ murshidabad
 
 <h1 class="heading">Hotels Of Murshidebad</h1>
 <div class="body-content">
+  {% for i in hotel_data %}
     <div class="container">
-      {% for i in hotel_data %}
       <img src="{{i.hotel_image2.url}}" alt="Tourist Place">
       <div class="description">
         <h2>{{i.hotel_name}}</h2>

@@ -28,7 +28,7 @@ class UserAdmin(admin.ModelAdmin):
 
 @admin.register(Review)
 class Review(admin.ModelAdmin):
-    list_display = ("name","image", "review", "stars")
+    list_display = ("name", "image", "review", "stars")
 
 
 # admin.site.register(Hotel)
@@ -62,7 +62,7 @@ class ContactMessageAdmin(admin.ModelAdmin):
 # Register Murshidabad_place table
 @admin.register(place)
 class place(admin.ModelAdmin):
-    list_display = ("title", "description","Dist","image")
+    list_display = ("title", "description", "Dist", "image")
 
 
 # Register Murshidabad_restaurants table
@@ -70,6 +70,25 @@ class place(admin.ModelAdmin):
 # class Murshidabad_Restaurants(admin.ModelAdmin):
 #     list_display = ("name", "description", "Dist","restaurant", "menu")
 
+
 @admin.register(Restaurants)
 class Murshidabad_Restaurants(admin.ModelAdmin):
-    list_display = ("name", "description", "Dist","restaurant", "menu")
+    list_display = ("name", "description", "Dist", "restaurant", "menu")
+
+
+@admin.register(HotelBooking)
+class HotelBooking(admin.ModelAdmin):
+    list_display = (
+        "id",
+        "user",
+        "hotel",
+        "check_in",
+        "check_out",
+        "total_member",
+        "amount",
+    )
+
+
+@admin.register(HotelBookingMemberDetail)
+class HotelBookingMemberDetail(admin.ModelAdmin):
+    list_display = ("hotel_booking", "name", "age", "gender")
