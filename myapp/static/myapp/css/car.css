@@ -86,38 +86,72 @@
 
    /* Car place select  pages css   */
 
-   /* Style for the checkbox container */
-.checkbox-container {
-  position: relative;
-  display: inline-block;
-  margin: 20px; /* Margin around the images */
-}
 
-/* Position the checkbox at the top left of the container */
-.checkbox-container input[type="checkbox"] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1; /* Ensure checkbox is above the image */
-  opacity: 0; /* Hide the checkbox */
-  pointer-events: all; /* Allow clicking on the checkbox area */
-}
+   ul {
+    list-style-type: none;
+  }
+  
+ .li {
+    display: inline-block;
+  }
+  
+  input[type="checkbox"][id^="myCheckbox"] {
+    display: none;
+  }
+  
+  .carps1 {
+    border: 8px solid #993f3f;
+    padding: 17px;
+    display: block;
+    position: relative;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  label:before {
+    background-color: rgb(13, 67, 205);
+    color: rgb(17, 21, 24);
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    border: 3px solid rgb(128, 128, 128);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 28px;
+    transition-duration: 0.4s;
+    transform: scale(0);
+  }
+  
+  label img {
+    height: 350px;
+    width: 400px;
+    transition-duration: 0.3s;
+    transform-origin: 50% 50%;
+  }
+  
+  :checked + label {
+    border-color: #9c6f6f;
+  }
+  
+  :checked + label:before {
+    content: "✓";
+    background-color: rgb(245, 239, 239);
+    transform: scale(1);
+  }
+  
+  :checked + label img {
+    transform: scale(0.9);
+    /* box-shadow: 0 0 5px #333; */
+    z-index: -1;
+  }
 
-/* Adjust image positioning */
-.border-image {
-  position: relative;
-  display: block;
-  max-width: 300px; /* Adjust max width as needed */
-  border: 15px solid #c82020; /* Border color for images */
-  transition: transform 0.3s;
-  position: relative;
-}
-
-/* Apply the zoom effect on hover */
-.checkbox-container:hover .border-image {
-  transform: scale(1.1);
-  transition: transform 0.3s;
-}
+  .pname{
+    text-align: center;
+  }
 
 /* Other styles... */
 
@@ -128,7 +162,7 @@
   background-color: blue; /* Set the background color to blue */
   color: white; /* Set text color to white */
   padding: 10px 20px; /* Adjust padding for better button size */
-  border: none; /* Remove border */
+  border: 2px brown; /* Remove border */
   cursor: pointer; /* Show cursor as pointer on hover */
   transition: background-color 0.3s; /* Add transition effect on background color change */
 }
@@ -140,18 +174,9 @@
 .save-next-button {
   display: flex;
   justify-content: center;
-  margin-top: 20px; /* Add margin to separate the button from the containers */
+  margin-bottom: 20px; 
 }
 
-.save-next-btn {
-  background-color: blue;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  text-align: center; /* Align text in the middle */
-}
 /* Media query for responsiveness */
 @media only screen and (max-width: 768px) {
   .save-next-btn {

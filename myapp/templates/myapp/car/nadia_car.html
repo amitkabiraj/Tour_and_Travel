@@ -6,105 +6,55 @@ Nadia car page
 {% load static %}
 {% comment %} write content here  {% endcomment %}
 <h1 class="heading">select Places Of Nadia</h1>
-<div class="body-content image-row">
-  <div class="container">
-    <input type="checkbox" id="checkbox1" class="checkbox-hidden">
-    <label class="checkbox-container" for="checkbox1">
-      <span class="custom-checkbox"></span>
-      <img src="{% static 'myapp/image/bg.jpg' %}" alt="Image 1" class="border-image image-zoom">
-    <div class="description">
-      <h2>Nadia</h2>
-      </label>
-    </div>
-    </div>
+<ul>
+       
+  <div class="li">
+      <input type="checkbox" id="myCheckbox1" />
+      <label class="carps1" for="myCheckbox1"><img src="{% static 'myapp/image/bg.jpg' %}" alt="Image 1" /><h2 class="pname">Nadia</h2></label>
+  </div>
 
-    <div class="container">
-    <input type="checkbox" id="checkbox2" class="checkbox-hidden">
-    <label class="checkbox-container" for="checkbox2">
-      <span class="custom-checkbox"></span>
-      <img src="{% static 'myapp/image/bg.jpg' %}" alt="Image 1" class="border-image image-zoom">
-    <div class="description">
-      <h2>Nadia</h2>
-      </label>
-    </div>
-    </div>
+  <div class="li">
+    <input type="checkbox" id="myCheckbox2" />
+    <label class="carps1" for="myCheckbox2"><img src="{% static 'myapp/image/bg.jpg' %}" alt="Image 2" /><h2 class="pname">Nadia</h2></label>
+  </div>
 
-    <div class="container">
-    <input type="checkbox" id="checkbox3" class="checkbox-hidden">
-    <label class="checkbox-container" for="checkbox3">
-      <span class="custom-checkbox"></span>
-      <img src="{% static 'myapp/image/bg.jpg' %}" alt="Image 1" class="border-image image-zoom">
-    <div class="description">
-      <h2>Nadia</h2>
-      </label>
-    </div>
-    </div>
+  <div class="li">
+    <input type="checkbox" id="myCheckbox3" />
+    <label class="carps1" for="myCheckbox3"><img src="{% static 'myapp/image/bg.jpg' %}" alt="Image 3"/><h2 class="pname">Nadia</h2></label>
+  </div>
 
-    <div class="container">
-    <input type="checkbox" id="checkbox4" class="checkbox-hidden">
-    <label class="checkbox-container" for="checkbox4">
-      <span class="custom-checkbox"></span>
-      <img src="{% static 'myapp/image/bg.jpg' %}" alt="Image 1" class="border-image image-zoom">
-    <div class="description">
-      <h2>Nadia</h2>
-      </label>
-    </div>
-    </div>
+  <div class="li">
+    <input type="checkbox" id="myCheckbox4"/>
+    <label class="carps1" for="myCheckbox4"><img src="{% static 'myapp/image/bg.jpg' %}" alt="Image 4"/><h2 class="pname">Nadia</h2></label>
+  </div>
 
-    <div class="container">
-    <input type="checkbox" id="checkbox5" class="checkbox-hidden">
-    <label class="checkbox-container" for="checkbox5">
-      <span class="custom-checkbox"></span>
-      <img src="{% static 'myapp/image/bg.jpg' %}" alt="Image 1" class="border-image image-zoom">
-    <div class="description">
-      <h2>Nadia</h2>
-      </label>
-    </div>
-    </div>
+  <div class="li">
+    <input type="checkbox" id="myCheckbox5"/>
+    <label class="carps1" for="myCheckbox5"><img src="{% static 'myapp/image/bg.jpg' %}" alt="Image 5"/><h2 class="pname">Nadia</h2></label>
+  </div>
 
-    <div class="container">
-    <input type="checkbox" id="checkbox6" class="checkbox-hidden">
-    <label class="checkbox-container" for="checkbox6">
-      <span class="custom-checkbox"></span>
-      <img src="{% static 'myapp/image/bg.jpg' %}" alt="Image 1" class="border-image image-zoom">
-    <div class="description">
-      <h2>Nadia</h2>
-      </label>
-    </div>
-    </div>
+  <div class="li">
+    <input type="checkbox" id="myCheckbox6"/>
+    <label class="carps1" for="myCheckbox6"><img src="{% static 'myapp/image/bg.jpg' %}" alt="Image 6" /><h2 class="pname">Nadia</h2></label>
+  </div>
 
-    <div class="container">
-    <input type="checkbox" id="checkbox7" class="checkbox-hidden">
-    <label class="checkbox-container" for="checkbox7">
-      <span class="custom-checkbox"></span>
-      <img src="{% static 'myapp/image/bg.jpg' %}" alt="Image 1" class="border-image image-zoom">
-    <div class="description">
-      <h2>Nadia</h2>
-      </label>
-    </div>
-    </div>
+  <div class="li">
+    <input type="checkbox" id="myCheckbox7"/>
+    <label class="carps1" for="myCheckbox7"><img src="{% static 'myapp/image/bg.jpg' %}" alt="Image 7" /><h2 class="pname">Nadia</h2></label>
+  </div>
 
-    <div class="container">
-    <input type="checkbox" id="checkbox8" class="checkbox-hidden">
-    <label class="checkbox-container" for="checkbox8">
-      <span class="custom-checkbox"></span>
-      <img src="{% static 'myapp/image/bg.jpg' %}" alt="Image 1" class="border-image image-zoom">
-    <div class="description">
-      <h2>Nadia</h2>
-      </label>
-    </div>
-    </div>
+  <div class="li">
+    <input type="checkbox" id="myCheckbox8"/>
+    <label class="carps1" for="myCheckbox8"><img src="{% static 'myapp/image/bg.jpg' %}" alt="Image 8"/><h2 class="pname">Nadia</h2></label>
+  </div>
+</ul>
+    
     <div class="save-next-button">
       <form action="{% url 'car_range' %}" method="post">
         {% csrf_token %}
         <input type="submit" value="Save & Next">
       </form>
     </div>
-
-
-
-
-</div>
 
 
 
