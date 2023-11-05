@@ -42,6 +42,10 @@ urlpatterns = [
     # USER END
     # CAR
     path("car", views.car, name="car"),
+    path("car_details", views.car_details, name="car_details"),
+    path("car_range", views.car_range, name="car_range"),
+    path("nadia_car", views.nadia_car, name="nadia_car"),
+    path("murshidabad_car", views.murshidabad_car, name="murshidabad_car"),
     # CAR END
     # HOTEL
     path("hotel", views.hotel, name="hotel"),
@@ -49,6 +53,7 @@ urlpatterns = [
     path("booking_details/<str:pk>", views.booking_details, name="bookimng_details"),
     path("payment_page", views.payment_page, name="payment_page"),
     path("all_images/<str:pk>", views.all_images, name="all_images"),
+    path("thank_you", views.thank_you, name="thank_you"),
     # HOTEL END
     # path('admin_login',views.admin_login, name='admin_login'),
     # path("admin_panel", views.admin_panel, name="admin_panel"),

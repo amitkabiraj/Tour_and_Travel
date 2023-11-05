@@ -156,6 +156,12 @@ class HotelBooking(models.Model):
         return self.hotel_booking_members.all().count()
 
     @property
+    def days(self):
+        duration = self.check_out - self.check_in
+        days = duration.days
+        return days
+
+    @property
     def amount(self):
         duration = self.check_out - self.check_in
         days = duration.days
@@ -184,3 +190,32 @@ class HotelBookingMemberDetail(models.Model):
 
     def __str__(self):
         return str(self.name)
+
+
+CURRENCY_CHOICES = [
+    ("INR", "Indian Rupees"),
+    ("USD", "US Dollar"),
+]
+
+
+class HotelBookingOrder(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
+    hotel_booking = models.ForeignKey(
+        HotelBooking,
+        models.DO_NOTHING,
+        blank=True,
+        null=True,
+        related_name="hotel_booking_orders",
+    )
+    paid_amount = models.FloatField(null=True, default=0)
+    currency = models.CharField(max_length=5, choices=CURRENCY_CHOICES, default="USD")
+    created_at = models.DateTimeField(auto_now_add=True, blank=True, null=True)
+    updated_at = models.DateTimeField(auto_now=True, blank=True, null=True)
+
+    @property
+    def rupees(self):
+        rupees = self.hotel_booking.amount + 50
+        return rupees
+
+    def __str__(self):
+        return str(self.hotel_booking)

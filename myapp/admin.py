@@ -92,3 +92,8 @@ class HotelBooking(admin.ModelAdmin):
 @admin.register(HotelBookingMemberDetail)
 class HotelBookingMemberDetail(admin.ModelAdmin):
     list_display = ("hotel_booking", "name", "age", "gender")
+
+
+@admin.register(HotelBookingOrder)
+class HotelBookingOrder(admin.ModelAdmin):
+    list_display = ("hotel_booking", "rupees", "paid_amount", "currency")

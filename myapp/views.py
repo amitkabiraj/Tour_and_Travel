@@ -1,6 +1,7 @@
 from django.shortcuts import redirect, render, HttpResponse
 from datetime import date, datetime
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.http import require_POST
 
 
 # from myapp.models import Hotel, Review, ContactMessage, User
@@ -69,12 +70,12 @@ def privasy(request):
 
 def review(request):
     if request.method == "POST":
-        name = request.POST["name"]
+        # name = request.POST["name"]
         review = request.POST["review"]
         stars = request.POST["stars"]
         image = request.FILES.get("image")
         Review.objects.create(
-            name=name,
+            # name=name,
             review=review,
             stars=stars,
             image=image,
@@ -182,7 +183,9 @@ def register(request):
 
 
 def order(request):
-    return render(request, "myapp/user/order.html")
+    user = request.user
+    orders = HotelBookingOrder.objects.filter(hotel_booking__user=user).order_by("-created_at")
+    return render(request, "myapp/user/order.html", {"orders": orders})
 
 
 def status(request):
@@ -224,6 +227,8 @@ def booking_page(request, pk):
 
 def booking_details(request, pk):
     hotel_booking = HotelBooking.objects.get(pk=pk)
+    if HotelBookingOrder.objects.filter(hotel_booking=hotel_booking).exists():
+        return redirect("/")
     exchange_rate = 0.015  # Assuming 1 INR = 0.015 USD
 
     rupees = float(hotel_booking.amount + 50)
@@ -236,6 +241,21 @@ def booking_details(request, pk):
 def all_images(request, pk):
     hotel = Hotel.objects.get(pk=pk)
     return render(request, "myapp/hotel/all_images.html", {"hotel": hotel})
+
+
+def thank_you(request):
+    if request.method == "POST":
+        hotel_booking_id = request.POST.get("hotel_booking_id")
+        amount = request.POST.get("amount")
+        hotel_booking = HotelBooking.objects.get(pk=hotel_booking_id)
+        HotelBookingOrder.objects.create(
+            hotel_booking=hotel_booking, paid_amount=amount
+        )
+
+    return render(
+        request,
+        "myapp/hotel/thank_you.html",
+    )
 
 
 def hotel(request):
@@ -270,8 +290,25 @@ def payment_page(request):
     )
 
 
+#  CAR
 def car(request):
     return render(request, "myapp/car/car.html")
+
+
+def car_range(request):
+    return render(request, "myapp/car/car_range.html")
+
+
+def car_details(request):
+    return render(request, "myapp/car/car_details.html")
+
+
+def murshidabad_car(request):
+    return render(request, "myapp/car/murshidabad_car.html")
+
+
+def nadia_car(request):
+    return render(request, "myapp/car/nadia_car.html")
 
 
 # def hotel(request):

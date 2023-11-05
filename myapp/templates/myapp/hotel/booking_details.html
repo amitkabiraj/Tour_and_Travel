@@ -94,11 +94,11 @@
         <div class="invoice-details">
             <div>
                 <label for="checkInDate">Check-In Date:</label>
-                <input type="text" id="checkInDate" name="checkInDate" value="{{hotel_booking.check_in}}" readonly>
+                <input type="text" id="checkInDate" name="checkInDate" value="{{hotel_booking.check_in|date:"M d, Y"}}" readonly>
             </div>
             <div>
                 <label for="checkOutDate">Check-Out Date:</label>
-                <input type="text" id="checkOutDate" name="checkOutDate" value="{{hotel_booking.check_out}}" readonly>
+                <input type="text" id="checkOutDate" name="checkOutDate" value="{{hotel_booking.check_out|date:"M d, Y"}}" readonly>
             </div>
         </div>
 
@@ -132,7 +132,42 @@
  <!-- Set up a container element for the button -->
 
  <script>
-   paypal
+    function getCookie(name) {
+        const cookieValue = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+        return cookieValue ? cookieValue.pop() : '';
+      }
+
+    function redirect() {
+        const formData = new FormData();
+        formData.append('hotel_booking_id', '{{hotel_booking.pk}}');
+        formData.append('amount', '{{dollars}}');
+        
+        fetch('/thank_you', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'X-CSRFToken': getCookie('csrftoken')
+          }        
+        })
+          .then(response => {
+            if (response.ok) {
+              // Form submission successful
+              console.log('Form submitted successfully');
+              // Redirect to another page
+              window.location.href = '/thank_you';
+            } else {
+              // Form submission failed
+              console.log('Form submission failed');
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });        
+
+        window.location.href = "{% url 'thank_you' %}";
+      }
+
+    paypal
      .Buttons({
        // Sets up the transaction when a payment button is clicked
        createOrder: (data, actions) => {
@@ -157,6 +192,7 @@
            );
            const transaction =
              orderData.purchase_units[0].payments.captures[0];
+             redirect()
            // alert(
            //   `Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`
            // );
