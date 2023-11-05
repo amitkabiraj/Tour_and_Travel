@@ -310,6 +310,10 @@ def murshidabad_car(request):
 def nadia_car(request):
     return render(request, "myapp/car/nadia_car.html")
 
+def process_payment(request):
+    # Add your payment processing logic here
+    return render(request, 'myapp/car/payment_confirmation.html')
+
 
 # def hotel(request):
 #     return render(request, 'myapp/hotel/hotel.html')

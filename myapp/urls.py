@@ -46,6 +46,7 @@ urlpatterns = [
     path("car_range", views.car_range, name="car_range"),
     path("nadia_car", views.nadia_car, name="nadia_car"),
     path("murshidabad_car", views.murshidabad_car, name="murshidabad_car"),
+    path('process_payment/', views.process_payment, name='process_payment'),
     # CAR END
     # HOTEL
     path("hotel", views.hotel, name="hotel"),

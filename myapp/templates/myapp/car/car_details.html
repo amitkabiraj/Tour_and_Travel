@@ -1,0 +1,41 @@
+{% extends 'myapp/base.html' %}
+{% block title%}
+Car Details  page
+{% endblock title%}
+{% block content %}
+
+
+{% load static %}
+<section id=about1>
+<div class="from-box">
+    <form id="placeForm">
+        <h2 id=nocar>Booking Details </h2>
+        <label for="placeSelector">Select Place :</label>
+        <select id="placeSelector" name="placeSelector">
+          <option value="nadia_car">Nadia</option>
+          <option value="murshidabad_car">Murshidabad</option>
+        </select>
+        
+        <label for="seatsSelect">Seates in Car:</label>
+        <select id="seatsSelect" name="seatsSelect">
+            <option value="seats1">4 seter </option>
+            <option value="seats2">5 seter </option>
+            <option value="seats3">7 seter </option>
+        </select>
+        
+        <label for="numMembers">Number of Members:</label>
+        <input type="number" id="numMembers" name="numMembers">
+        
+        <label for="numCars">Number of Cars:</label>
+        <input type="number" id="numCars" name="numCars">
+        
+
+        <label for="numSeats"> Date :</label>
+        <input type="Date" id="date" name="date">
+        <br><br>
+        
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+      
+{% endblock content %}
