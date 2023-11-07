@@ -1,0 +1,53 @@
+{% extends 'myapp/user/userpanel.html' %}
+{% block title%}
+user order
+{% endblock title%}
+{% block content %}
+{% load static %}
+<h1>
+my order
+</h1>
+<h1>Order History</h1>
+
+<div class="order-container">
+    {% comment %} <h2>Hotel Booking History</h2> {% endcomment %}
+    {% for i in orders %}
+
+        <div class="order-section">
+           
+
+            <div class="order-item">
+                <div class="order-details">
+                    <h3>Order #{{i.pk}}</h3>
+                    <a href="#">View Details</a>
+                </div>
+                <div class="order-type">Type: Hotel Booking</div>
+                <div>Date: {{i.created_at|date:"M d, Y"}}</div>
+                {% comment %} <div>Location: New York, USA</div> {% endcomment %}
+                <div>Number of Days: {{i.hotel_booking.days}}</div>
+                <div>Total Amount: {{i.rupees}}</div>
+            </div>
+
+            <!-- Add more hotel booking items as needed -->
+        </div>
+        {%endfor%}
+
+    {% comment %} <div class="order-section">
+        <h2>Car Rental History</h2>
+
+        <div class="order-item">
+            <div class="order-details">
+                <h3>Order #5678</h3>
+                <a href="#">View Details</a>
+            </div>
+            <div class="order-type">Type: Car Rental</div>
+            <div>Date: July 25, 2023</div>
+            <div>Location: Los Angeles, USA</div>
+            <div>Duration: 5 Days</div>
+            <div>Total Amount: $300</div>
+        </div>
+
+        <!-- Add more car rental booking items as needed -->
+    </div> {% endcomment %}
+</div>
+{% endblock content %}

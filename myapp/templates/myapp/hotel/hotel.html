@@ -17,45 +17,54 @@ hotel page
                 <img src="{% static 'myapp/image/hotel/hotel2.jpg' %}" alt="Hotel Room" class="hotel_hotel-image">
             </div>
             
+            
             <div class="hotel_room-details">
                 
                 <h2>Deluxe Room</h2>
                 <p>Enjoy a luxurious stay in our spacious deluxe rooms with a stunning view of the city.</p>
                 <ul class="hotel_ul">
+                    <li>price $500</li>
                     <li>Free Wifi</li>
                     <li>24x7 Service</li>
                     <li>King-sized bed</li>
                     <li>City view</li>
                     <li>En-suite bathroom</li>
                 </ul>
-                <button class="prev-btn"><b><</b></button>
-                <button class="next-btn"><b>></b></button>
-                <a href="{% url "hotel_booking" %}" class="hotel_button">Book Now</a>
-                <a href="{% url "all_images" %}" class="all_images">Show all images</a>
+                {% comment %} <button class="prev-btn"><b><</b></button>
+                <button class="next-btn"><b>></b></button> {% endcomment %}
+                {% comment %} <a href="{% url "booking_page" %}" class="hotel_button">Book Now</a> {% endcomment %}
+                {% comment %} <a href="{% url "all_images" %}" class="all_images">Show all images</a> {% endcomment %}
             </div>
         </div>
+
+        {% for i in hotel_data %}
         <div class="hotel_room">
             <div class="image">
-                <img src="{% static 'myapp/image/hotel/hotel3.jpg'%}" alt="Suite Room" class="hotel_hotel-image" >
-                <img src="{% static 'myapp/image/hotel/hotel4.jpg'%}" alt="Suite Room" class="hotel_hotel-image">
+                <img src="{{i.hotel_image2.url}}" alt="Hotel Room" class="hotel_hotel-image">
+                
             </div>
             
+            
             <div class="hotel_room-details">
-                <h2>Suite Room</h2>
-                <p>Indulge in the ultimate comfort with our elegantly designed suite rooms.</p>
-                <ul class="hotel_ul">
-                    <li>Free Wifi</li>
-                    <li>24x7 Service</li>
-                    <li>King-sized bed</li>
-                    <li>City view</li>
-                    <li>En-suite bathroom</li>
-                </ul>
-                <button class="prev-btn"><b><</b></button>
-                <button class="next-btn"><b>></b></button>
-                <a href="#" class="hotel_button">Book Now</a>
-            </div>
                 
+                <h2>{{i.hotel_name}}</h2>
+                <p>{{i.hotel_about}}</p>
+                <p>Member allowed per room :{{i.allowed_number}}</p>
+                <ul class="hotel_ul">
+                    <li>price: ₹{{i.hotel_price}}</li>
+                    <li> Dist: {{i.hotel_dist}}</li>
+                    <li>{{i.hotel_feature1}}</li>
+                    <li>{{i.hotel_feature2}}</li>
+                    <li>{{i.hotel_feature3}}</li>
+                    <li>{{i.hotel_feature4}}</li>
+                    <li>{{i.hotel_feature5}}</li>
+                </ul>
+                
+                <a href="{% url 'booking_page' i.pk %}" class="hotel_button">Book Now</a>
+                <a href="{% url 'all_images' i.pk %}" class="all_images">Show all images</a>
+            </div>
         </div>
+        {% endfor %}
     </div>
     
 </div>

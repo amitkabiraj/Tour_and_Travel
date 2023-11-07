@@ -12,9 +12,7 @@ index
     </div>
     <div class="content">
       <h1>explore new place, <br> adventure awaits. </h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro quod totam temporibus vel illum nemo
-        deleniti consequatur assumenda velit rem! Laboriosam suscipit iusto iure temporibus provident saepe
-        veniam dicta iste?</p>
+      <p>Traveling is like an exciting adventure. You get to visit new places, meet friendly people, and try tasty foods. Whether it's relaxing on a beach or exploring historic sites, every trip is special. So pack your bags and get ready for a journey full of wonderful experiences!"</p>
       <h2 class="register"><a href="{% url 'register' %}">Sign Up</a></h2>
     </div>
     <!-- <div class="form-container">
@@ -47,9 +45,7 @@ index
         <img src="{% static 'myapp/image/nadia/n2.jpg' %}" alt="">
         <div class="content">
           <h3 class="title">Mayapur</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas aliquam architecto magnam vero
-            a. Id odio quidem eaque mollitia nam obcaecati dolor fuga totam aut dolore, perspiciatis enim
-            quis saepe.</p>
+          <p>Mayapur ISKCON Temple is a beautiful and peaceful place. It's in West Bengal, India. People from all over the world visit to pray and learn about spiritual teachings. The temple has stunning architecture and serene gardens, making it a truly special place for worship and reflection..</p>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -57,7 +53,7 @@ index
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
           </div>
-          <a href="#"><button class="btn">check out!</button></a>
+          <a href="{% url 'nadia' %}"><button class="btn">check out!</button></a>
         </div>
       </div>
 
@@ -65,9 +61,7 @@ index
         <img src="{% static 'myapp/image/mur/hhh.jpg' %}" alt="">
         <div class="content">
           <h3 class="title">Hajarduyari</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas aliquam architecto magnam vero
-            a. Id odio quidem eaque mollitia nam obcaecati dolor fuga totam aut dolore, perspiciatis enim
-            quis saepe.</p>
+          <p>Murshidabad's Hazarduari Palace, also known as Jahangir Palace, is a grand historical building in West Bengal, India. It has a thousand doors, hence the name. This palace witnessed significant events during the Mughal era and offers visitors a glimpse into the region's rich heritage and royal past.</p>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -75,7 +69,7 @@ index
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
           </div>
-          <a href="#"><button class="btn">check out!</button></a>
+          <a href="{% url 'murshidabad' %}"><button class="btn">check out!</button></a>
         </div>
       </div>
 
@@ -83,9 +77,7 @@ index
         <img src="{% static 'myapp/image/mur/ppp.jpg' %}" alt="">
         <div class="content">
           <h3 class="title">Jiaganj</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas aliquam architecto magnam vero
-            a. Id odio quidem eaque mollitia nam obcaecati dolor fuga totam aut dolore, perspiciatis enim
-            quis saepe.</p>
+          <p>Katgola Bagan in Jiaganj, West Bengal, is a picturesque garden with a fascinating history. It's known for its ancient trees and tranquil atmosphere. Visitors can explore the lush greenery and learn about the legacy of the Tagore family, who played a significant role in Bengal's cultural heritage.</p>
           <div class="stars">
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
@@ -93,7 +85,7 @@ index
             <i class="fas fa-star"></i>
             <i class="fas fa-star-half-alt"></i>
           </div>
-          <a href="#"><button class="btn">check out!</button></a>
+          <a href="{% url 'murshidabad' %}"><button class="btn">check out!</button></a>
         </div>
       </div>
 
@@ -112,15 +104,11 @@ index
       <div class="content">
         <h3>why choose us ?</h3>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut accusantium molestias
-          voluptates nostrum maxime obcaecati excepturi corporis cumque eaque nihil dolor dicta doloribus
-          dignissimos, natus, quod cum quasi nemo!
+          We are a dedicated team of three passionate individuals, united by our shared love for exploration and adventure. Each member brings a unique set of skills and expertise to the table, allowing us to create a dynamic and well-rounded project. With a collective vision to revolutionize the way people experience travel, we've embarked on this minor project with unwavering determination and a commitment to excellence.
         </p>
         <br>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut adipisci, esse molestiae nemo fugit quae
-          tempora earum sit. Cupiditate minima perferendis rerum nobis porro est voluptatem id aperiam qui
-          itaque.
+          At the core of our project lies a simple yet powerful mission - to inspire wanderlust and facilitate unforgettable travel experiences. We understand that every journey is a personal story waiting to be written, and we aim to provide a platform that empowers travelers to embark on their dream adventures. By curating meticulously planned itineraries, offering a seamless booking process, and providing valuable travel insights, we hope to become a trusted companion for globetrotters around the world.
         </p>
         <a href="{% url 'about' %}"><button class="btn btn1">read more</button></a>
       </div>
@@ -136,46 +124,69 @@ index
     <div class="box-container">
       <div class="box">
         <img src="{% static 'myapp/image/mur/barikothi.jpeg' %}" alt="">
-        <a href="#"><button class="btn">check out!</button></a>
+        <a href="{% url 'murshidabad' %}"><button class="btn">check out!</button></a>
       </div>
 
       <div class="box">
         <img src="{% static 'myapp/image/mur/aaa.jpg' %}" alt="">
         
-        <a href="#"><button class="btn">check out!</button></a>
+        <a href="{% url 'murshidabad' %}"><button class="btn">check out!</button></a>
       </div>
 
       <div class="box">
         <img src="{% static 'myapp/image/mur/barikothi1.jpeg' %}" alt="">
         
-        <a href="#"><button class="btn">check out!</button></a>
+        <a href="{% url 'murshidabad' %}"><button class="btn">check out!</button></a>
       </div>
 
       <div class="box">
       <img src="{% static 'myapp/image/mur/barikothi4.jpeg' %}" alt="">
         
-        <a href="#"><button class="btn">check out!</button></a>
+        <a href="{% url 'nadia' %}"><button class="btn">check out!</button></a>
       </div>
 
       <div class="box">
       <img src="{% static 'myapp/image/mur/char.jpg' %}" alt="">
        
-        <a href="#"><button class="btn">check out!</button></a>
+        <a href="{% url 'nadia' %}"><button class="btn">check out!</button></a>
 
       </div>
 
       <div class="box">
       <img src="{% static 'myapp/image/mur/church1.jpg' %}" alt="">
        
-        <a href="#"><button class="btn">check out!</button></a>
+        <a href="{% url 'nadia' %}"><button class="btn">check out!</button></a>
       </div>
     </div>
   </section>
   <!-- gallery section end -->
   <!-- review section start -->
+  
   <section class="review" id="review">
+
     <h1 class="heading"><span>r</span>eview</h1>
     <div class="box-container">
+    {% for i in review_data %}
+
+     
+    <div class="box">
+      <div class="image">
+        <img src="{{ i.image.url }}" alt="">
+      </div>
+      <div class="content">
+        <h3>{{ i.user.name }}</h3>
+        <p>{{  i.review }}</p>
+        <div class="stars">
+        {% for _ in ''|center:i.stars %}
+          <i class="fas fa-star"></i>
+        {% endfor %}
+        </div>
+ 
+          {% comment %} <i class="fas fa-star-half-alt"></i> {% endcomment %}
+                  
+      </div>
+    </div>
+    {% endfor %}
       <div class="box">
         <div class="image">
           <img src="{% static 'myapp/image/pic-1.jpeg' %}" alt="">
@@ -262,7 +273,8 @@ index
       </div>
 
       <div class="contact-form-container">
-        <form action="">
+        <form action="{% url 'contact' %}" method="post" onsubmit="return alert('message sent');">
+          {% csrf_token %}
           <h3>get in touch</h3>
           <div class="inputBox">
             <input type="text" name="name" id="name" placeholder="your full name">
@@ -279,13 +291,12 @@ index
   <!-- newsletter section start -->
   <section class="newsletter" id="newsletter">
     <h1>FEEL FREE TO TRAVEL</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim illo iusto suscipit molestias cumque,
-      explicabo hic temporibus eligendi libero fuga distinctio cupiditate aliquid soluta! Doloremque architecto
-      magnam cumque laudantium totam?</p>
-    <form action="#">
+    <p>Join our community of explorers and embark on a journey of endless discovery. Sign in today for exclusive access to travel insights, special offers, and a world of exciting adventures waiting just for you!..</p>
+    <form action="{% url 'user_login' %}" method="post" >
+      {% csrf_token %}
       <input type="email" name="email" id="email" placeholder="enter your email">
       <input type="password" name="password" id="password" placeholder="enter your password">
-      <input type="submit" value="sign up">
+      <input type="submit" value="sign in">
     </form>
   </section>
   <!-- newsletter section end -->

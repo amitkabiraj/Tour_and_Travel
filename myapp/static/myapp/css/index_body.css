@@ -253,6 +253,7 @@ header .fa-bars {
     color: #333;
     font-size: 1.3rem;
     padding: 1rem;
+    text-align: justify;
 }
 
 .feature .card-container .content .stars i {
@@ -379,7 +380,7 @@ header .fa-bars {
     margin-right: 1rem;
 }
 .about_in p {
-    margin-top: 10px;
+    margin-top: 5px;
     padding: 20px;
     text-align: justify;
     font-size: 1.9rem;
@@ -508,6 +509,7 @@ header .fa-bars {
     font-size: 1.4rem;
     color: #333;
     padding: .5rem 1.5rem;
+    text-align: justify;
 }
 
 .review .box-container .box .content .stars i {

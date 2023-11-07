@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.head {
+    margin-top: 50px;
+    background-color: #d81818;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+.restaurant {
+    display: flex;
+    margin: 2em;
+    border: 1px solid #631414;
+    padding: 1em;
+}
+
+.restaurant-info {
+    flex-grow: 1;
+}
+
+.restaurant-info h2 {
+    margin-top: 0;
+}
+
+.restaurant-info p {
+    font-size: 1.2em;
+}
+
+.restaurant-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-image,
+.menu-image {
+    width: 200px;
+    height: 200px;
+    margin:10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.home-image:hover,
+.menu-image:hover {
+    transform: scale(1.3);
+}
