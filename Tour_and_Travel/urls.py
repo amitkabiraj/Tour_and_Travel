@@ -17,7 +17,9 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-
+admin.site.site_header = "ADMIN"
+admin.site.site_title = "Easy Travel"
+admin.site.index_title = "Dashboard"
 urlpatterns = [path("admin/", admin.site.urls), path("", include("myapp.urls"))]
 
 if settings.DEBUG:  # development
