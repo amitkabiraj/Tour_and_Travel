@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Invoice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .invoice-details {
+            margin-bottom: 20px;
+        }
+
+        .invoice-details div {
+            display: inline-block;
+            width: 49%;
+            vertical-align: top;
+        }
+
+        .invoice-details div:nth-child(odd) {
+            margin-right: 2%;
+        }
+
+        .invoice-details input[type="text"],
+        .invoice-details input[type="date"],
+        .invoice-details input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .invoice-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .invoice-table th,
+        .invoice-table td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .invoice-table th {
+            background-color: #f5f5f5;
+        }
+
+        .total-amount {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .payment-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .payment-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Booking Details</h1>
+        <div class="invoice-details">
+            <div>
+                <label for="checkInDate">Check-In Date:</label>
+                <input type="text" id="checkInDate" name="checkInDate" value="{{hotel_booking.check_in|date:"M d, Y"}}" readonly>
+            </div>
+            <div>
+                <label for="checkOutDate">Check-Out Date:</label>
+                <input type="text" id="checkOutDate" name="checkOutDate" value="{{hotel_booking.check_out|date:"M d, Y"}}" readonly>
+            </div>
+        </div>
+
+        <table class="invoice-table">
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Room Booking</td>
+                    <td>₹{{hotel_booking.amount}}</td>
+                </tr>
+                <tr>
+                    <td>Additional Services</td>
+                    <td>₹50.00</td>
+                </tr>
+                <!-- Add more items as needed -->
+            </tbody>
+        </table>
+
+        <div class="total-amount">Total Amount: ₹{{rupees}}/ ${{dollars}}</div>
+        <div id="paypal-button-container"></div>
+        {% comment %} <button class="payment-button" id="paypal-button">Make Payment</button> {% endcomment %}
+    </div>
+</body>
+ <!-- Replace "test" with your own sandbox Business account app client ID -->
+ <script src="https://www.paypal.com/sdk/js?client-id=AV97ndoFQ9u-aD6ZfillLBTMSRFnFBV5ZyXa7gpqIzucUqeMGknbNMA2kMhamZp88LBdHSbPSE12XV-s"></script>
+ <!-- Set up a container element for the button -->
+
+ <script>
+    function getCookie(name) {
+        const cookieValue = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+        return cookieValue ? cookieValue.pop() : '';
+      }
+
+    function redirect() {
+        const formData = new FormData();
+        formData.append('hotel_booking_id', '{{hotel_booking.pk}}');
+        formData.append('amount', '{{dollars}}');
+        
+        fetch('/thank_you', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'X-CSRFToken': getCookie('csrftoken')
+          }        
+        })
+          .then(response => {
+            if (response.ok) {
+              // Form submission successful
+              console.log('Form submitted successfully');
+              // Redirect to another page
+              window.location.href = '/thank_you';
+            } else {
+              // Form submission failed
+              console.log('Form submission failed');
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });        
+
+        window.location.href = "{% url 'thank_you' %}";
+      }
+
+    paypal
+     .Buttons({
+       // Sets up the transaction when a payment button is clicked
+       createOrder: (data, actions) => {
+         return actions.order.create({
+           purchase_units: [
+             {
+               amount: {
+                 value: "{{dollars}}",
+               },
+             },
+           ],
+         });
+       },
+       // Finalize the transaction after payer approval
+       onApprove: (data, actions) => {
+         return actions.order.capture().then(function (orderData) {
+           // Successful capture! For dev/demo purposes:
+           console.log(
+             "Capture result",
+             orderData,
+             JSON.stringify(orderData, null, 2)
+           );
+           const transaction =
+             orderData.purchase_units[0].payments.captures[0];
+             redirect()
+           // alert(
+           //   `Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`
+           // );
+           // When ready to go live, remove the alert and show a success message within this page. For example:
+           const element = document.getElementById(
+             "paypal-button-container"
+           );
+           element.innerHTML = "<h3>Thank you for your payment!</h3>";
+           // Or go to another URL:  actions.redirect('thank_you.html');
+         });
+       },
+     })
+     .render("#paypal-button-container");
+ </script></html>

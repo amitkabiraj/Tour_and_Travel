@@ -12,9 +12,16 @@
   <link rel="stylesheet" href="{% static 'myapp/css/login.css' %}">
   <link rel="stylesheet" href="{% static 'myapp/css/user.css' %}">
   <link rel="stylesheet" href="{% static 'myapp/css/modal.css' %}">
+  <link rel="stylesheet" href="{% static 'myapp/css/car.css' %}">
   <link rel="stylesheet" href="{% static 'myapp/css/admin.css' %}">
+<<<<<<< HEAD
   <link rel="stylesheet" href="{% static 'myapp/css/car.css' %}">
 
+=======
+  <link rel="stylesheet" href="{% static 'myapp/css/hotel_style.css' %}">
+  <link rel="stylesheet" href="{% static 'myapp/css/restaurant.css' %}">
+  
+>>>>>>> amit
   {% comment %} <link rel="stylesheet" href="{% static 'myapp/css/body-content.css' %}"> {% endcomment %}
   <title>{%block title%}Tour and Travel {% endblock %}</title>
 </head>
@@ -36,7 +43,7 @@
       </li>
       <li>
         <div class="dropdown">
-          <a href="{% url 'places' %}"style="font-size: 15px;">Places</a>
+          <a href="#"style="font-size: 15px;">Places</a>
           <div class="dropdown-content">
             <a href="{% url 'murshidabad' %}"style="font-size: 15px;">Murshidbad</a>
             <a href="{% url 'nadia' %}"style="font-size: 15px;">Nadia</a>
@@ -45,10 +52,11 @@
       </li>
       <li>
         <div class="dropdown">
-          <a href="{% url 'places' %}"style="font-size: 15px;">Info</a>
+          <a href="#"style="font-size: 15px;">Info</a>
           <div class="dropdown-content">
             <a href="{% url 'restrurent' %}"style="font-size: 15px;">Restaurants</a>
-             <a href="{% url 'hospital' %}"style="font-size: 15px;">Hospital</a>
+            <a href="{% url 'hospital' %}"style="font-size: 15px;">Hospital</a>
+            <a href="{% url 'medicine' %}"style="font-size: 15px;">Medicine Shop</a>
             <a href="{% url 'pump' %}"style="font-size: 15px;">Oil Pump</a>
             <a href="{% url 'atm' %}"style="font-size: 15px;">ATM</a>
           </div>
@@ -56,9 +64,9 @@
       </li>
       <li>
       <div class="dropdown">
-        <a href="{% url 'places' %}"style="font-size: 15px;">Login</a>
+        <a href="#"style="font-size: 15px;">Login</a>
         <div class="dropdown-content">
-          <a href="{% url 'admin_login' %}"style="font-size: 15px;">Admin Login</a>
+          <a href="admin"style="font-size: 15px;">Admin Login</a>
           <a href="{% url 'user_login' %}"style="font-size: 15px;">User Login</a>
         </div>
       </div>
@@ -90,7 +98,7 @@
       <div class="footer-links">
         <a href="{% url 'privasy' %}"style="font-size: 20px;">Privacy Policy</a>
         <a href="{% url 'terms' %}" style="font-size: 20px;">Terms of Service</a>
-        <a href="{% url 'review' %}"style="font-size: 20px;">Review</a>
+        <a href="{% url 'user_login' %}"style="font-size: 20px;">Review</a>
       </div>
       <div class="social-icons">
         <a href="#" class="icon"><i class="fab fa-facebook"></i></a>
@@ -102,5 +110,8 @@
 
   <script src="{% static 'myapp/js/script.js' %}"></script>
   <script src="{% static 'myapp/js/modal.js' %}"></script>
+  <script src="{% static 'myapp/js/hotel_image_slide.js' %}"></script>
+  <script src="{% static 'myapp/js/hotel_booking.js' %}"></script>
+  
 </body>
 </html>

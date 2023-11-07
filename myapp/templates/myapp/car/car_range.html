@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <title>Price Range Selection</title>
+    <link rel="stylesheet" href="{% static 'myapp/css/car_range.css' %}">
+    <script src="https://www.paypal.com/sdk/js?client-id=AV97ndoFQ9u-aD6ZfillLBTMSRFnFBV5ZyXa7gpqIzucUqeMGknbNMA2kMhamZp88LBdHSbPSE12XV-s"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Select Price Range</h1>
+
+        <div class="price-options">
+            <form action="{% url 'process_payment' %}" method="post" id="payment-form">
+                {% csrf_token %}
+                <div class="price-option">
+                    <input type="radio" id="low" name="price" value="low">
+                    <label for="low">Low<span>(Rs:1000) </span></label>
+                </div>
+
+                <div class="price-option">
+                    <input type="radio" id="medium" name="price" value="medium">
+                    <label for="medium">Medium<span>(Rs:1500) </span></label>
+                </div>
+
+                <div class="price-option">
+                    <input type="radio" id="high" name="price" value="high">
+                    <label for="high">High<span>(Rs:2000) </span></label>
+                </div>
+
+                <input type="hidden" id="amount" name="amount" value="">
+                <div id="paypal-button-container"></div>
+            </form>
+        </div>
+
+       {% comment %} <form action="{% url 'process_payment' %}" method="post" id="custom-price-form">
+            {% csrf_token %}
+            <div class="price-option">
+                <label for="custom_price">Enter Custom Price:</label>
+                <input type="text" id="custom_price" name="custom_price" required>
+            </div>
+
+            <input type="hidden" id="custom-amount" name="amount" value="">
+            <div id="custom-paypal-button-container"></div>
+        </form> {% endcomment %}
+    </div>
+
+    <script>
+        function getCookie(name) {
+            const cookieValue = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
+            return cookieValue ? cookieValue.pop() : '';
+        }
+
+        function captureOrder() {
+            return fetch('{% url "process_payment" %}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')
+                },
+                body: JSON.stringify({
+                    hotel_booking_id: '{{hotel_booking.pk}}',
+                    amount: '{{dollars}}'
+                })
+            }).then(response => {
+                if (response.ok) {
+                    console.log('Form submitted successfully');
+                } else {
+                    console.log('Form submission failed');
+                }
+            }).catch(error => {
+                console.error('Error:', error);
+            });
+        }
+
+        paypal.Buttons({
+            createOrder: (data, actions) => {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: document.getElementById('amount').value
+                        }
+                    }]
+                });
+            },
+            onApprove: (data, actions) => {
+                return actions.order.capture().then((orderData) => {
+                    const transaction = orderData.purchase_units[0].payments.captures[0];
+                    captureOrder().then(() => {
+                        const element = document.getElementById("paypal-button-container");
+                        element.innerHTML = "<h3>Thank you for your payment!</h3>";
+                    });
+                });
+            }
+        }).render("#paypal-button-container");
+
+        paypal.Buttons({
+            createOrder: (data, actions) => {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: document.getElementById('custom-amount').value
+                        }
+                    }]
+                });
+            },
+            onApprove: (data, actions) => {
+                return actions.order.capture().then((orderData) => {
+                    const transaction = orderData.purchase_units[0].payments.captures[0];
+                    captureOrder().then(() => {
+                        const element = document.getElementById("custom-paypal-button-container");
+                        element.innerHTML = "<h3>Thank you for your payment!</h3>";
+                    });
+                });
+            }
+        }).render("#custom-paypal-button-container");
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{% extends 'myapp/base.html' %}
+{% block title%}
+hotel image
+{% endblock title%}
+{% block content %}
+{% load static %}
+
+<div class="image_body">
+    <div class="hotel_image_card">
+        <img src="{{hotel.hotel_image1.url}}"  alt="Hotel 1">
+    </div>
+
+    <div class="hotel_image_card">
+        <img src="{{hotel.hotel_image3.url}}" alt="Hotel 2">
+    </div>
+
+    <div class="hotel_image_card">
+        <img src="{{hotel.hotel_image4.url}}" alt="Hotel 3">   
+    </div>
+
+    <div class="hotel_image_card">
+        <img src="{{hotel.hotel_image5.url}}" alt="Hotel 4">
+    </div>
+</div>
+    
+
+{% endblock content %}

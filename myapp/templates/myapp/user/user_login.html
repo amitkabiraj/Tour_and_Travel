@@ -4,9 +4,10 @@ user login
 {% endblock title%}
 {% block content %}
 <div class="login-container">
-  <form class="login-form" action="{% url 'user_panel' %}">
-    <label for="username">Username</label>
-    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+  <form class="login-form" method="post">
+    {%csrf_token%}
+    <label for="username">Email</label>
+    <input type="text" id="username" name="email" placeholder="Enter your email" required>
 
     <label for="password">Password</label>
     <input type="password" id="password" name="password" placeholder="Enter your password" required>

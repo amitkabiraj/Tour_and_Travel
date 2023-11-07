@@ -4,9 +4,8 @@ car page
 {% endblock title%}
 {% block content %}
 {% load static %}
-this the car page
-<h1>Looking for a  car</h1>
-<h2>Traditional Riding</h2>
+<h1 class="heading">Looking for a  car</h1>
+<h1>Traditional Riding</h1>
 <div class="body-content">
   <div class="container">
     <img src="{% static 'myapp/image/car/hoourse_card.jpeg' %}" alt="Car">
@@ -22,69 +21,68 @@ this the car page
     <div class="description">
       <h2>Horse Riding</h2>
       <h3>
-        <a href="car_desc.html"> Book Now </a>
+      <a href="{% url 'car_details' %}"> Book Now </a>
         </h3>
     </div>
   </div> 
   <div class="container">
-    <img src="{% static 'myapp/image/car/riska1.jpg' %}" alt="Car">
+    <img src="{% static 'myapp/image/car/Horse_riding.jpeg' %}" alt="Car">
     <div class="description">
       <h2>Hand Rickshaw</h2>
       <h3>
-        <a href="car_desc.html"> Book Now </a>
-        </h3>
+        <a href="{% url 'car_details' %}"> Book Now </a>
+      </h3>
     </div>
   </div>
   <div class="container">
-    <img src="{% static 'myapp/image/car/riska1.jpg' %}" alt="Car">
+    <img src="{% static 'myapp/image/car/kolkata_traditoin.jpeg' %}" alt="Car">
     <div class="description">
       <h2>Rickshaw</h2>
       <h3>
-        <a href="car_desc.html"> Book Now </a>
-        </h3>
+        <a href="{% url 'car_details' %}"> Book Now </a>
+      </h3>
     </div>
   </div>
   </div>
-  <h2>Classic Riding</h2>
+  <h1>Classic Riding</h1>
   <div class="body-content">
 
   <div class="container">
-    <img src="{% static 'myapp/image/car/riska1.jpg' %}" alt="Car">
+    <img src="{% static 'myapp/image/car/car1.webp' %}" alt="Car">
     <div class="description">
       <h2>car1</h2>
       <h3>
-        <a href="car_desc.html"> Book Now </a>
-        </h3>
+        <a href="{% url 'car_details' %}"> Book Now </a>
+      </h3>
     </div>
   </div>
   <div class="container">
-    <img src="{% static 'myapp/image/car/riska1.jpg' %}" alt="Car">
+    <img src="{% static 'myapp/image/car/car2.webp' %}" alt="Car">
     <div class="description">
       <h2>car2</h2>
       <h3>
-        <a href="car_desc.html"> Book Now </a>
-        </h3>
+        <a href="{% url 'car_details' %}"> Book Now </a>
+      </h3>
     </div>
   </div>
   <div class="container">
-    <img src="{% static 'myapp/image/car/riska1.jpg' %}" alt="Car">
+    <img src="{% static 'myapp/image/car/car3.jpeg' %}" alt="Car">
     <div class="description">
       <h2>car3</h2>
       <h3>
-        <a href="car_desc.html"> Book Now </a>
-        </h3>
+        <a href="{% url 'car_details' %}"> Book Now </a>
+      </h3>
     </div>
   </div>
   <div class="container">
-    <img src="{% static 'myapp/image/car/riska1.jpg' %}" alt="Car">
+    <img src="{% static 'myapp/image/car/car4.webp' %}" alt="Car">
     <div class="description">
       <h2>car3</h2>
       <h3>
-        <a href="car_desc.html"> Book Now </a>
-        </h3>
+        <a href="{% url 'car_details' %}"> Book Now </a>
+      </h3>
     </div>
   </div>
-  
 </div>
 
 {% endblock content %}

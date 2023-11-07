@@ -253,6 +253,7 @@ header .fa-bars {
     color: #333;
     font-size: 1.3rem;
     padding: 1rem;
+    text-align: justify;
 }
 
 .feature .card-container .content .stars i {
@@ -295,7 +296,7 @@ header .fa-bars {
     font-size: 2rem;
 }
 /* ABOUT SECTION */
-.about {
+/* .about {
     min-height: 100vh;
 }
 
@@ -322,8 +323,38 @@ header .fa-bars {
     color: #333;
     margin-left: 15px;
     text-align: justify;
-}
+} */
 
+.about {
+    min-height: 100vh;
+  }
+  
+  .about .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .about .row .image img {
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+  }
+  
+  .about .row .content {
+    margin-left: 15px; /* Add margin to separate image and content */
+    flex: 1; /* Allow the content to grow to take up remaining space */
+  }
+  .about .row .content h3 {
+    font-size: 4rem;
+    color: var(--blue-ocean);
+  }
+  
+  .about .row .content p {
+    font-size: 1.9rem;
+    color: #333;
+    text-align: justify;
+  }
 .about .row .content .btn {
     outline: none;
     border: none;
@@ -349,7 +380,7 @@ header .fa-bars {
     margin-right: 1rem;
 }
 .about_in p {
-    margin-top: 10px;
+    margin-top: 5px;
     padding: 20px;
     text-align: justify;
     font-size: 1.9rem;
@@ -478,6 +509,7 @@ header .fa-bars {
     font-size: 1.4rem;
     color: #333;
     padding: .5rem 1.5rem;
+    text-align: justify;
 }
 
 .review .box-container .box .content .stars i {
@@ -615,10 +647,23 @@ header .fa-bars {
     color: #fff;
     background: rgba(255, 255, 255, .2);
     font-size: 2rem;
+    margin-right: 1rem;
 }
 
 .newsletter form input[type="email"]::placeholder {
-    color: #ccc;
+    color: #211d1d;
+}
+.newsletter form input[type="password"] {
+    width: 40rem;
+    padding: 0 1rem;
+    color: #fff;
+    background: rgba(255, 255, 255, .2);
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.newsletter form input[type="password"]::placeholder {
+    color: #211d1d;
 }
 
 .newsletter form input[type="submit"] {

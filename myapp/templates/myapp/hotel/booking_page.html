@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel booking</title>
+    {% comment %} <link rel="stylesheet" href="{% static 'myapp/css/booking.css' %}"> {% endcomment %}
+    <style>
+        /* Add this to your booking.css file */
+        /* Add this to your booking.css file */
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        
+        form {
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        input[type="number"],
+        input[type="date"] {
+            width: calc(50% - 5px); /* Adjusted width */
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        .time {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        /* Add this to your <style> block or your external CSS file */
+
+            input[type="date"] {
+                width: 100%; /* Set the width to 100% to use available space */
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+                height: 38px;
+                font-size: 16px;
+            }
+            
+        #memberFields {
+            margin-top: 20px;
+        }
+        
+        #memberFields input {
+            margin-bottom: 10px;
+        }
+        
+        .danger {
+            color: #ff0000;
+        }
+        
+        /* Add any additional custom styles as needed */
+        
+    </style>
+</head>
+<body>
+    <h3 class="danger">{{error}}</h3>
+    <h1>Member Information</h1>
+    <form id="memberForm" action="" method="post">
+        {% csrf_token %}
+        <label for ="adhaar">Enter your Addhar number </label>
+        <input type="number" id="" class="adhaar" name="adhaar" required>
+        <label for="numberOfMembers">Number of Members:</label>
+        <input type="number" id="numberOfMembers" name="numberOfMembers" min="1" required>
+        <button type="button" onclick="generateFields()">Generate Fields</button>
+
+        <div id="memberFields">
+            <!-- Dynamic fields will be inserted here -->
+        </div>
+
+        <div class="time">
+            <input type="date" name="startdatetime" id="datetime" min="{{d|date:'Y-m-d'}}">
+        </div>
+        <p><b>To</b></p>
+        <div class="time">
+            <input type="date" name="enddatetime" id="datetime" min="{{d|date:'Y-m-d'}}">
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+    <script src="{% static 'myapp/js/hotel_booking.js' %}
+    "></script>   
+    <script src="{% static 'myapp/js/date.js' %}
+    "></script>   
+</body>
+</html>
